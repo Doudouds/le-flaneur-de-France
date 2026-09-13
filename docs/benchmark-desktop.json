@@ -1,0 +1,147 @@
+{
+  "viewport_Paris": {
+    "rows": 2005,
+    "median_ms": 2.1,
+    "p95_ms": 3.534,
+    "first_ms": 4.416,
+    "plan": [
+      "SEARCH monuments USING COVERING INDEX index_monuments_coordinates (latitude>? AND latitude<?)"
+    ]
+  },
+  "viewport_Bordeaux": {
+    "rows": 385,
+    "median_ms": 0.432,
+    "p95_ms": 0.538,
+    "first_ms": 0.567,
+    "plan": [
+      "SEARCH monuments USING COVERING INDEX index_monuments_coordinates (latitude>? AND latitude<?)"
+    ]
+  },
+  "viewport_Lyon": {
+    "rows": 237,
+    "median_ms": 0.32,
+    "p95_ms": 0.576,
+    "first_ms": 0.485,
+    "plan": [
+      "SEARCH monuments USING COVERING INDEX index_monuments_coordinates (latitude>? AND latitude<?)"
+    ]
+  },
+  "viewport_Strasbourg": {
+    "rows": 230,
+    "median_ms": 0.313,
+    "p95_ms": 0.431,
+    "first_ms": 0.431,
+    "plan": [
+      "SEARCH monuments USING COVERING INDEX index_monuments_coordinates (latitude>? AND latitude<?)"
+    ]
+  },
+  "viewport_Rouen": {
+    "rows": 179,
+    "median_ms": 0.276,
+    "p95_ms": 0.454,
+    "first_ms": 0.325,
+    "plan": [
+      "SEARCH monuments USING COVERING INDEX index_monuments_coordinates (latitude>? AND latitude<?)"
+    ]
+  },
+  "viewport_Avignon": {
+    "rows": 159,
+    "median_ms": 0.224,
+    "p95_ms": 0.389,
+    "first_ms": 0.357,
+    "plan": [
+      "SEARCH monuments USING COVERING INDEX index_monuments_coordinates (latitude>? AND latitude<?)"
+    ]
+  },
+  "viewport_Rural_Cevennes": {
+    "rows": 28,
+    "median_ms": 0.18,
+    "p95_ms": 0.315,
+    "first_ms": 0.308,
+    "plan": [
+      "SEARCH monuments USING COVERING INDEX index_monuments_coordinates (latitude>? AND latitude<?)"
+    ]
+  },
+  "search_chambord": {
+    "rows": 4,
+    "median_ms": 0.082,
+    "p95_ms": 0.259,
+    "first_ms": 0.595,
+    "plan": [
+      "SCAN f VIRTUAL TABLE INDEX 4:",
+      "SEARCH m USING INTEGER PRIMARY KEY (rowid=?)",
+      "USE TEMP B-TREE FOR ORDER BY"
+    ]
+  },
+  "search_mont saint mich": {
+    "rows": 50,
+    "median_ms": 3.528,
+    "p95_ms": 4.018,
+    "first_ms": 4.479,
+    "plan": [
+      "SCAN f VIRTUAL TABLE INDEX 4:",
+      "SEARCH m USING INTEGER PRIMARY KEY (rowid=?)",
+      "USE TEMP B-TREE FOR ORDER BY"
+    ]
+  },
+  "search_chartres": {
+    "rows": 46,
+    "median_ms": 0.187,
+    "p95_ms": 0.406,
+    "first_ms": 0.766,
+    "plan": [
+      "SCAN f VIRTUAL TABLE INDEX 4:",
+      "SEARCH m USING INTEGER PRIMARY KEY (rowid=?)",
+      "USE TEMP B-TREE FOR ORDER BY"
+    ]
+  },
+  "search_eglise": {
+    "rows": 50,
+    "median_ms": 12.608,
+    "p95_ms": 15.335,
+    "first_ms": 11.729,
+    "plan": [
+      "SCAN f VIRTUAL TABLE INDEX 4:",
+      "SEARCH m USING INTEGER PRIMARY KEY (rowid=?)",
+      "USE TEMP B-TREE FOR ORDER BY"
+    ]
+  },
+  "search_zzzzzz": {
+    "rows": 0,
+    "median_ms": 0.065,
+    "p95_ms": 0.125,
+    "first_ms": 0.253,
+    "plan": [
+      "SCAN f VIRTUAL TABLE INDEX 4:",
+      "SEARCH m USING INTEGER PRIMARY KEY (rowid=?)",
+      "USE TEMP B-TREE FOR ORDER BY"
+    ]
+  },
+  "search_PA2A000001": {
+    "rows": 1,
+    "median_ms": 0.078,
+    "p95_ms": 0.113,
+    "first_ms": 0.14,
+    "plan": [
+      "SCAN f VIRTUAL TABLE INDEX 4:",
+      "SEARCH m USING INTEGER PRIMARY KEY (rowid=?)",
+      "USE TEMP B-TREE FOR ORDER BY"
+    ]
+  },
+  "national_clusters": {
+    "rows": 27,
+    "median_ms": 0.073,
+    "p95_ms": 0.147,
+    "first_ms": 0.224,
+    "plan": [
+      "SEARCH map_cells USING PRIMARY KEY (level=? AND x>? AND x<?)"
+    ]
+  },
+  "dataset": {
+    "monuments": 46760,
+    "positioned": 44482,
+    "bytes": 207282176,
+    "sqlite": "3.53.1",
+    "integrity": "ok"
+  }
+}

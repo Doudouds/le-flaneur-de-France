@@ -1,0 +1,3699 @@
+{
+  "notices": 46760,
+  "linked": 29533,
+  "new_links": 8063,
+  "linked_notices_with_extract": 1341,
+  "uncached_pages": 27705,
+  "pages_with_extract": 1294,
+  "ambiguous": {
+    "PA00110608": [
+      "https://fr.wikipedia.org/wiki/Forts_de_la_Hougue_et_de_Tatihou",
+      "https://fr.wikipedia.org/wiki/Tatihou"
+    ],
+    "PA00103208": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_abbatiale_de_Saint-Gilles_du_Gard",
+      "https://fr.wikipedia.org/wiki/Ancienne_abbaye_de_Saint-Gilles"
+    ],
+    "PA00086780": [
+      "https://fr.wikipedia.org/wiki/Cimeti%C3%A8re_du_P%C3%A8re-Lachaise",
+      "https://fr.wikipedia.org/wiki/Entr%C3%A9e_principale_du_cimeti%C3%A8re_du_P%C3%A8re-Lachaise",
+      "https://fr.wikipedia.org/wiki/Monument_aux_morts_du_P%C3%A8re-Lachaise",
+      "https://fr.wikipedia.org/wiki/Monument_fun%C3%A9raire_de_Paul_Baudry",
+      "https://fr.wikipedia.org/wiki/Tombe_d%27Adolphe_Thiers",
+      "https://fr.wikipedia.org/wiki/Tombe_du_Dragon"
+    ],
+    "PA00088482": [
+      "https://fr.wikipedia.org/wiki/Fontaine_aux_lions_(jardin_des_plantes_de_Paris)",
+      "https://fr.wikipedia.org/wiki/Galerie_de_Pal%C3%A9ontologie_et_d%27Anatomie_compar%C3%A9e",
+      "https://fr.wikipedia.org/wiki/Gloriette_de_Buffon",
+      "https://fr.wikipedia.org/wiki/Grande_galerie_de_l%27%C3%89volution",
+      "https://fr.wikipedia.org/wiki/Grandes_serres_du_Jardin_des_plantes",
+      "https://fr.wikipedia.org/wiki/Jardin_des_plantes_de_Paris",
+      "https://fr.wikipedia.org/wiki/M%C3%A9nagerie_du_Jardin_des_plantes",
+      "https://fr.wikipedia.org/wiki/Maison_de_Buffon",
+      "https://fr.wikipedia.org/wiki/Maison_des_Nouveaux-Convertis"
+    ],
+    "PA00086721": [
+      "https://fr.wikipedia.org/wiki/%C3%89cole_normale_de_musique_de_Paris",
+      "https://fr.wikipedia.org/wiki/Salle_Cortot"
+    ],
+    "PA00085817": [
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_d%27Orsigny",
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Co%C3%ABtlogon"
+    ],
+    "PA00085838": [
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_Boffrand",
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_S%C3%A9gur"
+    ],
+    "PA00091076": [
+      "https://fr.wikipedia.org/wiki/Alignements_de_Kermario",
+      "https://fr.wikipedia.org/wiki/Dolmen_de_Kermario"
+    ],
+    "PA00091129": [
+      "https://fr.wikipedia.org/wiki/Menhir_de_Kerlescan",
+      "https://fr.wikipedia.org/wiki/Tumulus_de_Kerlescan"
+    ],
+    "PA00090870": [
+      "https://fr.wikipedia.org/wiki/Grand_B%C3%A9",
+      "https://fr.wikipedia.org/wiki/Tombeau_de_Chateaubriand"
+    ],
+    "PA00087146": [
+      "https://fr.wikipedia.org/wiki/Porte_de_Bourgogne_(Moret-sur-Loing)",
+      "https://fr.wikipedia.org/wiki/Porte_de_Paris_(Moret-sur-Loing)"
+    ],
+    "PA00085814": [
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Bourvallais",
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Simiane_(Paris)"
+    ],
+    "PA93000017": [
+      "https://fr.wikipedia.org/wiki/Cath%C3%A9drales_du_Rail",
+      "https://fr.wikipedia.org/wiki/D%C3%A9p%C3%B4t_de_La_Plaine"
+    ],
+    "PA00103291": [
+      "https://fr.wikipedia.org/wiki/Aqueduc_de_N%C3%AEmes",
+      "https://fr.wikipedia.org/wiki/Pont_du_Gard"
+    ],
+    "PA00114578": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Chantilly",
+      "https://fr.wikipedia.org/wiki/Domaine_de_Chantilly",
+      "https://fr.wikipedia.org/wiki/Hameau_de_Chantilly"
+    ],
+    "PA00099112": [
+      "https://fr.wikipedia.org/wiki/Alignement_d%27I_Stantari",
+      "https://fr.wikipedia.org/wiki/Alignement_de_Rinaghju"
+    ],
+    "PA00114885": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_royal_de_Senlis_et_prieur%C3%A9_Saint-Maurice",
+      "https://fr.wikipedia.org/wiki/Remparts_de_Senlis"
+    ],
+    "PA00103609": [
+      "https://fr.wikipedia.org/wiki/Pont_Vialleton",
+      "https://fr.wikipedia.org/wiki/Promenade_du_Peyrou"
+    ],
+    "PA00086570": [
+      "https://fr.wikipedia.org/wiki/Grande_fresque_de_la_gare_de_Lyon",
+      "https://fr.wikipedia.org/wiki/Le_Train_bleu_(restaurant)",
+      "https://fr.wikipedia.org/wiki/Paris-Gare-de-Lyon"
+    ],
+    "PA00080780": [
+      "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Saint-Nicolas_de_Nice",
+      "https://fr.wikipedia.org/wiki/Chapelle_du_tsar%C3%A9vitch_Nicolas_Alexandrovitch_de_Nice"
+    ],
+    "PA00103093": [
+      "https://fr.wikipedia.org/wiki/Aqueduc_de_N%C3%AEmes",
+      "https://fr.wikipedia.org/wiki/Castellum_divisorium_de_N%C3%AEmes"
+    ],
+    "PA00106374": [
+      "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Saint-%C3%89tienne_de_Toul",
+      "https://fr.wikipedia.org/wiki/Coll%C3%A9giale_Saint-Gengoult_de_Toul"
+    ],
+    "PA00100922": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Louis_de_Rouen",
+      "https://fr.wikipedia.org/wiki/Lyc%C3%A9e_Pierre-Corneille_(Rouen)"
+    ],
+    "PA00080653": [
+      "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Notre-Dame-de-l%27Immacul%C3%A9e-Conception_d%27Antibes",
+      "https://fr.wikipedia.org/wiki/Chapelle_Saint-Esprit_d%27Antibes",
+      "https://fr.wikipedia.org/wiki/Tour_Grimaldi"
+    ],
+    "PA00105254": [
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_Monconseil",
+      "https://fr.wikipedia.org/wiki/Mus%C3%A9e_Dupuy-Mestreau"
+    ],
+    "PA00079987": [
+      "https://fr.wikipedia.org/wiki/Abbaye_de_Royaumont",
+      "https://fr.wikipedia.org/wiki/Palais_abbatial_de_Royaumont"
+    ],
+    "PA00091009": [
+      "https://fr.wikipedia.org/wiki/Manoir_de_Kerl%C3%A9ano",
+      "https://fr.wikipedia.org/wiki/Monument_de_Cadoudal"
+    ],
+    "PA00101466": [
+      "https://fr.wikipedia.org/wiki/Citadelle_de_Besan%C3%A7on",
+      "https://fr.wikipedia.org/wiki/Tour_de_Chamars",
+      "https://fr.wikipedia.org/wiki/Tour_de_Montmart",
+      "https://fr.wikipedia.org/wiki/Tour_de_Rivotte",
+      "https://fr.wikipedia.org/wiki/Tour_des_Cordeliers",
+      "https://fr.wikipedia.org/wiki/Tour_du_Marais"
+    ],
+    "PA30000021": [
+      "https://fr.wikipedia.org/wiki/Aqueduc_de_N%C3%AEmes",
+      "https://fr.wikipedia.org/wiki/Pont_de_la_Combe_Joseph"
+    ],
+    "PA00116291": [
+      "https://fr.wikipedia.org/wiki/Abbatiale_Notre-Dame_d%27Ambronay",
+      "https://fr.wikipedia.org/wiki/Abbaye_Notre-Dame_d%27Ambronay"
+    ],
+    "PA00086616": [
+      "https://fr.wikipedia.org/wiki/Carri%C3%A8res_souterraines_des_Capucins",
+      "https://fr.wikipedia.org/wiki/H%C3%B4pital_Cochin"
+    ],
+    "PA00085749": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Gr%C3%A9goire_de_Munster",
+      "https://fr.wikipedia.org/wiki/Abbaye_de_Munster"
+    ],
+    "PA00086607": [
+      "https://fr.wikipedia.org/wiki/Aqueducs_d%27Arcueil_et_de_Cachan",
+      "https://fr.wikipedia.org/wiki/Maison_du_Fontainier"
+    ],
+    "PA00089888": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Derrien_de_Commana",
+      "https://fr.wikipedia.org/wiki/Enclos_paroissial_de_Commana"
+    ],
+    "PA00085991": [
+      "https://fr.wikipedia.org/wiki/Conciergerie_de_Paris",
+      "https://fr.wikipedia.org/wiki/Grand-Salle_du_Palais_de_la_Cit%C3%A9",
+      "https://fr.wikipedia.org/wiki/Palais_de_justice_de_Paris"
+    ],
+    "PA00081941": [
+      "https://fr.wikipedia.org/wiki/Chapelle_Saint-Martial_(Avignon)",
+      "https://fr.wikipedia.org/wiki/Palais_des_papes_d%27Avignon"
+    ],
+    "PA00085816": [
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_Charlemagne",
+      "https://fr.wikipedia.org/wiki/Place_des_Victoires"
+    ],
+    "PA00102201": [
+      "https://fr.wikipedia.org/wiki/Abbaye_Saint-Pierre-et-Saint-Paul_de_Luxeuil",
+      "https://fr.wikipedia.org/wiki/Basilique_Saint-Pierre_de_Luxeuil-les-Bains",
+      "https://fr.wikipedia.org/wiki/Palais_abbatial_(Luxeuil)"
+    ],
+    "PA56000127": [
+      "https://fr.wikipedia.org/wiki/Alignement_de_Men_Letionnec",
+      "https://fr.wikipedia.org/wiki/Alignements_de_Kerpenhir",
+      "https://fr.wikipedia.org/wiki/Menhir_de_Go%C3%A9morent"
+    ],
+    "PA00102638": [
+      "https://fr.wikipedia.org/wiki/Abbatiale_Saint-Pierre-et-Saint-Paul_de_Caunes-Minervois",
+      "https://fr.wikipedia.org/wiki/Abbaye_Saint-Pierre-Saint-Paul_de_Caunes-Minervois"
+    ],
+    "PA00083909": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Bourran",
+      "https://fr.wikipedia.org/wiki/Parc_de_Bourran"
+    ],
+    "PA00135425": [
+      "https://fr.wikipedia.org/wiki/Abbaye_du_Saint-Mont",
+      "https://fr.wikipedia.org/wiki/Site_arch%C3%A9ologique_du_Saint-Mont"
+    ],
+    "PA00088402": [
+      "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_des_Saints-Archanges",
+      "https://fr.wikipedia.org/wiki/Coll%C3%A8ge_de_Beauvais"
+    ],
+    "PA00100335": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Pierre-du-S%C3%A9pulcre_de_Limoges",
+      "https://fr.wikipedia.org/wiki/Chapelle_Saint-Beno%C3%AEt_de_Limoges"
+    ],
+    "PA00110153": [
+      "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Notre-Dame-de-l%27Assomption_de_Lu%C3%A7on",
+      "https://fr.wikipedia.org/wiki/Palais_%C3%A9piscopal_de_Lu%C3%A7on"
+    ],
+    "PA00088515": [
+      "https://fr.wikipedia.org/wiki/%C3%89cole_de_m%C3%A9decine_(b%C3%A2timent)",
+      "https://fr.wikipedia.org/wiki/Biblioth%C3%A8que_interuniversitaire_de_sant%C3%A9"
+    ],
+    "PA70000001": [
+      "https://fr.wikipedia.org/wiki/Fontaine_Napol%C3%A9on_(Bouligney)",
+      "https://fr.wikipedia.org/wiki/Mairie-lavoir_de_Bouligney"
+    ],
+    "PA70000029": [
+      "https://fr.wikipedia.org/wiki/Abbaye_Notre-Dame-de-la-Charit%C3%A9_de_Neuvelle-l%C3%A8s-la-Charit%C3%A9",
+      "https://fr.wikipedia.org/wiki/Grange_cistercienne_de_Fontaine-Robert"
+    ],
+    "PA29000049": [
+      "https://fr.wikipedia.org/wiki/Phare_d%27Eckm%C3%BChl",
+      "https://fr.wikipedia.org/wiki/Vieux_phare_de_Penmarc%27h"
+    ],
+    "PA00085585": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Saint-Ulrich",
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_du_Girsberg",
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_du_Haut-Ribeaupierre"
+    ],
+    "PA00088879": [
+      "https://fr.wikipedia.org/wiki/Barri%C3%A8re_de_la_rotonde_de_Chartres",
+      "https://fr.wikipedia.org/wiki/Parc_Monceau"
+    ],
+    "PA00085464": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Wahlenbourg",
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Weckmund"
+    ],
+    "PA00086583": [
+      "https://fr.wikipedia.org/wiki/Fa%C3%A7ade_du_palais_de_la_Porte-Dor%C3%A9e",
+      "https://fr.wikipedia.org/wiki/Palais_de_la_Porte-Dor%C3%A9e"
+    ],
+    "PA00080689": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Notre-Dame-d%27Esp%C3%A9rance_de_Cannes",
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_du_Suquet",
+      "https://fr.wikipedia.org/wiki/Chapelle_Sainte-Anne_de_Cannes",
+      "https://fr.wikipedia.org/wiki/Tour_du_Suquet"
+    ],
+    "PA00080762": [
+      "https://fr.wikipedia.org/wiki/Basilique_Saint-Michel-Archange_de_Menton",
+      "https://fr.wikipedia.org/wiki/Chapelle_de_l%27Immacul%C3%A9e-Conception_de_Menton"
+    ],
+    "PA00113488": [
+      "https://fr.wikipedia.org/wiki/Abbatiale_St-Philibert_(Tournus)",
+      "https://fr.wikipedia.org/wiki/Abbaye_Saint-Philibert_de_Tournus"
+    ],
+    "PA00080693": [
+      "https://fr.wikipedia.org/wiki/Abbaye_de_L%C3%A9rins",
+      "https://fr.wikipedia.org/wiki/Monast%C3%A8re_fortifi%C3%A9_de_l%27abbaye_de_L%C3%A9rins"
+    ],
+    "PA00085449": [
+      "https://fr.wikipedia.org/wiki/Maison_du_rabbin_(Guebwiller)",
+      "https://fr.wikipedia.org/wiki/Synagogue_de_Guebwiller"
+    ],
+    "PA00104286": [
+      "https://fr.wikipedia.org/wiki/Cassinomagus",
+      "https://fr.wikipedia.org/wiki/Thermes_de_Chassenon"
+    ],
+    "PA00088746": [
+      "https://fr.wikipedia.org/wiki/Lyc%C3%A9e_Paul-Claudel-d%27Hulst",
+      "https://fr.wikipedia.org/wiki/Petit_h%C3%B4tel_de_Villars"
+    ],
+    "PA00085830": [
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_Heuz%C3%A9_de_Vologer",
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_Marquet_de_Bourgade",
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_Thibert_des_Martrais"
+    ],
+    "PA00091138": [
+      "https://fr.wikipedia.org/wiki/G%C3%A9ant_du_Manio",
+      "https://fr.wikipedia.org/wiki/Quadrilat%C3%A8re_du_Manio",
+      "https://fr.wikipedia.org/wiki/Tumulus_du_Manio"
+    ],
+    "PA00080856": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Sauveur_de_Saorge",
+      "https://fr.wikipedia.org/wiki/Chapelle_Saint-Jacques_des_P%C3%A9nitents_blancs_de_Saorge"
+    ],
+    "PA00086155": [
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_Le_Tonnelier_de_Breteuil",
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_d%27Assy",
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Clisson",
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Jaucourt",
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Rohan_(Paris)",
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Soubise"
+    ],
+    "PA00112427": [
+      "https://fr.wikipedia.org/wiki/Chapelle_des_%C3%89lus",
+      "https://fr.wikipedia.org/wiki/Palais_des_ducs_et_des_%C3%A9tats_de_Bourgogne",
+      "https://fr.wikipedia.org/wiki/Tour_Philippe_le_Bon"
+    ],
+    "PA00080890": [
+      "https://fr.wikipedia.org/wiki/Carri%C3%A8re_romaine_du_Mont_Justicier",
+      "https://fr.wikipedia.org/wiki/Gibet_du_Mont_Justicier"
+    ],
+    "PA00109552": [
+      "https://fr.wikipedia.org/wiki/Enceinte_de_Laval",
+      "https://fr.wikipedia.org/wiki/Porte_Beucheresse",
+      "https://fr.wikipedia.org/wiki/Tour_Belot-Oissel",
+      "https://fr.wikipedia.org/wiki/Tour_Rennaise"
+    ],
+    "PA00086125": [
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_Le_Peletier_de_Saint-Fargeau",
+      "https://fr.wikipedia.org/wiki/Mus%C3%A9e_Carnavalet"
+    ],
+    "PA00112285": [
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_Chartraire_de_Montigny",
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_du_Commandant_militaire"
+    ],
+    "PA00109848": [
+      "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Saint-Julien_du_Mans",
+      "https://fr.wikipedia.org/wiki/Pierre_Saint-Julien"
+    ],
+    "PA00106099": [
+      "https://fr.wikipedia.org/wiki/Arc_H%C3%A9r%C3%A9",
+      "https://fr.wikipedia.org/wiki/Place_Stanislas",
+      "https://fr.wikipedia.org/wiki/Place_de_la_Carri%C3%A8re"
+    ],
+    "PA00117984": [
+      "https://fr.wikipedia.org/wiki/Od%C3%A9on_antique_de_Lyon",
+      "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_antique_de_Lyon"
+    ],
+    "PA00085826": [
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_Crozat",
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Gramont_(Paris)",
+      "https://fr.wikipedia.org/wiki/Ritz_Paris"
+    ],
+    "PA00097821": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Loches",
+      "https://fr.wikipedia.org/wiki/Cit%C3%A9_royale_de_Loches"
+    ],
+    "PA00080432": [
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Crose",
+      "https://fr.wikipedia.org/wiki/Portail_Saint-F%C3%A9lix"
+    ],
+    "PA00112428": [
+      "https://fr.wikipedia.org/wiki/Palais_de_justice_de_Dijon",
+      "https://fr.wikipedia.org/wiki/Parlement_de_Dijon"
+    ],
+    "PA00088425": [
+      "https://fr.wikipedia.org/wiki/Centre_Panth%C3%A9on",
+      "https://fr.wikipedia.org/wiki/Facult%C3%A9_de_droit_de_Paris"
+    ],
+    "PA00082403": [
+      "https://fr.wikipedia.org/wiki/Abbaye_Saint-Pierre_de_Brant%C3%B4me",
+      "https://fr.wikipedia.org/wiki/Pont_coud%C3%A9_de_Brant%C3%B4me"
+    ],
+    "PA00090172": [
+      "https://fr.wikipedia.org/wiki/Ensemble_m%C3%A9galithique_de_Qu%C3%A9larn",
+      "https://fr.wikipedia.org/wiki/Menhir_de_Kerdala%C3%AB-Lesconil"
+    ],
+    "PA34000017": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_des_Gaucelm",
+      "https://fr.wikipedia.org/wiki/Mus%C3%A9e_de_la_Tour_des_Prisons"
+    ],
+    "PA49000066": [
+      "https://fr.wikipedia.org/wiki/Maison_de_ma%C3%AEtre_de_la_Charpenterie",
+      "https://fr.wikipedia.org/wiki/Tour_de_Cornill%C3%A9"
+    ],
+    "PA00118246": [
+      "https://fr.wikipedia.org/wiki/Pont_Royal_(Savoie)",
+      "https://fr.wikipedia.org/wiki/Tunnel_hydraulique_du_Gelon"
+    ],
+    "PA00113415": [
+      "https://fr.wikipedia.org/wiki/Abbaye_de_La_Fert%C3%A9",
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_la_Fert%C3%A9_(Saint-Ambreuil)"
+    ],
+    "PA00085992": [
+      "https://fr.wikipedia.org/wiki/Arc_de_triomphe_du_Carrousel",
+      "https://fr.wikipedia.org/wiki/Palais_du_Louvre"
+    ],
+    "PA00100712": [
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_Homberg",
+      "https://fr.wikipedia.org/wiki/Infirmerie_Saint-Louis"
+    ],
+    "PA00112275": [
+      "https://fr.wikipedia.org/wiki/Ancien_h%C3%B4pital_g%C3%A9n%C3%A9ral_de_Dijon",
+      "https://fr.wikipedia.org/wiki/Grande_Chapelle_de_l%27h%C3%B4pital_g%C3%A9n%C3%A9ral_de_Dijon"
+    ],
+    "PA00094111": [
+      "https://fr.wikipedia.org/wiki/Ancien_coll%C3%A8ge_des_j%C3%A9suites_de_Rodez",
+      "https://fr.wikipedia.org/wiki/La_Na%C3%AFade_de_Vors"
+    ],
+    "PA00116966": [
+      "https://fr.wikipedia.org/wiki/Palais_id%C3%A9al",
+      "https://fr.wikipedia.org/wiki/Villa_Alicius"
+    ],
+    "PA00117783": [
+      "https://fr.wikipedia.org/wiki/Basilique_Notre-Dame_de_Fourvi%C3%A8re",
+      "https://fr.wikipedia.org/wiki/Chapelle_Saint-Thomas_de_Lyon"
+    ],
+    "PA00087611": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Saint-Germain-en-Laye",
+      "https://fr.wikipedia.org/wiki/Pavillon_de_la_Muette"
+    ],
+    "PA00085030": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_catholique_Saint-Pierre-le-Jeune_de_Strasbourg",
+      "https://fr.wikipedia.org/wiki/%C3%89glise_protestante_Saint-Pierre-le-Jeune_de_Strasbourg"
+    ],
+    "PA00084072": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Martial_de_Bazens",
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Bazens"
+    ],
+    "PA00091179": [
+      "https://fr.wikipedia.org/wiki/Alignement_de_la_Table_du_sacrifice",
+      "https://fr.wikipedia.org/wiki/Alignements_de_Kerz%C3%A9rho"
+    ],
+    "PA00116128": [
+      "https://fr.wikipedia.org/wiki/Abbaye_du_Gard",
+      "https://fr.wikipedia.org/wiki/Chartreuse_de_Notre-Dame_du_Gard"
+    ],
+    "PA00088117": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Meudon",
+      "https://fr.wikipedia.org/wiki/Hangar_Y"
+    ],
+    "PA00093212": [
+      "https://fr.wikipedia.org/wiki/Chapelle_de_la_Visitation_de_Moulins",
+      "https://fr.wikipedia.org/wiki/Lyc%C3%A9e_Th%C3%A9odore-de-Banville"
+    ],
+    "PA00103469": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Laroque_(H%C3%A9rault)",
+      "https://fr.wikipedia.org/wiki/Chapelle_Saint-Jean_de_Laroque"
+    ],
+    "PA00080981": [
+      "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Saint-Sauveur_d%27Aix-en-Provence",
+      "https://fr.wikipedia.org/wiki/Clo%C3%AEtre_Saint-Sauveur_(Aix-en-Provence)"
+    ],
+    "PA00087676": [
+      "https://fr.wikipedia.org/wiki/Couvent_des_R%C3%A9collets_de_Versailles",
+      "https://fr.wikipedia.org/wiki/Grand_Commun"
+    ],
+    "PA00097626": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Champigny-sur-Veude",
+      "https://fr.wikipedia.org/wiki/Sainte-Chapelle_de_Champigny-sur-Veude"
+    ],
+    "PA00095117": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Pierre-%C3%A8s-Liens_des_Junies",
+      "https://fr.wikipedia.org/wiki/Couvent_Notre-Dame_des_Junies"
+    ],
+    "PA00102942": [
+      "https://fr.wikipedia.org/wiki/Remparts_d%27Aigues-Mortes",
+      "https://fr.wikipedia.org/wiki/Tour_de_Constance"
+    ],
+    "PA00112249": [
+      "https://fr.wikipedia.org/wiki/Abbaye_Saint-B%C3%A9nigne_de_Dijon",
+      "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Saint-B%C3%A9nigne_de_Dijon",
+      "https://fr.wikipedia.org/wiki/Palais_abbatial_Saint-B%C3%A9nigne"
+    ],
+    "PA00086494": [
+      "https://fr.wikipedia.org/wiki/H%C3%B4pital_Saint-Louis",
+      "https://fr.wikipedia.org/wiki/R%C3%A9servoir_de_l%27h%C3%B4pital_Saint-Louis"
+    ],
+    "PA00088714": [
+      "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Saint-Louis-des-Invalides",
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_des_Invalides"
+    ],
+    "PA56000079": [
+      "https://fr.wikipedia.org/wiki/253_bis_cit%C3%A9_de_Soye",
+      "https://fr.wikipedia.org/wiki/253_cit%C3%A9_de_Soye",
+      "https://fr.wikipedia.org/wiki/Cit%C3%A9_provisoire_de_Soye"
+    ],
+    "PA00086767": [
+      "https://fr.wikipedia.org/wiki/Fontaine_du_Ch%C3%A2teau_d%27eau_(Pierre-Simon_Girard)",
+      "https://fr.wikipedia.org/wiki/Grande_halle_de_la_Villette"
+    ],
+    "PA00105165": [
+      "https://fr.wikipedia.org/wiki/Phare_des_Baleineaux",
+      "https://fr.wikipedia.org/wiki/Phare_des_Baleines"
+    ],
+    "PA64000117": [
+      "https://fr.wikipedia.org/wiki/Funiculaire_de_Pau",
+      "https://fr.wikipedia.org/wiki/Pavillon_des_Arts_de_Pau"
+    ],
+    "PA00091674": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Gildas_de_Saint-Gildas-de-Rhuys",
+      "https://fr.wikipedia.org/wiki/Abbaye_Saint-Gildas_de_Rhuys"
+    ],
+    "PA00090672": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Notre-Dame-en-Saint-Melaine_de_Rennes",
+      "https://fr.wikipedia.org/wiki/Palais_Saint-Melaine"
+    ],
+    "PA00086585": [
+      "https://fr.wikipedia.org/wiki/Jardin_d%27agronomie_tropicale_de_Paris",
+      "https://fr.wikipedia.org/wiki/Monument_aux_soldats_noirs_morts_pour_la_France",
+      "https://fr.wikipedia.org/wiki/Pavillon_de_La_R%C3%A9union"
+    ],
+    "PA00081179": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Honorat_des_Alyscamps",
+      "https://fr.wikipedia.org/wiki/Alyscamps"
+    ],
+    "PA00086975": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Fontainebleau",
+      "https://fr.wikipedia.org/wiki/Galerie_Fran%C3%A7ois-Ier_(ch%C3%A2teau_de_Fontainebleau)"
+    ],
+    "PA00091075": [
+      "https://fr.wikipedia.org/wiki/Alignement_de_Kerlescan",
+      "https://fr.wikipedia.org/wiki/Dolmen_de_Kerlescan"
+    ],
+    "PA00088141": [
+      "https://fr.wikipedia.org/wiki/Domaine_national_de_Saint-Cloud",
+      "https://fr.wikipedia.org/wiki/Manufacture_nationale_de_S%C3%A8vres"
+    ],
+    "PA00103994": [
+      "https://fr.wikipedia.org/wiki/Fortifications_romaines_des_Cluses",
+      "https://fr.wikipedia.org/wiki/Les_Cluses"
+    ],
+    "PA00104019": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-G%C3%A9nis_d%27Err",
+      "https://fr.wikipedia.org/wiki/Chapelle_Notre-Dame_d%27Err"
+    ],
+    "PA00099045": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Jacques-le-Majeur_de_Courcelles-le-Roi",
+      "https://fr.wikipedia.org/wiki/Chapelle_Saint-Hubert_de_Courcelles-le-Roi"
+    ],
+    "PA00086489": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Vincent-de-Paul_de_Paris",
+      "https://fr.wikipedia.org/wiki/Square_Aristide-Cavaill%C3%A9-Coll"
+    ],
+    "PA00104012": [
+      "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Sainte-Eulalie-et-Sainte-Julie_d%27Elne",
+      "https://fr.wikipedia.org/wiki/Clo%C3%AEtre_d%27Elne"
+    ],
+    "PA02000092": [
+      "https://fr.wikipedia.org/wiki/Chapelle_du_Souvenir_et_lanterne_des_morts_de_Cerny-en-Laonnois",
+      "https://fr.wikipedia.org/wiki/M%C3%A9morial_du_Chemin_des_Dames"
+    ],
+    "PA00086088": [
+      "https://fr.wikipedia.org/wiki/Passage_Choiseul",
+      "https://fr.wikipedia.org/wiki/Passage_Sainte-Anne"
+    ],
+    "PA00114678": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_d%27Ermenonville",
+      "https://fr.wikipedia.org/wiki/Parc_Jean-Jacques-Rousseau"
+    ],
+    "PA00084818": [
+      "https://fr.wikipedia.org/wiki/Camp_de_concentration_de_Natzweiler-Struthof",
+      "https://fr.wikipedia.org/wiki/Villa_Ehret"
+    ],
+    "PA00081518": [
+      "https://fr.wikipedia.org/wiki/Grotte_Cosquer",
+      "https://fr.wikipedia.org/wiki/Grotte_de_la_Triperie",
+      "https://fr.wikipedia.org/wiki/Grotte_du_Figuier_(Marseille)",
+      "https://fr.wikipedia.org/wiki/Grotte_du_Renard"
+    ],
+    "PA00088485": [
+      "https://fr.wikipedia.org/wiki/Chapelle_de_la_Sorbonne",
+      "https://fr.wikipedia.org/wiki/Sorbonne"
+    ],
+    "PA00079877": [
+      "https://fr.wikipedia.org/wiki/Aqueducs_d%27Arcueil_et_de_Cachan",
+      "https://fr.wikipedia.org/wiki/Regard_de_Gentilly"
+    ],
+    "PA00098131": [
+      "https://fr.wikipedia.org/wiki/Tour_Charlemagne",
+      "https://fr.wikipedia.org/wiki/Tour_de_l%27Horloge_(Tours)"
+    ],
+    "PA00103124": [
+      "https://fr.wikipedia.org/wiki/Jardins_de_la_Fontaine",
+      "https://fr.wikipedia.org/wiki/Temple_de_Diane_(N%C3%AEmes)"
+    ],
+    "PA00080947": [
+      "https://fr.wikipedia.org/wiki/Dolmen_de_Mauvans_Sud",
+      "https://fr.wikipedia.org/wiki/Tombe_en_blocs_de_Mauvans_Sud"
+    ],
+    "PA00078254": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_de_la_Madeleine_de_Troyes",
+      "https://fr.wikipedia.org/wiki/Ancien_cimeti%C3%A8re_de_l%27%C3%A9glise_de_la_Madeleine"
+    ],
+    "PA00090458": [
+      "https://fr.wikipedia.org/wiki/Ensemble_m%C3%A9galithique_de_Qu%C3%A9larn",
+      "https://fr.wikipedia.org/wiki/Menhir_de_Qu%C3%A9larn"
+    ],
+    "PA00090173": [
+      "https://fr.wikipedia.org/wiki/Dolmen_de_Tronval",
+      "https://fr.wikipedia.org/wiki/Ensemble_m%C3%A9galithique_de_Qu%C3%A9larn"
+    ],
+    "PA00087037": [
+      "https://fr.wikipedia.org/wiki/Abbaye_Notre-Dame_de_Jouarre",
+      "https://fr.wikipedia.org/wiki/Cryptes_de_Jouarre"
+    ],
+    "PA00113530": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Lay%C3%A9",
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Vinzelles",
+      "https://fr.wikipedia.org/wiki/Domaine_du_ch%C3%A2teau_de_Lay%C3%A9_et_du_Vieux-Ch%C3%A2teau_de_Vinzelles"
+    ],
+    "PA00118339": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_d%27Allinges-Neuf",
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_d%27Allinges-Vieux"
+    ],
+    "PA00110335": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Saint-Quentin-d%27Elle",
+      "https://fr.wikipedia.org/wiki/Chapelle_de_Saint-Quentin-d%27Elle"
+    ],
+    "PA00107488": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-%C3%89loi_de_Dunkerque",
+      "https://fr.wikipedia.org/wiki/Beffroi_de_Dunkerque"
+    ],
+    "PA00104603": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Pierre_d%27Aulnay",
+      "https://fr.wikipedia.org/wiki/Croix_de_cimeti%C3%A8re_d%27Aulnay"
+    ],
+    "PA59000078": [
+      "https://fr.wikipedia.org/wiki/Beffroi_de_l%27h%C3%B4tel_de_ville_de_Lille",
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_ville_de_Lille"
+    ],
+    "PA00086131": [
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_d%27Espinoy",
+      "https://fr.wikipedia.org/wiki/Pavillon_de_la_Reine"
+    ],
+    "PA00090801": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Saint-Malo",
+      "https://fr.wikipedia.org/wiki/Remparts_de_Saint-Malo"
+    ],
+    "PA00113220": [
+      "https://fr.wikipedia.org/wiki/Abbaye_de_Cluny",
+      "https://fr.wikipedia.org/wiki/Cluny_III"
+    ],
+    "PA00091074": [
+      "https://fr.wikipedia.org/wiki/Alignement_de_Toulchignan",
+      "https://fr.wikipedia.org/wiki/Alignement_du_M%C3%A9nec"
+    ],
+    "PA00115727": [
+      "https://fr.wikipedia.org/wiki/Chapelle_de_l%27H%C3%B4pital_g%C3%A9n%C3%A9ral_de_Laon",
+      "https://fr.wikipedia.org/wiki/H%C3%B4pital_g%C3%A9n%C3%A9ral_de_Laon"
+    ],
+    "PA00087014": [
+      "https://fr.wikipedia.org/wiki/Borne_fleurdelys%C3%A9e_no_28_(Grandpuits-Bailly-Carrois)",
+      "https://fr.wikipedia.org/wiki/Borne_fleurdelys%C3%A9e_no_29_(Grandpuits-Bailly-Carrois)"
+    ],
+    "PA00087083": [
+      "https://fr.wikipedia.org/wiki/Pyramide_de_Mauperthuis",
+      "https://fr.wikipedia.org/wiki/Tour_des_Gardes"
+    ],
+    "PA00087251": [
+      "https://fr.wikipedia.org/wiki/Borne_fleurdelys%C3%A9e_no_34_(Rampillon)",
+      "https://fr.wikipedia.org/wiki/Borne_fleurdelys%C3%A9e_no_35_(Rampillon)"
+    ],
+    "PA00087149": [
+      "https://fr.wikipedia.org/wiki/Borne_fleurdelys%C3%A9e_no_25_(Mormant)",
+      "https://fr.wikipedia.org/wiki/Borne_fleurdelys%C3%A9e_no_26_(Mormant)"
+    ],
+    "PA00087905": [
+      "https://fr.wikipedia.org/wiki/Tour_du_Loup_(%C3%89tampes)",
+      "https://fr.wikipedia.org/wiki/Vestiges_des_anciens_remparts_d%27%C3%89tampes"
+    ],
+    "PA00094710": [
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_ville_d%27Auch",
+      "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_municipal_d%27Auch"
+    ],
+    "PA00095198": [
+      "https://fr.wikipedia.org/wiki/Basilique_Saint-Sauveur_de_Rocamadour",
+      "https://fr.wikipedia.org/wiki/Crypte_Saint-Amadour"
+    ],
+    "PA00089548": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_la_Houssaye_(Quessoy)",
+      "https://fr.wikipedia.org/wiki/Colombier_du_ch%C3%A2teau_de_la_Houssaye"
+    ],
+    "PA46000020": [
+      "https://fr.wikipedia.org/wiki/Basilique_Saint-Sauveur_de_Rocamadour",
+      "https://fr.wikipedia.org/wiki/Chapelle_Notre-Dame_de_Rocamadour",
+      "https://fr.wikipedia.org/wiki/Cit%C3%A9_religieuse_de_Rocamadour",
+      "https://fr.wikipedia.org/wiki/Crypte_Saint-Amadour"
+    ],
+    "PA00097777": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_d%27Uzage",
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Bonaventure"
+    ],
+    "PA00097828": [
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_ville_de_Loches",
+      "https://fr.wikipedia.org/wiki/Porte_Picois"
+    ],
+    "PA00097834": [
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_Haincque",
+      "https://fr.wikipedia.org/wiki/Maison_de_la_Chancellerie_(Loches)"
+    ],
+    "PA00099158": [
+      "https://fr.wikipedia.org/wiki/Citadelle_de_Bastia",
+      "https://fr.wikipedia.org/wiki/Palais_des_Gouverneurs_(Bastia)"
+    ],
+    "PA00100377": [
+      "https://fr.wikipedia.org/wiki/Cit%C3%A9_administrative_Blanqui",
+      "https://fr.wikipedia.org/wiki/Grand_s%C3%A9minaire_de_Limoges"
+    ],
+    "PA00106650": [
+      "https://fr.wikipedia.org/wiki/Remparts_de_Vaucouleurs",
+      "https://fr.wikipedia.org/wiki/Tour_des_Anglais_(Vaucouleurs)"
+    ],
+    "PA00108354": [
+      "https://fr.wikipedia.org/wiki/Citadelle_de_Montreuil-sur-Mer",
+      "https://fr.wikipedia.org/wiki/Enceinte_de_Montreuil-sur-Mer"
+    ],
+    "PA00109513": [
+      "https://fr.wikipedia.org/wiki/Menhir_du_Gu%C3%A9_Blandin",
+      "https://fr.wikipedia.org/wiki/Menhir_du_Gu%C3%A9_P%C3%A9an"
+    ],
+    "PA00117327": [
+      "https://fr.wikipedia.org/wiki/Escaliers_antiques_de_Vienne",
+      "https://fr.wikipedia.org/wiki/Jardin_arch%C3%A9ologique_de_Cyb%C3%A8le"
+    ],
+    "PA00111823": [
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel-Dieu_de_Bayeux",
+      "https://fr.wikipedia.org/wiki/S%C3%A9minaire_de_Bayeux"
+    ],
+    "PA50000027": [
+      "https://fr.wikipedia.org/wiki/Chapelle_Saint-Ortaire",
+      "https://fr.wikipedia.org/wiki/Manoir_de_Saint-Ortaire"
+    ],
+    "PA00113150": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Notre-Dame-de-l%27Assomption_d%27Autun",
+      "https://fr.wikipedia.org/wiki/Lyc%C3%A9e_Bonaparte_(Autun)"
+    ],
+    "PA00116450": [
+      "https://fr.wikipedia.org/wiki/%C3%89curie_Thimon",
+      "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+    ],
+    "PA00116525": [
+      "https://fr.wikipedia.org/wiki/Maison_Berges",
+      "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+    ],
+    "PA00090906": [
+      "https://fr.wikipedia.org/wiki/Porte_d%27Embas",
+      "https://fr.wikipedia.org/wiki/Remparts_de_Vitr%C3%A9",
+      "https://fr.wikipedia.org/wiki/Tour_de_la_Bridole"
+    ],
+    "PA00092430": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_du_Mo%C3%BBtier_de_Thiers",
+      "https://fr.wikipedia.org/wiki/Abbaye_du_Moutier"
+    ],
+    "PA00083150": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Nicolas_de_Blasimon",
+      "https://fr.wikipedia.org/wiki/Abbaye_Saint-Maurice_de_Blasimon"
+    ],
+    "PA00106837": [
+      "https://fr.wikipedia.org/wiki/Basses_grilles_de_la_Seille",
+      "https://fr.wikipedia.org/wiki/Enceinte_m%C3%A9di%C3%A9vale_de_Metz",
+      "https://fr.wikipedia.org/wiki/Porte_des_Allemands",
+      "https://fr.wikipedia.org/wiki/Tour_Camoufle",
+      "https://fr.wikipedia.org/wiki/Tour_des_Esprits"
+    ],
+    "PA00108563": [
+      "https://fr.wikipedia.org/wiki/Chapelle_des_Ursulines_d%27Ancenis-Saint-G%C3%A9r%C3%A9on",
+      "https://fr.wikipedia.org/wiki/Couvent_des_Ursulines_de_la_Davrays"
+    ],
+    "PA00125556": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_Mage",
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_la_Servayrie"
+    ],
+    "PA00094233": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Calmont_d%27Olt",
+      "https://fr.wikipedia.org/wiki/Chapelle_de_Calmont-d%27Olt"
+    ],
+    "PA67000099": [
+      "https://fr.wikipedia.org/wiki/Ancien_magasin_Neunreiter",
+      "https://fr.wikipedia.org/wiki/Centre_europ%C3%A9en_d%27actions_artistiques_contemporaines"
+    ],
+    "PA00095412": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Pierre_de_Saint-P%C3%A9-de-Bigorre",
+      "https://fr.wikipedia.org/wiki/Abbaye_de_Saint-P%C3%A9-de-Bigorre"
+    ],
+    "PA00113789": [
+      "https://fr.wikipedia.org/wiki/Abbatiale_Notre-Dame-et-Saint-Edme_de_Pontigny",
+      "https://fr.wikipedia.org/wiki/Abbaye_de_Pontigny"
+    ],
+    "PA00109798": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Notre-Dame_de_la_Couture_du_Mans",
+      "https://fr.wikipedia.org/wiki/Abbaye_Saint-Pierre_de_la_Couture"
+    ],
+    "PA00101165": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Pierre_d%27Airvault",
+      "https://fr.wikipedia.org/wiki/Abbaye_Saint-Pierre_d%27Airvault"
+    ],
+    "PA13000033": [
+      "https://fr.wikipedia.org/wiki/Immeuble_au_11,_rue_Espariat_%C3%A0_Aix-en-Provence",
+      "https://fr.wikipedia.org/wiki/Immeuble_au_13,_rue_Espariat_%C3%A0_Aix-en-Provence",
+      "https://fr.wikipedia.org/wiki/Immeuble_au_15,_rue_Espariat_%C3%A0_Aix-en-Provence",
+      "https://fr.wikipedia.org/wiki/Immeuble_au_9,_rue_Espariat_%C3%A0_Aix-en-Provence",
+      "https://fr.wikipedia.org/wiki/Place_d%27Albertas"
+    ],
+    "PA00087673": [
+      "https://fr.wikipedia.org/wiki/Belv%C3%A9d%C3%A8re_(Petit_Trianon)",
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Versailles",
+      "https://fr.wikipedia.org/wiki/Grand_Trianon",
+      "https://fr.wikipedia.org/wiki/Parc_de_Versailles",
+      "https://fr.wikipedia.org/wiki/Petit_Trianon"
+    ],
+    "PA00079920": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Vincennes",
+      "https://fr.wikipedia.org/wiki/Donjon_de_Vincennes",
+      "https://fr.wikipedia.org/wiki/Sainte-Chapelle_de_Vincennes"
+    ],
+    "PA00117095": [
+      "https://fr.wikipedia.org/wiki/Abbaye_Saint-Ruf_de_Valence",
+      "https://fr.wikipedia.org/wiki/Temple_protestant_Saint-Ruf"
+    ],
+    "PA93000015": [
+      "https://fr.wikipedia.org/wiki/Camp_de_Drancy",
+      "https://fr.wikipedia.org/wiki/Cit%C3%A9_de_la_Muette"
+    ],
+    "PA00086638": [
+      "https://fr.wikipedia.org/wiki/Le_Baiser_(Br%C3%A2ncu%C8%99i)",
+      "https://fr.wikipedia.org/wiki/Moulin_de_la_Charit%C3%A9"
+    ],
+    "PA00079845": [
+      "https://fr.wikipedia.org/wiki/Aqueduc_M%C3%A9dicis",
+      "https://fr.wikipedia.org/wiki/Aqueducs_d%27Arcueil_et_de_Cachan"
+    ],
+    "PA00088431": [
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Cluny",
+      "https://fr.wikipedia.org/wiki/Thermes_de_Cluny"
+    ],
+    "PA00116514": [
+      "https://fr.wikipedia.org/wiki/Grenier_%C3%A0_sel_(P%C3%A9rouges)",
+      "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+    ],
+    "PA00086476": [
+      "https://fr.wikipedia.org/wiki/Place_des_Vosges",
+      "https://fr.wikipedia.org/wiki/Square_Louis-XIII"
+    ],
+    "PA00093593": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Sainte-Croix_de_Saignes",
+      "https://fr.wikipedia.org/wiki/Chapelle_Notre-Dame-du-Ch%C3%A2teau_de_Saignes"
+    ],
+    "PA00082172": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Sainte-Marie_de_Thouzon",
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Thouzon",
+      "https://fr.wikipedia.org/wiki/Chapelle_Saint-Pierre_de_Thouzon"
+    ],
+    "PA00110359": [
+      "https://fr.wikipedia.org/wiki/Abbaye_de_Cerisy-la-For%C3%AAt",
+      "https://fr.wikipedia.org/wiki/Chapelle_Saint-Gerbold_de_Cerisy-la-For%C3%AAt"
+    ],
+    "PA00116523": [
+      "https://fr.wikipedia.org/wiki/Maison_Nicolas",
+      "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+    ],
+    "PA00116526": [
+      "https://fr.wikipedia.org/wiki/Maison_Moschard",
+      "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+    ],
+    "PA00116528": [
+      "https://fr.wikipedia.org/wiki/Maison_Messimy",
+      "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+    ],
+    "PA00116529": [
+      "https://fr.wikipedia.org/wiki/Maison_du_Sergent_de_Justice",
+      "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+    ],
+    "PA00087245": [
+      "https://fr.wikipedia.org/wiki/Chapelle_comtale_de_Provins",
+      "https://fr.wikipedia.org/wiki/Palais_des_comtes_de_Champagne"
+    ],
+    "PA04000013": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Saint-Maime",
+      "https://fr.wikipedia.org/wiki/Chapelle_Sainte-Agathe_de_Saint-Maime"
+    ],
+    "PA00117728": [
+      "https://fr.wikipedia.org/wiki/Chapelle_Saint-Joseph_(Caluire-et-Cuire)",
+      "https://fr.wikipedia.org/wiki/Maison_des_Fr%C3%A8res_des_%C3%89coles_chr%C3%A9tiennes"
+    ],
+    "PA00091248": [
+      "https://fr.wikipedia.org/wiki/Calvaire_de_Locmeltro",
+      "https://fr.wikipedia.org/wiki/Colonnes_de_Locmeltro"
+    ],
+    "PA00105813": [
+      "https://fr.wikipedia.org/wiki/Chapelle_de_l%27Immacul%C3%A9e-Conception_de_Saint-Denis",
+      "https://fr.wikipedia.org/wiki/Pensionnat_de_l%27Immacul%C3%A9e-Conception"
+    ],
+    "PA00108665": [
+      "https://fr.wikipedia.org/wiki/Chapelle_de_l%27Oratoire_(Nantes)",
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_le_Lasseur"
+    ],
+    "PA00099655": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Pompadour",
+      "https://fr.wikipedia.org/wiki/Haras_national_de_Pompadour"
+    ],
+    "PA00109746": [
+      "https://fr.wikipedia.org/wiki/Pierre_Fiche_(Duneau)",
+      "https://fr.wikipedia.org/wiki/Site_arch%C3%A9ologique_de_Duneau"
+    ],
+    "PA11000036": [
+      "https://fr.wikipedia.org/wiki/Carri%C3%A8re_de_marbre_gris_de_Caunes-Minervois",
+      "https://fr.wikipedia.org/wiki/Carri%C3%A8re_du_Roi",
+      "https://fr.wikipedia.org/wiki/Carri%C3%A8re_du_roc_de_Buffens"
+    ],
+    "PA00090243": [
+      "https://fr.wikipedia.org/wiki/Calvaire_de_Plougonven",
+      "https://fr.wikipedia.org/wiki/Enclos_paroissial_de_Plougonven"
+    ],
+    "PA00088909": [
+      "https://fr.wikipedia.org/wiki/Caf%C3%A9_de_la_Paix_(Paris)",
+      "https://fr.wikipedia.org/wiki/InterContinental_Paris_Le_Grand"
+    ],
+    "PA00078827": [
+      "https://fr.wikipedia.org/wiki/Ancienne_%C3%A9glise_Saint-Nicaise_de_Reims",
+      "https://fr.wikipedia.org/wiki/Jardin_des_buttes_Saint-Nicaise"
+    ],
+    "PA00103409": [
+      "https://fr.wikipedia.org/wiki/Aqueduc_de_Castries",
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Castries"
+    ],
+    "PA00094506": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Reynerie",
+      "https://fr.wikipedia.org/wiki/Parc_de_Reynerie"
+    ],
+    "PA00135229": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_la_Montagne_(Saint-Honor%C3%A9-les-Bains)",
+      "https://fr.wikipedia.org/wiki/La_Poterie_de_la_montagne"
+    ],
+    "PA00109801": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_du_Mans",
+      "https://fr.wikipedia.org/wiki/Palais_des_comtes_du_Maine"
+    ],
+    "PA00109744": [
+      "https://fr.wikipedia.org/wiki/Pierre_couverte_(Duneau)",
+      "https://fr.wikipedia.org/wiki/Site_arch%C3%A9ologique_de_Duneau"
+    ],
+    "PA00100439": [
+      "https://fr.wikipedia.org/wiki/Dolmen_de_Chez_Moutaud",
+      "https://fr.wikipedia.org/wiki/Menhir_de_Chez_Moutaud"
+    ],
+    "PA00087524": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Marly",
+      "https://fr.wikipedia.org/wiki/Domaine_national_de_Marly-le-Roi"
+    ],
+    "PA00102568": [
+      "https://fr.wikipedia.org/wiki/Grotte_de_Las_Fons",
+      "https://fr.wikipedia.org/wiki/Grotte_du_Moulin_(Bize)"
+    ],
+    "PA00102043": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Syam",
+      "https://fr.wikipedia.org/wiki/Forges_de_Syam"
+    ],
+    "PA75200003": [
+      "https://fr.wikipedia.org/wiki/Eaux_de_Belleville",
+      "https://fr.wikipedia.org/wiki/R%C3%A9servoir_de_l%27h%C3%B4pital_Saint-Louis",
+      "https://fr.wikipedia.org/wiki/Regard_de_la_Chambrette",
+      "https://fr.wikipedia.org/wiki/Regard_de_la_Planchette",
+      "https://fr.wikipedia.org/wiki/Regard_des_Cascades",
+      "https://fr.wikipedia.org/wiki/Regard_des_Religieux_de_Saint-Martin-des-Champs",
+      "https://fr.wikipedia.org/wiki/Regard_du_Chaudron",
+      "https://fr.wikipedia.org/wiki/Regard_du_Zouave"
+    ],
+    "PA22000027": [
+      "https://fr.wikipedia.org/wiki/Colombier_de_Kerdalo",
+      "https://fr.wikipedia.org/wiki/Jardins_de_Kerdalo"
+    ],
+    "PA70000070": [
+      "https://fr.wikipedia.org/wiki/Cimeti%C3%A8re_de_Pennesi%C3%A8res",
+      "https://fr.wikipedia.org/wiki/Fontaine-lavoir_de_Pennesi%C3%A8res"
+    ],
+    "PA00081825": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Symphorien-les-Carmes_d%27Avignon",
+      "https://fr.wikipedia.org/wiki/Clo%C3%AEtre_des_Carmes"
+    ],
+    "PA62000013": [
+      "https://fr.wikipedia.org/wiki/Hippodrome_de_la_Canche",
+      "https://fr.wikipedia.org/wiki/Tribunes_de_l%27hippodrome_de_la_Canche"
+    ],
+    "PA00083152": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_des_Rudel",
+      "https://fr.wikipedia.org/wiki/Citadelle_de_Blaye",
+      "https://fr.wikipedia.org/wiki/Couvent_des_Minimes_de_Blaye"
+    ],
+    "PA00089998": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Miliau_de_Guimiliau",
+      "https://fr.wikipedia.org/wiki/Enclos_paroissial_de_Guimiliau"
+    ],
+    "PA00100800": [
+      "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Notre-Dame_de_Rouen",
+      "https://fr.wikipedia.org/wiki/Cit%C3%A9_canoniale_de_Rouen"
+    ],
+    "PA00105817": [
+      "https://fr.wikipedia.org/wiki/Jardin_de_l%27%C3%89tat",
+      "https://fr.wikipedia.org/wiki/Mus%C3%A9um_d%27histoire_naturelle_de_La_R%C3%A9union"
+    ],
+    "PA00101077": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Valery_de_Varengeville-sur-Mer",
+      "https://fr.wikipedia.org/wiki/Cimeti%C3%A8re_marin_de_Varengeville-sur-Mer"
+    ],
+    "PA00089415": [
+      "https://fr.wikipedia.org/wiki/Menhirs_de_Saint-Mirel",
+      "https://fr.wikipedia.org/wiki/Pierre_Longue_(Pl%C3%A9n%C3%A9e-Jugon)"
+    ],
+    "PA00088690": [
+      "https://fr.wikipedia.org/wiki/Chapelle_de_l%27h%C3%B4pital_Laennec",
+      "https://fr.wikipedia.org/wiki/Fontaine_du_Fellah",
+      "https://fr.wikipedia.org/wiki/H%C3%B4pital_Laennec_de_Paris"
+    ],
+    "PA74000031": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Montanier",
+      "https://fr.wikipedia.org/wiki/Jardin_botanique_alpin_La_Ja%C3%BFsinia"
+    ],
+    "PA00091126": [
+      "https://fr.wikipedia.org/wiki/Alignement_de_Kerloquet",
+      "https://fr.wikipedia.org/wiki/Alignements_de_Carnac"
+    ],
+    "PA00078428": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Pierre_de_Chuffilly-Roche",
+      "https://fr.wikipedia.org/wiki/Fontaine_Saint-Pierre_de_Chuffilly-Roche"
+    ],
+    "PA00085808": [
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_Batailhe_de_Franc%C3%A8s",
+      "https://fr.wikipedia.org/wiki/Place_Vend%C3%B4me"
+    ],
+    "PA66000022": [
+      "https://fr.wikipedia.org/wiki/Col_de_Panissars",
+      "https://fr.wikipedia.org/wiki/Troph%C3%A9e_de_Pomp%C3%A9e"
+    ],
+    "PA14000027": [
+      "https://fr.wikipedia.org/wiki/Abbaye_aux_Hommes",
+      "https://fr.wikipedia.org/wiki/Monast%C3%A8re_des_Visitandines_de_Caen"
+    ],
+    "PA00116318": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Nicolas-de-Tolentin_de_Brou",
+      "https://fr.wikipedia.org/wiki/Monast%C3%A8re_royal_de_Brou"
+    ],
+    "PA00112276": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Sainte-Anne_de_Dijon",
+      "https://fr.wikipedia.org/wiki/Hospice_Sainte-Anne_(Dijon)",
+      "https://fr.wikipedia.org/wiki/Monast%C3%A8re_des_Bernardines_de_Dijon"
+    ],
+    "PA00116469": [
+      "https://fr.wikipedia.org/wiki/Maison_Gerlier",
+      "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+    ],
+    "PA00106376": [
+      "https://fr.wikipedia.org/wiki/Enceinte_de_Toul",
+      "https://fr.wikipedia.org/wiki/Porte_de_Metz_(Toul)"
+    ],
+    "PA00116470": [
+      "https://fr.wikipedia.org/wiki/Maison_Grezin",
+      "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+    ],
+    "PA00116521": [
+      "https://fr.wikipedia.org/wiki/Maison_Grezin",
+      "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+    ],
+    "PA00116455": [
+      "https://fr.wikipedia.org/wiki/H%C3%B4pital_de_P%C3%A9rouges",
+      "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+    ],
+    "PA00100813": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Cande-le-Jeune_de_Rouen",
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_Asselin"
+    ],
+    "PA00116479": [
+      "https://fr.wikipedia.org/wiki/Maison_Perrin",
+      "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+    ],
+    "PA00100849": [
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_d%27Aligre_(Rouen)",
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Senneville"
+    ],
+    "PA00088789": [
+      "https://fr.wikipedia.org/wiki/Chapelle_Notre-Dame-de-la-M%C3%A9daille-Miraculeuse_de_Paris",
+      "https://fr.wikipedia.org/wiki/Maison_des_Filles_de_la_charit%C3%A9"
+    ],
+    "PA00087380": [
+      "https://fr.wikipedia.org/wiki/Mus%C3%A9e_Ivan-Tourgueniev",
+      "https://fr.wikipedia.org/wiki/Villa_Viardot_(Bougival)"
+    ],
+    "PA00079937": [
+      "https://fr.wikipedia.org/wiki/Mus%C3%A9e_du_Travail",
+      "https://fr.wikipedia.org/wiki/Petit_Ch%C3%A2teau"
+    ],
+    "PA00116079": [
+      "https://fr.wikipedia.org/wiki/Gare_d%27Amiens",
+      "https://fr.wikipedia.org/wiki/Tour_Perret_(Amiens)"
+    ],
+    "PA00116497": [
+      "https://fr.wikipedia.org/wiki/Maison_Vallet",
+      "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+    ],
+    "PA00091806": [
+      "https://fr.wikipedia.org/wiki/Porte_Saint-Vincent_(Vannes)",
+      "https://fr.wikipedia.org/wiki/Remparts_de_Vannes",
+      "https://fr.wikipedia.org/wiki/Tour_du_Conn%C3%A9table_(Vannes)"
+    ],
+    "PA00080457": [
+      "https://fr.wikipedia.org/wiki/Porte_Saint-S%C3%A9bastien_(Riez)",
+      "https://fr.wikipedia.org/wiki/Porte_d%27Aygui%C3%A8res"
+    ],
+    "PA18000048": [
+      "https://fr.wikipedia.org/wiki/Pont-canal_de_La_Croix",
+      "https://fr.wikipedia.org/wiki/Pont-canal_de_La_Tranchasse"
+    ],
+    "PA34000011": [
+      "https://fr.wikipedia.org/wiki/%C3%89cluse_d%27Ognon",
+      "https://fr.wikipedia.org/wiki/Pont-canal_de_l%27Ognon"
+    ],
+    "PA00135305": [
+      "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_ville_de_Brienne-le-Ch%C3%A2teau",
+      "https://fr.wikipedia.org/wiki/Statue_de_Napol%C3%A9on_(Brienne-le-Ch%C3%A2teau)"
+    ],
+    "PA00106809": [
+      "https://fr.wikipedia.org/wiki/%C3%89cole_d%27application_de_l%27artillerie_et_du_g%C3%A9nie",
+      "https://fr.wikipedia.org/wiki/Abbaye_de_Saint-Arnould"
+    ],
+    "PA06000029": [
+      "https://fr.wikipedia.org/wiki/Grotte_de_la_Ratapignata",
+      "https://fr.wikipedia.org/wiki/Pyramide_de_Falicon_et_grotte_de_la_Ratapignata"
+    ],
+    "PA00093993": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Michel_de_Castelnau-P%C3%A9gayrols",
+      "https://fr.wikipedia.org/wiki/Prieur%C3%A9_Saint-Michel_de_Castelnau-P%C3%A9gayrols"
+    ],
+    "PA31000026": [
+      "https://fr.wikipedia.org/wiki/%C3%89cluse_de_Gardouch",
+      "https://fr.wikipedia.org/wiki/Pont-canal_de_Gardouch"
+    ],
+    "PA00087681": [
+      "https://fr.wikipedia.org/wiki/Parc_Balbi",
+      "https://fr.wikipedia.org/wiki/Potager_du_Roi"
+    ],
+    "PA69000053": [
+      "https://fr.wikipedia.org/wiki/Parc_de_la_Cerisaie",
+      "https://fr.wikipedia.org/wiki/Villa_Gillet"
+    ],
+    "PA00116620": [
+      "https://fr.wikipedia.org/wiki/Site_arch%C3%A9ologique_d%27Alba-la-Romaine",
+      "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_gallo-romain_d%27Alba-la-Romaine"
+    ],
+    "PA00103777": [
+      "https://fr.wikipedia.org/wiki/Monument_aux_morts_de_B%C3%A9ziers",
+      "https://fr.wikipedia.org/wiki/Plateau_des_po%C3%A8tes_(B%C3%A9ziers)"
+    ],
+    "PA00088792": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Thomas-d%27Aquin_de_Paris",
+      "https://fr.wikipedia.org/wiki/Noviciat_des_Dominicains"
+    ],
+    "PA00111124": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-%C3%89tienne_de_Caen",
+      "https://fr.wikipedia.org/wiki/Abbaye_aux_Hommes"
+    ],
+    "PA50000084": [
+      "https://fr.wikipedia.org/wiki/%C3%8Ele_du_Large",
+      "https://fr.wikipedia.org/wiki/%C3%8Eles_Saint-Marcouf"
+    ],
+    "PA00135184": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Sainte-Marie_de_Roquefort",
+      "https://fr.wikipedia.org/wiki/Chapelle_Saint-Joseph_de_Roquefort"
+    ],
+    "PA00084970": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Ramstein",
+      "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_l%27Ortenbourg"
+    ],
+    "PA76000060": [
+      "https://fr.wikipedia.org/wiki/%C3%89glise_Sainte-Jeanne-d%27Arc_de_Rouen",
+      "https://fr.wikipedia.org/wiki/Jeanne_au_b%C3%BBcher_(statue)"
+    ],
+    "PA00104612": [
+      "https://fr.wikipedia.org/wiki/Site_gallo-romain_de_Barzan",
+      "https://fr.wikipedia.org/wiki/Temple_du_moulin_du_F%C3%A2"
+    ],
+    "PA02000122": [
+      "https://fr.wikipedia.org/wiki/Cimeti%C3%A8re_militaire_allemand_de_Cerny-en-Laonnois",
+      "https://fr.wikipedia.org/wiki/N%C3%A9cropole_nationale_de_Cerny-en-Laonnois"
+    ],
+    "PA59000220": [
+      "https://fr.wikipedia.org/wiki/Louverval_Military_Cemetery",
+      "https://fr.wikipedia.org/wiki/M%C3%A9morial_de_Louverval"
+    ],
+    "PA59000219": [
+      "https://fr.wikipedia.org/wiki/Cambrai_East_Military_Cemetery",
+      "https://fr.wikipedia.org/wiki/Cimeti%C3%A8re_militaire_allemand_de_Cambrai"
+    ]
+  },
+  "conflicts": [
+    {
+      "reference": "PA00081518",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Grotte_Cosquer",
+        "https://fr.wikipedia.org/wiki/Grotte_de_la_Triperie",
+        "https://fr.wikipedia.org/wiki/Grotte_du_Figuier_(Marseille)",
+        "https://fr.wikipedia.org/wiki/Grotte_du_Renard"
+      ]
+    },
+    {
+      "reference": "PA00088907",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Eug%C3%A8ne-Sainte-C%C3%A9cile",
+      "selected": "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Eug%C3%A8ne-Sainte-C%C3%A9cile_de_Paris",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00086591",
+      "previous": "https://fr.wikipedia.org/wiki/Cit%C3%A9-refuge_de_l'Arm%C3%A9e_du_Salut",
+      "selected": "https://fr.wikipedia.org/wiki/Cit%C3%A9_de_Refuge",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00102942",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Remparts_d%27Aigues-Mortes",
+        "https://fr.wikipedia.org/wiki/Tour_de_Constance"
+      ]
+    },
+    {
+      "reference": "PA00104612",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Site_gallo-romain_de_Barzan",
+        "https://fr.wikipedia.org/wiki/Temple_du_moulin_du_F%C3%A2"
+      ]
+    },
+    {
+      "reference": "PA56000079",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/253_bis_cit%C3%A9_de_Soye",
+        "https://fr.wikipedia.org/wiki/253_cit%C3%A9_de_Soye",
+        "https://fr.wikipedia.org/wiki/Cit%C3%A9_provisoire_de_Soye"
+      ]
+    },
+    {
+      "reference": "PA00086607",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Aqueducs_d%27Arcueil_et_de_Cachan",
+        "https://fr.wikipedia.org/wiki/Maison_du_Fontainier"
+      ]
+    },
+    {
+      "reference": "PA75190001",
+      "previous": "https://fr.wikipedia.org/wiki/Cent_Quatre_(%C3%A9tablissement_culturel)",
+      "selected": "https://fr.wikipedia.org/wiki/Centquatre-Paris",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00086784",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Alexandre_Dumas_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00116450",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89curie_Thimon",
+        "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+      ]
+    },
+    {
+      "reference": "PA00109746",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Pierre_Fiche_(Duneau)",
+        "https://fr.wikipedia.org/wiki/Site_arch%C3%A9ologique_de_Duneau"
+      ]
+    },
+    {
+      "reference": "PA00086787",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Philippe_Auguste_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00111823",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel-Dieu_de_Bayeux",
+        "https://fr.wikipedia.org/wiki/S%C3%A9minaire_de_Bayeux"
+      ]
+    },
+    {
+      "reference": "PA00087146",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Porte_de_Bourgogne_(Moret-sur-Loing)",
+        "https://fr.wikipedia.org/wiki/Porte_de_Paris_(Moret-sur-Loing)"
+      ]
+    },
+    {
+      "reference": "PA00109744",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Pierre_couverte_(Duneau)",
+        "https://fr.wikipedia.org/wiki/Site_arch%C3%A9ologique_de_Duneau"
+      ]
+    },
+    {
+      "reference": "PA00078827",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ancienne_%C3%A9glise_Saint-Nicaise_de_Reims",
+        "https://fr.wikipedia.org/wiki/Jardin_des_buttes_Saint-Nicaise"
+      ]
+    },
+    {
+      "reference": "PA00086613",
+      "previous": "https://fr.wikipedia.org/wiki/Pavillon_de_la_Suisse",
+      "selected": "https://fr.wikipedia.org/wiki/Fondation_suisse",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00112427",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Chapelle_des_%C3%89lus",
+        "https://fr.wikipedia.org/wiki/Palais_des_ducs_et_des_%C3%A9tats_de_Bourgogne",
+        "https://fr.wikipedia.org/wiki/Tour_Philippe_le_Bon"
+      ]
+    },
+    {
+      "reference": "PA00086638",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Le_Baiser_(Br%C3%A2ncu%C8%99i)",
+        "https://fr.wikipedia.org/wiki/Moulin_de_la_Charit%C3%A9"
+      ]
+    },
+    {
+      "reference": "PA00114578",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Chantilly",
+        "https://fr.wikipedia.org/wiki/Domaine_de_Chantilly",
+        "https://fr.wikipedia.org/wiki/Hameau_de_Chantilly"
+      ]
+    },
+    {
+      "reference": "PA00091076",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Alignements_de_Kermario",
+        "https://fr.wikipedia.org/wiki/Dolmen_de_Kermario"
+      ]
+    },
+    {
+      "reference": "PA00112428",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Palais_de_justice_de_Dijon",
+        "https://fr.wikipedia.org/wiki/Parlement_de_Dijon"
+      ]
+    },
+    {
+      "reference": "PA00113789",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Abbatiale_Notre-Dame-et-Saint-Edme_de_Pontigny",
+        "https://fr.wikipedia.org/wiki/Abbaye_de_Pontigny"
+      ]
+    },
+    {
+      "reference": "PA00086546",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Couronnes_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00125556",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_Mage",
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_la_Servayrie"
+      ]
+    },
+    {
+      "reference": "PA00091129",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Menhir_de_Kerlescan",
+        "https://fr.wikipedia.org/wiki/Tumulus_de_Kerlescan"
+      ]
+    },
+    {
+      "reference": "PA00109513",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Menhir_du_Gu%C3%A9_Blandin",
+        "https://fr.wikipedia.org/wiki/Menhir_du_Gu%C3%A9_P%C3%A9an"
+      ]
+    },
+    {
+      "reference": "PA00104019",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-G%C3%A9nis_d%27Err",
+        "https://fr.wikipedia.org/wiki/Chapelle_Notre-Dame_d%27Err"
+      ]
+    },
+    {
+      "reference": "PA00113423",
+      "previous": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Chaumont",
+      "selected": "https://fr.wikipedia.org/wiki/%C3%89curies_du_ch%C3%A2teau_de_Chaumont",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00086600",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Place_d%27Italie_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00110153",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Notre-Dame-de-l%27Assomption_de_Lu%C3%A7on",
+        "https://fr.wikipedia.org/wiki/Palais_%C3%A9piscopal_de_Lu%C3%A7on"
+      ]
+    },
+    {
+      "reference": "PA00086125",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_Le_Peletier_de_Saint-Fargeau",
+        "https://fr.wikipedia.org/wiki/Mus%C3%A9e_Carnavalet"
+      ]
+    },
+    {
+      "reference": "PA02000092",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Chapelle_du_Souvenir_et_lanterne_des_morts_de_Cerny-en-Laonnois",
+        "https://fr.wikipedia.org/wiki/M%C3%A9morial_du_Chemin_des_Dames"
+      ]
+    },
+    {
+      "reference": "PA00086698",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/%C3%89glise_d%27Auteuil_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00103609",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Pont_Vialleton",
+        "https://fr.wikipedia.org/wiki/Promenade_du_Peyrou"
+      ]
+    },
+    {
+      "reference": "PA00102201",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Abbaye_Saint-Pierre-et-Saint-Paul_de_Luxeuil",
+        "https://fr.wikipedia.org/wiki/Basilique_Saint-Pierre_de_Luxeuil-les-Bains",
+        "https://fr.wikipedia.org/wiki/Palais_abbatial_(Luxeuil)"
+      ]
+    },
+    {
+      "reference": "PA00086508",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_d%27Eau_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00086780",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Cimeti%C3%A8re_du_P%C3%A8re-Lachaise",
+        "https://fr.wikipedia.org/wiki/Entr%C3%A9e_principale_du_cimeti%C3%A8re_du_P%C3%A8re-Lachaise",
+        "https://fr.wikipedia.org/wiki/Monument_aux_morts_du_P%C3%A8re-Lachaise",
+        "https://fr.wikipedia.org/wiki/Monument_fun%C3%A9raire_de_Paul_Baudry",
+        "https://fr.wikipedia.org/wiki/Tombe_d%27Adolphe_Thiers",
+        "https://fr.wikipedia.org/wiki/Tombe_du_Dragon"
+      ]
+    },
+    {
+      "reference": "PA00112275",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ancien_h%C3%B4pital_g%C3%A9n%C3%A9ral_de_Dijon",
+        "https://fr.wikipedia.org/wiki/Grande_Chapelle_de_l%27h%C3%B4pital_g%C3%A9n%C3%A9ral_de_Dijon"
+      ]
+    },
+    {
+      "reference": "PA00086725",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Rome_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00103208",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_abbatiale_de_Saint-Gilles_du_Gard",
+        "https://fr.wikipedia.org/wiki/Ancienne_abbaye_de_Saint-Gilles"
+      ]
+    },
+    {
+      "reference": "PA00135715",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89glise_luth%C3%A9rienne_du_Bon-Secours",
+      "selected": "https://fr.wikipedia.org/wiki/%C3%89glise_protestante_de_Bon_Secours",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00088141",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Domaine_national_de_Saint-Cloud",
+        "https://fr.wikipedia.org/wiki/Manufacture_nationale_de_S%C3%A8vres"
+      ]
+    },
+    {
+      "reference": "PA00110608",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Forts_de_la_Hougue_et_de_Tatihou",
+        "https://fr.wikipedia.org/wiki/Tatihou"
+      ]
+    },
+    {
+      "reference": "PA00088792",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Thomas-d%27Aquin_de_Paris",
+        "https://fr.wikipedia.org/wiki/Noviciat_des_Dominicains"
+      ]
+    },
+    {
+      "reference": "PA00101165",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Pierre_d%27Airvault",
+        "https://fr.wikipedia.org/wiki/Abbaye_Saint-Pierre_d%27Airvault"
+      ]
+    },
+    {
+      "reference": "PA00088746",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Lyc%C3%A9e_Paul-Claudel-d%27Hulst",
+        "https://fr.wikipedia.org/wiki/Petit_h%C3%B4tel_de_Villars"
+      ]
+    },
+    {
+      "reference": "PA00078254",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_de_la_Madeleine_de_Troyes",
+        "https://fr.wikipedia.org/wiki/Ancien_cimeti%C3%A8re_de_l%27%C3%A9glise_de_la_Madeleine"
+      ]
+    },
+    {
+      "reference": "PA00112285",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_Chartraire_de_Montigny",
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_du_Commandant_militaire"
+      ]
+    },
+    {
+      "reference": "PA00087905",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Tour_du_Loup_(%C3%89tampes)",
+        "https://fr.wikipedia.org/wiki/Vestiges_des_anciens_remparts_d%27%C3%89tampes"
+      ]
+    },
+    {
+      "reference": "PA00088991",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Cadet_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00084818",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Camp_de_concentration_de_Natzweiler-Struthof",
+        "https://fr.wikipedia.org/wiki/Villa_Ehret"
+      ]
+    },
+    {
+      "reference": "PA00085988",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Louvre_-_Rivoli_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00084970",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Ramstein",
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_l%27Ortenbourg"
+      ]
+    },
+    {
+      "reference": "PA00091138",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/G%C3%A9ant_du_Manio",
+        "https://fr.wikipedia.org/wiki/Quadrilat%C3%A8re_du_Manio",
+        "https://fr.wikipedia.org/wiki/Tumulus_du_Manio"
+      ]
+    },
+    {
+      "reference": "PA00113488",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Abbatiale_St-Philibert_(Tournus)",
+        "https://fr.wikipedia.org/wiki/Abbaye_Saint-Philibert_de_Tournus"
+      ]
+    },
+    {
+      "reference": "PA00085992",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Arc_de_triomphe_du_Carrousel",
+        "https://fr.wikipedia.org/wiki/Palais_du_Louvre"
+      ]
+    },
+    {
+      "reference": "PA00116514",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Grenier_%C3%A0_sel_(P%C3%A9rouges)",
+        "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+      ]
+    },
+    {
+      "reference": "PA00080432",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Crose",
+        "https://fr.wikipedia.org/wiki/Portail_Saint-F%C3%A9lix"
+      ]
+    },
+    {
+      "reference": "PA00090801",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Saint-Malo",
+        "https://fr.wikipedia.org/wiki/Remparts_de_Saint-Malo"
+      ]
+    },
+    {
+      "reference": "PA00086549",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/P%C3%A8re_Lachaise_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00086753",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Place_de_Clichy_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA62000013",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Hippodrome_de_la_Canche",
+        "https://fr.wikipedia.org/wiki/Tribunes_de_l%27hippodrome_de_la_Canche"
+      ]
+    },
+    {
+      "reference": "PA00087037",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Abbaye_Notre-Dame_de_Jouarre",
+        "https://fr.wikipedia.org/wiki/Cryptes_de_Jouarre"
+      ]
+    },
+    {
+      "reference": "PA00094111",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ancien_coll%C3%A8ge_des_j%C3%A9suites_de_Rodez",
+        "https://fr.wikipedia.org/wiki/La_Na%C3%AFade_de_Vors"
+      ]
+    },
+    {
+      "reference": "PA00101466",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Citadelle_de_Besan%C3%A7on",
+        "https://fr.wikipedia.org/wiki/Tour_de_Chamars",
+        "https://fr.wikipedia.org/wiki/Tour_de_Montmart",
+        "https://fr.wikipedia.org/wiki/Tour_de_Rivotte",
+        "https://fr.wikipedia.org/wiki/Tour_des_Cordeliers",
+        "https://fr.wikipedia.org/wiki/Tour_du_Marais"
+      ]
+    },
+    {
+      "reference": "PA00086751",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Blanche_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00086131",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_d%27Espinoy",
+        "https://fr.wikipedia.org/wiki/Pavillon_de_la_Reine"
+      ]
+    },
+    {
+      "reference": "PA00104286",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Cassinomagus",
+        "https://fr.wikipedia.org/wiki/Thermes_de_Chassenon"
+      ]
+    },
+    {
+      "reference": "PA00089888",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Derrien_de_Commana",
+        "https://fr.wikipedia.org/wiki/Enclos_paroissial_de_Commana"
+      ]
+    },
+    {
+      "reference": "PA31000026",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89cluse_de_Gardouch",
+        "https://fr.wikipedia.org/wiki/Pont-canal_de_Gardouch"
+      ]
+    },
+    {
+      "reference": "PA00080780",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Saint-Nicolas_de_Nice",
+        "https://fr.wikipedia.org/wiki/Chapelle_du_tsar%C3%A9vitch_Nicolas_Alexandrovitch_de_Nice"
+      ]
+    },
+    {
+      "reference": "PA00116966",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Palais_id%C3%A9al",
+        "https://fr.wikipedia.org/wiki/Villa_Alicius"
+      ]
+    },
+    {
+      "reference": "PA00085830",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_Heuz%C3%A9_de_Vologer",
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_Marquet_de_Bourgade",
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_Thibert_des_Martrais"
+      ]
+    },
+    {
+      "reference": "PA00100712",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_Homberg",
+        "https://fr.wikipedia.org/wiki/Infirmerie_Saint-Louis"
+      ]
+    },
+    {
+      "reference": "PA00087676",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Couvent_des_R%C3%A9collets_de_Versailles",
+        "https://fr.wikipedia.org/wiki/Grand_Commun"
+      ]
+    },
+    {
+      "reference": "PA00088813",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Augustin_(Paris)",
+      "selected": "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Augustin_de_Paris",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00094233",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Calmont_d%27Olt",
+        "https://fr.wikipedia.org/wiki/Chapelle_de_Calmont-d%27Olt"
+      ]
+    },
+    {
+      "reference": "PA00086747",
+      "previous": "https://fr.wikipedia.org/wiki/March%C3%A9_de_la_Chapelle",
+      "selected": "https://fr.wikipedia.org/wiki/March%C3%A9_de_La_Chapelle",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00116291",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Abbatiale_Notre-Dame_d%27Ambronay",
+        "https://fr.wikipedia.org/wiki/Abbaye_Notre-Dame_d%27Ambronay"
+      ]
+    },
+    {
+      "reference": "PA00088515",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89cole_de_m%C3%A9decine_(b%C3%A2timent)",
+        "https://fr.wikipedia.org/wiki/Biblioth%C3%A8que_interuniversitaire_de_sant%C3%A9"
+      ]
+    },
+    {
+      "reference": "PA00086721",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89cole_normale_de_musique_de_Paris",
+        "https://fr.wikipedia.org/wiki/Salle_Cortot"
+      ]
+    },
+    {
+      "reference": "PA70000001",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Fontaine_Napol%C3%A9on_(Bouligney)",
+        "https://fr.wikipedia.org/wiki/Mairie-lavoir_de_Bouligney"
+      ]
+    },
+    {
+      "reference": "PA00086616",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Carri%C3%A8res_souterraines_des_Capucins",
+        "https://fr.wikipedia.org/wiki/H%C3%B4pital_Cochin"
+      ]
+    },
+    {
+      "reference": "PA00117095",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Abbaye_Saint-Ruf_de_Valence",
+        "https://fr.wikipedia.org/wiki/Temple_protestant_Saint-Ruf"
+      ]
+    },
+    {
+      "reference": "PA30000021",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Aqueduc_de_N%C3%AEmes",
+        "https://fr.wikipedia.org/wiki/Pont_de_la_Combe_Joseph"
+      ]
+    },
+    {
+      "reference": "PA00117728",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Chapelle_Saint-Joseph_(Caluire-et-Cuire)",
+        "https://fr.wikipedia.org/wiki/Maison_des_Fr%C3%A8res_des_%C3%89coles_chr%C3%A9tiennes"
+      ]
+    },
+    {
+      "reference": "PA00086547",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/M%C3%A9nilmontant_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00086570",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Grande_fresque_de_la_gare_de_Lyon",
+        "https://fr.wikipedia.org/wiki/Le_Train_bleu_(restaurant)",
+        "https://fr.wikipedia.org/wiki/Paris-Gare-de-Lyon"
+      ]
+    },
+    {
+      "reference": "PA75110002",
+      "previous": "https://fr.wikipedia.org/wiki/Maison_des_M%C3%A9tallos",
+      "selected": "https://fr.wikipedia.org/wiki/Maison_des_m%C3%A9tallos",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA02000122",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Cimeti%C3%A8re_militaire_allemand_de_Cerny-en-Laonnois",
+        "https://fr.wikipedia.org/wiki/N%C3%A9cropole_nationale_de_Cerny-en-Laonnois"
+      ]
+    },
+    {
+      "reference": "PA00118339",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_d%27Allinges-Neuf",
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_d%27Allinges-Vieux"
+      ]
+    },
+    {
+      "reference": "PA00090672",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Notre-Dame-en-Saint-Melaine_de_Rennes",
+        "https://fr.wikipedia.org/wiki/Palais_Saint-Melaine"
+      ]
+    },
+    {
+      "reference": "PA00106650",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Remparts_de_Vaucouleurs",
+        "https://fr.wikipedia.org/wiki/Tour_des_Anglais_(Vaucouleurs)"
+      ]
+    },
+    {
+      "reference": "PA00087611",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Saint-Germain-en-Laye",
+        "https://fr.wikipedia.org/wiki/Pavillon_de_la_Muette"
+      ]
+    },
+    {
+      "reference": "PA00116479",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Maison_Perrin",
+        "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+      ]
+    },
+    {
+      "reference": "PA00088392",
+      "previous": "https://fr.wikipedia.org/wiki/Abbaye_du_Val-de-Gr%C3%A2ce",
+      "selected": "https://fr.wikipedia.org/wiki/%C3%89glise_Notre-Dame_du_Val-de-Gr%C3%A2ce",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA93000017",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Cath%C3%A9drales_du_Rail",
+        "https://fr.wikipedia.org/wiki/D%C3%A9p%C3%B4t_de_La_Plaine"
+      ]
+    },
+    {
+      "reference": "PA00086752",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Pigalle_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00086785",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Avron_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00079845",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Aqueduc_M%C3%A9dicis",
+        "https://fr.wikipedia.org/wiki/Aqueducs_d%27Arcueil_et_de_Cachan"
+      ]
+    },
+    {
+      "reference": "PA00106374",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Saint-%C3%89tienne_de_Toul",
+        "https://fr.wikipedia.org/wiki/Coll%C3%A9giale_Saint-Gengoult_de_Toul"
+      ]
+    },
+    {
+      "reference": "PA00086541",
+      "previous": "https://fr.wikipedia.org/wiki/Cour_de_l'%C3%89toile_d'or",
+      "selected": "https://fr.wikipedia.org/wiki/Cour_de_l%27%C3%89toile-d%27Or",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00087251",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Borne_fleurdelys%C3%A9e_no_34_(Rampillon)",
+        "https://fr.wikipedia.org/wiki/Borne_fleurdelys%C3%A9e_no_35_(Rampillon)"
+      ]
+    },
+    {
+      "reference": "PA00107488",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-%C3%89loi_de_Dunkerque",
+        "https://fr.wikipedia.org/wiki/Beffroi_de_Dunkerque"
+      ]
+    },
+    {
+      "reference": "PA00083657",
+      "previous": "https://fr.wikipedia.org/wiki/Cit%C3%A9_Frug%C3%A8s_%C3%A0_Pessac",
+      "selected": "https://fr.wikipedia.org/wiki/Cit%C3%A9_Frug%C3%A8s",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00087673",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Belv%C3%A9d%C3%A8re_(Petit_Trianon)",
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Versailles",
+        "https://fr.wikipedia.org/wiki/Grand_Trianon",
+        "https://fr.wikipedia.org/wiki/Parc_de_Versailles",
+        "https://fr.wikipedia.org/wiki/Petit_Trianon"
+      ]
+    },
+    {
+      "reference": "PA00086771",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Pr%C3%A9-Saint-Gervais_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00086700",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Mirabeau_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00091179",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Alignement_de_la_Table_du_sacrifice",
+        "https://fr.wikipedia.org/wiki/Alignements_de_Kerz%C3%A9rho"
+      ]
+    },
+    {
+      "reference": "PA00106837",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Basses_grilles_de_la_Seille",
+        "https://fr.wikipedia.org/wiki/Enceinte_m%C3%A9di%C3%A9vale_de_Metz",
+        "https://fr.wikipedia.org/wiki/Porte_des_Allemands",
+        "https://fr.wikipedia.org/wiki/Tour_Camoufle",
+        "https://fr.wikipedia.org/wiki/Tour_des_Esprits"
+      ]
+    },
+    {
+      "reference": "PA00111124",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-%C3%89tienne_de_Caen",
+        "https://fr.wikipedia.org/wiki/Abbaye_aux_Hommes"
+      ]
+    },
+    {
+      "reference": "PA00091009",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Manoir_de_Kerl%C3%A9ano",
+        "https://fr.wikipedia.org/wiki/Monument_de_Cadoudal"
+      ]
+    },
+    {
+      "reference": "PA00112249",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Abbaye_Saint-B%C3%A9nigne_de_Dijon",
+        "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Saint-B%C3%A9nigne_de_Dijon",
+        "https://fr.wikipedia.org/wiki/Palais_abbatial_Saint-B%C3%A9nigne"
+      ]
+    },
+    {
+      "reference": "PA00113150",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Notre-Dame-de-l%27Assomption_d%27Autun",
+        "https://fr.wikipedia.org/wiki/Lyc%C3%A9e_Bonaparte_(Autun)"
+      ]
+    },
+    {
+      "reference": "PA00086585",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Jardin_d%27agronomie_tropicale_de_Paris",
+        "https://fr.wikipedia.org/wiki/Monument_aux_soldats_noirs_morts_pour_la_France",
+        "https://fr.wikipedia.org/wiki/Pavillon_de_La_R%C3%A9union"
+      ]
+    },
+    {
+      "reference": "PA00100209",
+      "previous": "https://fr.wikipedia.org/wiki/Porte_de_Puy-Charraud",
+      "selected": "https://fr.wikipedia.org/wiki/Porte_du_Puycharraud",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00088402",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_des_Saints-Archanges",
+        "https://fr.wikipedia.org/wiki/Coll%C3%A8ge_de_Beauvais"
+      ]
+    },
+    {
+      "reference": "PA00082172",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Sainte-Marie_de_Thouzon",
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Thouzon",
+        "https://fr.wikipedia.org/wiki/Chapelle_Saint-Pierre_de_Thouzon"
+      ]
+    },
+    {
+      "reference": "PA00102043",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Syam",
+        "https://fr.wikipedia.org/wiki/Forges_de_Syam"
+      ]
+    },
+    {
+      "reference": "PA00100335",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Pierre-du-S%C3%A9pulcre_de_Limoges",
+        "https://fr.wikipedia.org/wiki/Chapelle_Saint-Beno%C3%AEt_de_Limoges"
+      ]
+    },
+    {
+      "reference": "PA00086009",
+      "previous": "https://fr.wikipedia.org/wiki/Biblioth%C3%A8que_nationale_de_France%23Site_Richelieu_%2F_Louvois",
+      "selected": "https://fr.wikipedia.org/wiki/H%C3%B4tel_Tubeuf_(rue_des_Petits-Champs)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00093593",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Sainte-Croix_de_Saignes",
+        "https://fr.wikipedia.org/wiki/Chapelle_Notre-Dame-du-Ch%C3%A2teau_de_Saignes"
+      ]
+    },
+    {
+      "reference": "PA00116620",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Site_arch%C3%A9ologique_d%27Alba-la-Romaine",
+        "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_gallo-romain_d%27Alba-la-Romaine"
+      ]
+    },
+    {
+      "reference": "PA00085991",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Conciergerie_de_Paris",
+        "https://fr.wikipedia.org/wiki/Grand-Salle_du_Palais_de_la_Cit%C3%A9",
+        "https://fr.wikipedia.org/wiki/Palais_de_justice_de_Paris"
+      ]
+    },
+    {
+      "reference": "PA00086757",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89lys%C3%A9e_Montmartre",
+      "selected": "https://fr.wikipedia.org/wiki/%C3%89lys%C3%A9e-Montmartre",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00113530",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Lay%C3%A9",
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Vinzelles",
+        "https://fr.wikipedia.org/wiki/Domaine_du_ch%C3%A2teau_de_Lay%C3%A9_et_du_Vieux-Ch%C3%A2teau_de_Vinzelles"
+      ]
+    },
+    {
+      "reference": "PA00086726",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Ternes_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00086510",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Gare_du_Nord_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00078428",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Pierre_de_Chuffilly-Roche",
+        "https://fr.wikipedia.org/wiki/Fontaine_Saint-Pierre_de_Chuffilly-Roche"
+      ]
+    },
+    {
+      "reference": "PA00086748",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Abbesses_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00100439",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Dolmen_de_Chez_Moutaud",
+        "https://fr.wikipedia.org/wiki/Menhir_de_Chez_Moutaud"
+      ]
+    },
+    {
+      "reference": "PA00090870",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Grand_B%C3%A9",
+        "https://fr.wikipedia.org/wiki/Tombeau_de_Chateaubriand"
+      ]
+    },
+    {
+      "reference": "PA00087380",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Mus%C3%A9e_Ivan-Tourgueniev",
+        "https://fr.wikipedia.org/wiki/Villa_Viardot_(Bougival)"
+      ]
+    },
+    {
+      "reference": "PA00109552",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Enceinte_de_Laval",
+        "https://fr.wikipedia.org/wiki/Porte_Beucheresse",
+        "https://fr.wikipedia.org/wiki/Tour_Belot-Oissel",
+        "https://fr.wikipedia.org/wiki/Tour_Rennaise"
+      ]
+    },
+    {
+      "reference": "PA00100849",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_d%27Aligre_(Rouen)",
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Senneville"
+      ]
+    },
+    {
+      "reference": "PA59000220",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Louverval_Military_Cemetery",
+        "https://fr.wikipedia.org/wiki/M%C3%A9morial_de_Louverval"
+      ]
+    },
+    {
+      "reference": "PA00079987",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Abbaye_de_Royaumont",
+        "https://fr.wikipedia.org/wiki/Palais_abbatial_de_Royaumont"
+      ]
+    },
+    {
+      "reference": "PA00099158",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Citadelle_de_Bastia",
+        "https://fr.wikipedia.org/wiki/Palais_des_Gouverneurs_(Bastia)"
+      ]
+    },
+    {
+      "reference": "PA00089548",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_la_Houssaye_(Quessoy)",
+        "https://fr.wikipedia.org/wiki/Colombier_du_ch%C3%A2teau_de_la_Houssaye"
+      ]
+    },
+    {
+      "reference": "PA00109798",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Notre-Dame_de_la_Couture_du_Mans",
+        "https://fr.wikipedia.org/wiki/Abbaye_Saint-Pierre_de_la_Couture"
+      ]
+    },
+    {
+      "reference": "PA00135370",
+      "previous": "https://fr.wikipedia.org/wiki/Maison_Eymonaud_(Paris)",
+      "selected": "https://fr.wikipedia.org/wiki/Maison_Eymonaud",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00110359",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Abbaye_de_Cerisy-la-For%C3%AAt",
+        "https://fr.wikipedia.org/wiki/Chapelle_Saint-Gerbold_de_Cerisy-la-For%C3%AAt"
+      ]
+    },
+    {
+      "reference": "PA00089415",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Menhirs_de_Saint-Mirel",
+        "https://fr.wikipedia.org/wiki/Pierre_Longue_(Pl%C3%A9n%C3%A9e-Jugon)"
+      ]
+    },
+    {
+      "reference": "PA00097777",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_d%27Uzage",
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Bonaventure"
+      ]
+    },
+    {
+      "reference": "PA00103409",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Aqueduc_de_Castries",
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Castries"
+      ]
+    },
+    {
+      "reference": "PA00103291",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Aqueduc_de_N%C3%AEmes",
+        "https://fr.wikipedia.org/wiki/Pont_du_Gard"
+      ]
+    },
+    {
+      "reference": "PA00087681",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Parc_Balbi",
+        "https://fr.wikipedia.org/wiki/Potager_du_Roi"
+      ]
+    },
+    {
+      "reference": "PA00103124",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Jardins_de_la_Fontaine",
+        "https://fr.wikipedia.org/wiki/Temple_de_Diane_(N%C3%AEmes)"
+      ]
+    },
+    {
+      "reference": "PA04000013",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Saint-Maime",
+        "https://fr.wikipedia.org/wiki/Chapelle_Sainte-Agathe_de_Saint-Maime"
+      ]
+    },
+    {
+      "reference": "PA00086724",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Monceau_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA69000053",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Parc_de_la_Cerisaie",
+        "https://fr.wikipedia.org/wiki/Villa_Gillet"
+      ]
+    },
+    {
+      "reference": "PA00083150",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Nicolas_de_Blasimon",
+        "https://fr.wikipedia.org/wiki/Abbaye_Saint-Maurice_de_Blasimon"
+      ]
+    },
+    {
+      "reference": "PA00086583",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Fa%C3%A7ade_du_palais_de_la_Porte-Dor%C3%A9e",
+        "https://fr.wikipedia.org/wiki/Palais_de_la_Porte-Dor%C3%A9e"
+      ]
+    },
+    {
+      "reference": "PA50000084",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%8Ele_du_Large",
+        "https://fr.wikipedia.org/wiki/%C3%8Eles_Saint-Marcouf"
+      ]
+    },
+    {
+      "reference": "PA00080693",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Abbaye_de_L%C3%A9rins",
+        "https://fr.wikipedia.org/wiki/Monast%C3%A8re_fortifi%C3%A9_de_l%27abbaye_de_L%C3%A9rins"
+      ]
+    },
+    {
+      "reference": "PA00125453",
+      "previous": "https://fr.wikipedia.org/wiki/M%C3%A9morial_des_Martyrs_de_la_D%C3%A9portation",
+      "selected": "https://fr.wikipedia.org/wiki/M%C3%A9morial_des_martyrs_de_la_d%C3%A9portation",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00085838",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_Boffrand",
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_S%C3%A9gur"
+      ]
+    },
+    {
+      "reference": "PA00114678",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_d%27Ermenonville",
+        "https://fr.wikipedia.org/wiki/Parc_Jean-Jacques-Rousseau"
+      ]
+    },
+    {
+      "reference": "PA00116525",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Maison_Berges",
+        "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+      ]
+    },
+    {
+      "reference": "PA00116455",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/H%C3%B4pital_de_P%C3%A9rouges",
+        "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+      ]
+    },
+    {
+      "reference": "PA00100377",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Cit%C3%A9_administrative_Blanqui",
+        "https://fr.wikipedia.org/wiki/Grand_s%C3%A9minaire_de_Limoges"
+      ]
+    },
+    {
+      "reference": "PA00104603",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Pierre_d%27Aulnay",
+        "https://fr.wikipedia.org/wiki/Croix_de_cimeti%C3%A8re_d%27Aulnay"
+      ]
+    },
+    {
+      "reference": "PA00085826",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_Crozat",
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Gramont_(Paris)",
+        "https://fr.wikipedia.org/wiki/Ritz_Paris"
+      ]
+    },
+    {
+      "reference": "PA00108563",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Chapelle_des_Ursulines_d%27Ancenis-Saint-G%C3%A9r%C3%A9on",
+        "https://fr.wikipedia.org/wiki/Couvent_des_Ursulines_de_la_Davrays"
+      ]
+    },
+    {
+      "reference": "PA00099045",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Jacques-le-Majeur_de_Courcelles-le-Roi",
+        "https://fr.wikipedia.org/wiki/Chapelle_Saint-Hubert_de_Courcelles-le-Roi"
+      ]
+    },
+    {
+      "reference": "PA00106099",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Arc_H%C3%A9r%C3%A9",
+        "https://fr.wikipedia.org/wiki/Place_Stanislas",
+        "https://fr.wikipedia.org/wiki/Place_de_la_Carri%C3%A8re"
+      ]
+    },
+    {
+      "reference": "PA00085808",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_Batailhe_de_Franc%C3%A8s",
+        "https://fr.wikipedia.org/wiki/Place_Vend%C3%B4me"
+      ]
+    },
+    {
+      "reference": "PA18000048",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Pont-canal_de_La_Croix",
+        "https://fr.wikipedia.org/wiki/Pont-canal_de_La_Tranchasse"
+      ]
+    },
+    {
+      "reference": "PA13000033",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Immeuble_au_11,_rue_Espariat_%C3%A0_Aix-en-Provence",
+        "https://fr.wikipedia.org/wiki/Immeuble_au_13,_rue_Espariat_%C3%A0_Aix-en-Provence",
+        "https://fr.wikipedia.org/wiki/Immeuble_au_15,_rue_Espariat_%C3%A0_Aix-en-Provence",
+        "https://fr.wikipedia.org/wiki/Immeuble_au_9,_rue_Espariat_%C3%A0_Aix-en-Provence",
+        "https://fr.wikipedia.org/wiki/Place_d%27Albertas"
+      ]
+    },
+    {
+      "reference": "PA00086086",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/R%C3%A9aumur_-_S%C3%A9bastopol_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00086770",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Jaur%C3%A8s_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA22000027",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Colombier_de_Kerdalo",
+        "https://fr.wikipedia.org/wiki/Jardins_de_Kerdalo"
+      ]
+    },
+    {
+      "reference": "PA00092430",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_du_Mo%C3%BBtier_de_Thiers",
+        "https://fr.wikipedia.org/wiki/Abbaye_du_Moutier"
+      ]
+    },
+    {
+      "reference": "PA00106376",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Enceinte_de_Toul",
+        "https://fr.wikipedia.org/wiki/Porte_de_Metz_(Toul)"
+      ]
+    },
+    {
+      "reference": "PA00094506",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Reynerie",
+        "https://fr.wikipedia.org/wiki/Parc_de_Reynerie"
+      ]
+    },
+    {
+      "reference": "PA00088993",
+      "previous": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_Gr%C3%A9vin",
+      "selected": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_Gr%C3%A9vin",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00109848",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Saint-Julien_du_Mans",
+        "https://fr.wikipedia.org/wiki/Pierre_Saint-Julien"
+      ]
+    },
+    {
+      "reference": "PA00086578",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Gare_de_Lyon_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA67000099",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ancien_magasin_Neunreiter",
+        "https://fr.wikipedia.org/wiki/Centre_europ%C3%A9en_d%27actions_artistiques_contemporaines"
+      ]
+    },
+    {
+      "reference": "PA00086975",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Fontainebleau",
+        "https://fr.wikipedia.org/wiki/Galerie_Fran%C3%A7ois-Ier_(ch%C3%A2teau_de_Fontainebleau)"
+      ]
+    },
+    {
+      "reference": "PA00091126",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Alignement_de_Kerloquet",
+        "https://fr.wikipedia.org/wiki/Alignements_de_Carnac"
+      ]
+    },
+    {
+      "reference": "PA00103469",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Laroque_(H%C3%A9rault)",
+        "https://fr.wikipedia.org/wiki/Chapelle_Saint-Jean_de_Laroque"
+      ]
+    },
+    {
+      "reference": "PA00088909",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Caf%C3%A9_de_la_Paix_(Paris)",
+        "https://fr.wikipedia.org/wiki/InterContinental_Paris_Le_Grand"
+      ]
+    },
+    {
+      "reference": "PA00086696",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Chardon-Lagache_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00086551",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Richard-Lenoir_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00083909",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Bourran",
+        "https://fr.wikipedia.org/wiki/Parc_de_Bourran"
+      ]
+    },
+    {
+      "reference": "PA00102638",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Abbatiale_Saint-Pierre-et-Saint-Paul_de_Caunes-Minervois",
+        "https://fr.wikipedia.org/wiki/Abbaye_Saint-Pierre-Saint-Paul_de_Caunes-Minervois"
+      ]
+    },
+    {
+      "reference": "PA00085780",
+      "previous": "https://fr.wikipedia.org/wiki/Tribunal_de_grande_instance_de_Mulhouse",
+      "selected": "https://fr.wikipedia.org/wiki/Tribunal_judiciaire_de_Mulhouse",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00113220",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Abbaye_de_Cluny",
+        "https://fr.wikipedia.org/wiki/Cluny_III"
+      ]
+    },
+    {
+      "reference": "PA00135229",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_la_Montagne_(Saint-Honor%C3%A9-les-Bains)",
+        "https://fr.wikipedia.org/wiki/La_Poterie_de_la_montagne"
+      ]
+    },
+    {
+      "reference": "PA00086614",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89glise_Notre-Dame-du-Travail_(Paris)",
+      "selected": "https://fr.wikipedia.org/wiki/%C3%89glise_Notre-Dame-du-Travail_de_Paris",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00086727",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Villiers_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA50000027",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Chapelle_Saint-Ortaire",
+        "https://fr.wikipedia.org/wiki/Manoir_de_Saint-Ortaire"
+      ]
+    },
+    {
+      "reference": "PA00103093",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Aqueduc_de_N%C3%AEmes",
+        "https://fr.wikipedia.org/wiki/Castellum_divisorium_de_N%C3%AEmes"
+      ]
+    },
+    {
+      "reference": "PA00086471",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Cit%C3%A9_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00088431",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Cluny",
+        "https://fr.wikipedia.org/wiki/Thermes_de_Cluny"
+      ]
+    },
+    {
+      "reference": "PA00088697",
+      "previous": "https://fr.wikipedia.org/wiki/H%C3%B4tel_Biron",
+      "selected": "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Biron",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00135184",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Sainte-Marie_de_Roquefort",
+        "https://fr.wikipedia.org/wiki/Chapelle_Saint-Joseph_de_Roquefort"
+      ]
+    },
+    {
+      "reference": "PA00101077",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Valery_de_Varengeville-sur-Mer",
+        "https://fr.wikipedia.org/wiki/Cimeti%C3%A8re_marin_de_Varengeville-sur-Mer"
+      ]
+    },
+    {
+      "reference": "PA75140003",
+      "previous": "https://fr.wikipedia.org/wiki/Fondation_Deutsch_de_la_Meurthe",
+      "selected": "https://fr.wikipedia.org/wiki/Fondation_%C3%89mile_et_Louise_Deutsch",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA92000013",
+      "previous": "https://ace.wikipedia.org/wiki/Facult%C3%A9_de_droit%2C_d'%C3%A9conomie_et_de_gestion_de_Paris-Cit%C3%A9",
+      "selected": "https://fr.wikipedia.org/wiki/Facult%C3%A9_de_droit,_d%27%C3%A9conomie_et_de_gestion_de_Paris-Cit%C3%A9",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00088482",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Fontaine_aux_lions_(jardin_des_plantes_de_Paris)",
+        "https://fr.wikipedia.org/wiki/Galerie_de_Pal%C3%A9ontologie_et_d%27Anatomie_compar%C3%A9e",
+        "https://fr.wikipedia.org/wiki/Gloriette_de_Buffon",
+        "https://fr.wikipedia.org/wiki/Grande_galerie_de_l%27%C3%89volution",
+        "https://fr.wikipedia.org/wiki/Grandes_serres_du_Jardin_des_plantes",
+        "https://fr.wikipedia.org/wiki/Jardin_des_plantes_de_Paris",
+        "https://fr.wikipedia.org/wiki/M%C3%A9nagerie_du_Jardin_des_plantes",
+        "https://fr.wikipedia.org/wiki/Maison_de_Buffon",
+        "https://fr.wikipedia.org/wiki/Maison_des_Nouveaux-Convertis"
+      ]
+    },
+    {
+      "reference": "PA00081825",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Symphorien-les-Carmes_d%27Avignon",
+        "https://fr.wikipedia.org/wiki/Clo%C3%AEtre_des_Carmes"
+      ]
+    },
+    {
+      "reference": "PA00105817",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Jardin_de_l%27%C3%89tat",
+        "https://fr.wikipedia.org/wiki/Mus%C3%A9um_d%27histoire_naturelle_de_La_R%C3%A9union"
+      ]
+    },
+    {
+      "reference": "PA00090906",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Porte_d%27Embas",
+        "https://fr.wikipedia.org/wiki/Remparts_de_Vitr%C3%A9",
+        "https://fr.wikipedia.org/wiki/Tour_de_la_Bridole"
+      ]
+    },
+    {
+      "reference": "PA00089998",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Miliau_de_Guimiliau",
+        "https://fr.wikipedia.org/wiki/Enclos_paroissial_de_Guimiliau"
+      ]
+    },
+    {
+      "reference": "PA75140005",
+      "previous": "https://fr.wikipedia.org/wiki/Maison_du_Br%C3%A9sil",
+      "selected": "https://fr.wikipedia.org/wiki/Maison_du_Br%C3%A9sil_(Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00088477",
+      "previous": "https://fr.wikipedia.org/wiki/Lyc%C3%A9e_Louis-le-Grand",
+      "selected": "https://fr.wikipedia.org/wiki/Coll%C3%A8ge_Louis-le-Grand",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00088490",
+      "previous": "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Saint-Vladimir-le-Grand",
+      "selected": "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Saint-Vladimir-le-Grand_de_Paris",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00099112",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Alignement_d%27I_Stantari",
+        "https://fr.wikipedia.org/wiki/Alignement_de_Rinaghju"
+      ]
+    },
+    {
+      "reference": "PA00116128",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Abbaye_du_Gard",
+        "https://fr.wikipedia.org/wiki/Chartreuse_de_Notre-Dame_du_Gard"
+      ]
+    },
+    {
+      "reference": "PA00090458",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ensemble_m%C3%A9galithique_de_Qu%C3%A9larn",
+        "https://fr.wikipedia.org/wiki/Menhir_de_Qu%C3%A9larn"
+      ]
+    },
+    {
+      "reference": "PA00103777",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Monument_aux_morts_de_B%C3%A9ziers",
+        "https://fr.wikipedia.org/wiki/Plateau_des_po%C3%A8tes_(B%C3%A9ziers)"
+      ]
+    },
+    {
+      "reference": "PA00086576",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Bastille_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00086548",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Parmentier_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA93000015",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Camp_de_Drancy",
+        "https://fr.wikipedia.org/wiki/Cit%C3%A9_de_la_Muette"
+      ]
+    },
+    {
+      "reference": "PA75200002",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Jean-Bosco_(Paris)",
+      "selected": "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Jean-Bosco_de_Paris",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA75190002",
+      "previous": "https://fr.wikipedia.org/wiki/Piscine_Pailleron",
+      "selected": "https://fr.wikipedia.org/wiki/Espace_sportif_Pailleron",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00080457",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Porte_Saint-S%C3%A9bastien_(Riez)",
+        "https://fr.wikipedia.org/wiki/Porte_d%27Aygui%C3%A8res"
+      ]
+    },
+    {
+      "reference": "PA00086750",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Barb%C3%A8s_-_Rochechouart_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00080856",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Sauveur_de_Saorge",
+        "https://fr.wikipedia.org/wiki/Chapelle_Saint-Jacques_des_P%C3%A9nitents_blancs_de_Saorge"
+      ]
+    },
+    {
+      "reference": "PA00110335",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Saint-Quentin-d%27Elle",
+        "https://fr.wikipedia.org/wiki/Chapelle_de_Saint-Quentin-d%27Elle"
+      ]
+    },
+    {
+      "reference": "PA00115727",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Chapelle_de_l%27H%C3%B4pital_g%C3%A9n%C3%A9ral_de_Laon",
+        "https://fr.wikipedia.org/wiki/H%C3%B4pital_g%C3%A9n%C3%A9ral_de_Laon"
+      ]
+    },
+    {
+      "reference": "PA00086657",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Pasteur_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA75200003",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Eaux_de_Belleville",
+        "https://fr.wikipedia.org/wiki/R%C3%A9servoir_de_l%27h%C3%B4pital_Saint-Louis",
+        "https://fr.wikipedia.org/wiki/Regard_de_la_Chambrette",
+        "https://fr.wikipedia.org/wiki/Regard_de_la_Planchette",
+        "https://fr.wikipedia.org/wiki/Regard_des_Cascades",
+        "https://fr.wikipedia.org/wiki/Regard_des_Religieux_de_Saint-Martin-des-Champs",
+        "https://fr.wikipedia.org/wiki/Regard_du_Chaudron",
+        "https://fr.wikipedia.org/wiki/Regard_du_Zouave"
+      ]
+    },
+    {
+      "reference": "PA00085030",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_catholique_Saint-Pierre-le-Jeune_de_Strasbourg",
+        "https://fr.wikipedia.org/wiki/%C3%89glise_protestante_Saint-Pierre-le-Jeune_de_Strasbourg"
+      ]
+    },
+    {
+      "reference": "PA00086699",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Kl%C3%A9ber_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00085464",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Wahlenbourg",
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Weckmund"
+      ]
+    },
+    {
+      "reference": "PA70000029",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Abbaye_Notre-Dame-de-la-Charit%C3%A9_de_Neuvelle-l%C3%A8s-la-Charit%C3%A9",
+        "https://fr.wikipedia.org/wiki/Grange_cistercienne_de_Fontaine-Robert"
+      ]
+    },
+    {
+      "reference": "PA11000036",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Carri%C3%A8re_de_marbre_gris_de_Caunes-Minervois",
+        "https://fr.wikipedia.org/wiki/Carri%C3%A8re_du_Roi",
+        "https://fr.wikipedia.org/wiki/Carri%C3%A8re_du_roc_de_Buffens"
+      ]
+    },
+    {
+      "reference": "PA00116528",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Maison_Messimy",
+        "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+      ]
+    },
+    {
+      "reference": "PA34000017",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_des_Gaucelm",
+        "https://fr.wikipedia.org/wiki/Mus%C3%A9e_de_la_Tour_des_Prisons"
+      ]
+    },
+    {
+      "reference": "PA00085990",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Tuileries_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00097626",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Champigny-sur-Veude",
+        "https://fr.wikipedia.org/wiki/Sainte-Chapelle_de_Champigny-sur-Veude"
+      ]
+    },
+    {
+      "reference": "PA00086695",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Boissi%C3%A8re_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00090243",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Calvaire_de_Plougonven",
+        "https://fr.wikipedia.org/wiki/Enclos_paroissial_de_Plougonven"
+      ]
+    },
+    {
+      "reference": "PA00116529",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Maison_du_Sergent_de_Justice",
+        "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+      ]
+    },
+    {
+      "reference": "PA00082403",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Abbaye_Saint-Pierre_de_Brant%C3%B4me",
+        "https://fr.wikipedia.org/wiki/Pont_coud%C3%A9_de_Brant%C3%B4me"
+      ]
+    },
+    {
+      "reference": "PA00086093",
+      "previous": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_national_de_l'Op%C3%A9ra-Comique",
+      "selected": "https://fr.wikipedia.org/wiki/Salle_Favart",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00086768",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Botzaris_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00105165",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Phare_des_Baleineaux",
+        "https://fr.wikipedia.org/wiki/Phare_des_Baleines"
+      ]
+    },
+    {
+      "reference": "PA00086767",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Fontaine_du_Ch%C3%A2teau_d%27eau_(Pierre-Simon_Girard)",
+        "https://fr.wikipedia.org/wiki/Grande_halle_de_la_Villette"
+      ]
+    },
+    {
+      "reference": "PA75170005",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89glise_Sainte-Odile_(Paris)",
+      "selected": "https://fr.wikipedia.org/wiki/%C3%89glise_Sainte-Odile_de_Paris",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00087149",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Borne_fleurdelys%C3%A9e_no_25_(Mormant)",
+        "https://fr.wikipedia.org/wiki/Borne_fleurdelys%C3%A9e_no_26_(Mormant)"
+      ]
+    },
+    {
+      "reference": "PA00112276",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Sainte-Anne_de_Dijon",
+        "https://fr.wikipedia.org/wiki/Hospice_Sainte-Anne_(Dijon)",
+        "https://fr.wikipedia.org/wiki/Monast%C3%A8re_des_Bernardines_de_Dijon"
+      ]
+    },
+    {
+      "reference": "PA00116469",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Maison_Gerlier",
+        "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+      ]
+    },
+    {
+      "reference": "PA00108354",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Citadelle_de_Montreuil-sur-Mer",
+        "https://fr.wikipedia.org/wiki/Enceinte_de_Montreuil-sur-Mer"
+      ]
+    },
+    {
+      "reference": "PA00086489",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Vincent-de-Paul_de_Paris",
+        "https://fr.wikipedia.org/wiki/Square_Aristide-Cavaill%C3%A9-Coll"
+      ]
+    },
+    {
+      "reference": "PA06000029",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Grotte_de_la_Ratapignata",
+        "https://fr.wikipedia.org/wiki/Pyramide_de_Falicon_et_grotte_de_la_Ratapignata"
+      ]
+    },
+    {
+      "reference": "PA00087245",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Chapelle_comtale_de_Provins",
+        "https://fr.wikipedia.org/wiki/Palais_des_comtes_de_Champagne"
+      ]
+    },
+    {
+      "reference": "PA00105254",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_Monconseil",
+        "https://fr.wikipedia.org/wiki/Mus%C3%A9e_Dupuy-Mestreau"
+      ]
+    },
+    {
+      "reference": "PA66000022",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Col_de_Panissars",
+        "https://fr.wikipedia.org/wiki/Troph%C3%A9e_de_Pomp%C3%A9e"
+      ]
+    },
+    {
+      "reference": "PA00116470",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Maison_Grezin",
+        "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+      ]
+    },
+    {
+      "reference": "PA00086545",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Br%C3%A9guet_-_Sabin_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA64000117",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Funiculaire_de_Pau",
+        "https://fr.wikipedia.org/wiki/Pavillon_des_Arts_de_Pau"
+      ]
+    },
+    {
+      "reference": "PA00088992",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Op%C3%A9ra_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00086749",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Anvers_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00117327",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Escaliers_antiques_de_Vienne",
+        "https://fr.wikipedia.org/wiki/Jardin_arch%C3%A9ologique_de_Cyb%C3%A8le"
+      ]
+    },
+    {
+      "reference": "PA74000031",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Montanier",
+        "https://fr.wikipedia.org/wiki/Jardin_botanique_alpin_La_Ja%C3%BFsinia"
+      ]
+    },
+    {
+      "reference": "PA00088690",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Chapelle_de_l%27h%C3%B4pital_Laennec",
+        "https://fr.wikipedia.org/wiki/Fontaine_du_Fellah",
+        "https://fr.wikipedia.org/wiki/H%C3%B4pital_Laennec_de_Paris"
+      ]
+    },
+    {
+      "reference": "PA00086155",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_Le_Tonnelier_de_Breteuil",
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_d%27Assy",
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Clisson",
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Jaucourt",
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Rohan_(Paris)",
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Soubise"
+      ]
+    },
+    {
+      "reference": "PA00085749",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Gr%C3%A9goire_de_Munster",
+        "https://fr.wikipedia.org/wiki/Abbaye_de_Munster"
+      ]
+    },
+    {
+      "reference": "PA00090173",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Dolmen_de_Tronval",
+        "https://fr.wikipedia.org/wiki/Ensemble_m%C3%A9galithique_de_Qu%C3%A9larn"
+      ]
+    },
+    {
+      "reference": "PA00084072",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Martial_de_Bazens",
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Bazens"
+      ]
+    },
+    {
+      "reference": "PA00086697",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Porte_Dauphine_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00086769",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Crim%C3%A9e_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00088789",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Chapelle_Notre-Dame-de-la-M%C3%A9daille-Miraculeuse_de_Paris",
+        "https://fr.wikipedia.org/wiki/Maison_des_Filles_de_la_charit%C3%A9"
+      ]
+    },
+    {
+      "reference": "PA00087014",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Borne_fleurdelys%C3%A9e_no_28_(Grandpuits-Bailly-Carrois)",
+        "https://fr.wikipedia.org/wiki/Borne_fleurdelys%C3%A9e_no_29_(Grandpuits-Bailly-Carrois)"
+      ]
+    },
+    {
+      "reference": "PA00107015",
+      "previous": "https://fr.wikipedia.org/wiki/H%C3%B4tel_d%27Eltz_%28ancien%29",
+      "selected": "https://fr.wikipedia.org/wiki/Palais_de_justice_de_Thionville",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA59000078",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Beffroi_de_l%27h%C3%B4tel_de_ville_de_Lille",
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_ville_de_Lille"
+      ]
+    },
+    {
+      "reference": "PA00088871",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Europe_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00108665",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Chapelle_de_l%27Oratoire_(Nantes)",
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_le_Lasseur"
+      ]
+    },
+    {
+      "reference": "PA00093993",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Michel_de_Castelnau-P%C3%A9gayrols",
+        "https://fr.wikipedia.org/wiki/Prieur%C3%A9_Saint-Michel_de_Castelnau-P%C3%A9gayrols"
+      ]
+    },
+    {
+      "reference": "PA00095262",
+      "previous": "https://fr.wikipedia.org/wiki/Abbatiale_Sainte-Marie_de_Souillac",
+      "selected": "https://fr.wikipedia.org/wiki/Abbaye_Sainte-Marie_de_Souillac",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00091074",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Alignement_de_Toulchignan",
+        "https://fr.wikipedia.org/wiki/Alignement_du_M%C3%A9nec"
+      ]
+    },
+    {
+      "reference": "PA00085814",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Bourvallais",
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Simiane_(Paris)"
+      ]
+    },
+    {
+      "reference": "PA00086088",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Passage_Choiseul",
+        "https://fr.wikipedia.org/wiki/Passage_Sainte-Anne"
+      ]
+    },
+    {
+      "reference": "PA00088117",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Meudon",
+        "https://fr.wikipedia.org/wiki/Hangar_Y"
+      ]
+    },
+    {
+      "reference": "PA00095412",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Pierre_de_Saint-P%C3%A9-de-Bigorre",
+        "https://fr.wikipedia.org/wiki/Abbaye_de_Saint-P%C3%A9-de-Bigorre"
+      ]
+    },
+    {
+      "reference": "PA00113415",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Abbaye_de_La_Fert%C3%A9",
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_la_Fert%C3%A9_(Saint-Ambreuil)"
+      ]
+    },
+    {
+      "reference": "PA00089016",
+      "previous": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_de_l'Ath%C3%A9n%C3%A9e-Louis-Jouvet",
+      "selected": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_de_l%27Ath%C3%A9n%C3%A9e_Louis-Jouvet",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00087083",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Pyramide_de_Mauperthuis",
+        "https://fr.wikipedia.org/wiki/Tour_des_Gardes"
+      ]
+    },
+    {
+      "reference": "PA00088879",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Barri%C3%A8re_de_la_rotonde_de_Chartres",
+        "https://fr.wikipedia.org/wiki/Parc_Monceau"
+      ]
+    },
+    {
+      "reference": "PA00080981",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Saint-Sauveur_d%27Aix-en-Provence",
+        "https://fr.wikipedia.org/wiki/Clo%C3%AEtre_Saint-Sauveur_(Aix-en-Provence)"
+      ]
+    },
+    {
+      "reference": "PA00098131",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Tour_Charlemagne",
+        "https://fr.wikipedia.org/wiki/Tour_de_l%27Horloge_(Tours)"
+      ]
+    },
+    {
+      "reference": "PA00116521",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Maison_Grezin",
+        "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+      ]
+    },
+    {
+      "reference": "PA00080890",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Carri%C3%A8re_romaine_du_Mont_Justicier",
+        "https://fr.wikipedia.org/wiki/Gibet_du_Mont_Justicier"
+      ]
+    },
+    {
+      "reference": "PA00105813",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Chapelle_de_l%27Immacul%C3%A9e-Conception_de_Saint-Denis",
+        "https://fr.wikipedia.org/wiki/Pensionnat_de_l%27Immacul%C3%A9e-Conception"
+      ]
+    },
+    {
+      "reference": "PA00079920",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Vincennes",
+        "https://fr.wikipedia.org/wiki/Donjon_de_Vincennes",
+        "https://fr.wikipedia.org/wiki/Sainte-Chapelle_de_Vincennes"
+      ]
+    },
+    {
+      "reference": "PA00100922",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Louis_de_Rouen",
+        "https://fr.wikipedia.org/wiki/Lyc%C3%A9e_Pierre-Corneille_(Rouen)"
+      ]
+    },
+    {
+      "reference": "PA34000011",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89cluse_d%27Ognon",
+        "https://fr.wikipedia.org/wiki/Pont-canal_de_l%27Ognon"
+      ]
+    },
+    {
+      "reference": "PA00085817",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_d%27Orsigny",
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Co%C3%ABtlogon"
+      ]
+    },
+    {
+      "reference": "PA00088872",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Saint-Lazare_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00095117",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Pierre-%C3%A8s-Liens_des_Junies",
+        "https://fr.wikipedia.org/wiki/Couvent_Notre-Dame_des_Junies"
+      ]
+    },
+    {
+      "reference": "PA46000020",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Basilique_Saint-Sauveur_de_Rocamadour",
+        "https://fr.wikipedia.org/wiki/Chapelle_Notre-Dame_de_Rocamadour",
+        "https://fr.wikipedia.org/wiki/Cit%C3%A9_religieuse_de_Rocamadour",
+        "https://fr.wikipedia.org/wiki/Crypte_Saint-Amadour"
+      ]
+    },
+    {
+      "reference": "PA00090172",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ensemble_m%C3%A9galithique_de_Qu%C3%A9larn",
+        "https://fr.wikipedia.org/wiki/Menhir_de_Kerdala%C3%AB-Lesconil"
+      ]
+    },
+    {
+      "reference": "PA14000027",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Abbaye_aux_Hommes",
+        "https://fr.wikipedia.org/wiki/Monast%C3%A8re_des_Visitandines_de_Caen"
+      ]
+    },
+    {
+      "reference": "PA00085585",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Saint-Ulrich",
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_du_Girsberg",
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_du_Haut-Ribeaupierre"
+      ]
+    },
+    {
+      "reference": "PA00135305",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_ville_de_Brienne-le-Ch%C3%A2teau",
+        "https://fr.wikipedia.org/wiki/Statue_de_Napol%C3%A9on_(Brienne-le-Ch%C3%A2teau)"
+      ]
+    },
+    {
+      "reference": "PA75140002",
+      "previous": "https://fr.wikipedia.org/wiki/Chapelle_Saint-Yves_(Paris)",
+      "selected": "https://fr.wikipedia.org/wiki/Chapelle_Saint-Yves_de_Paris",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00086786",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Gambetta_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00088905",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89glise_Notre-Dame-de-Lorette_(Paris)",
+      "selected": "https://fr.wikipedia.org/wiki/%C3%89glise_Notre-Dame-de-Lorette_de_Paris",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA67000028",
+      "previous": "https://fr.wikipedia.org/wiki/Kornspeicher",
+      "selected": "https://fr.wikipedia.org/wiki/Grenier_d%27abondance_(Strasbourg)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00086511",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Louis_Blanc_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA49000066",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Maison_de_ma%C3%AEtre_de_la_Charpenterie",
+        "https://fr.wikipedia.org/wiki/Tour_de_Cornill%C3%A9"
+      ]
+    },
+    {
+      "reference": "PA00080947",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Dolmen_de_Mauvans_Sud",
+        "https://fr.wikipedia.org/wiki/Tombe_en_blocs_de_Mauvans_Sud"
+      ]
+    },
+    {
+      "reference": "PA00086514",
+      "previous": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_Antoine",
+      "selected": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_Antoine_-_Simone-Berriau",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA29000049",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Phare_d%27Eckm%C3%BChl",
+        "https://fr.wikipedia.org/wiki/Vieux_phare_de_Penmarc%27h"
+      ]
+    },
+    {
+      "reference": "PA75100008",
+      "previous": "https://fr.wikipedia.org/wiki/M%C3%A9diath%C3%A8que_Fran%C3%A7oise-Sagan",
+      "selected": "https://fr.wikipedia.org/wiki/Prison_Saint-Lazare",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00117984",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Od%C3%A9on_antique_de_Lyon",
+        "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_antique_de_Lyon"
+      ]
+    },
+    {
+      "reference": "PA00081179",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Honorat_des_Alyscamps",
+        "https://fr.wikipedia.org/wiki/Alyscamps"
+      ]
+    },
+    {
+      "reference": "PA00079937",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Mus%C3%A9e_du_Travail",
+        "https://fr.wikipedia.org/wiki/Petit_Ch%C3%A2teau"
+      ]
+    },
+    {
+      "reference": "PA00099655",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Pompadour",
+        "https://fr.wikipedia.org/wiki/Haras_national_de_Pompadour"
+      ]
+    },
+    {
+      "reference": "PA00080689",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Notre-Dame-d%27Esp%C3%A9rance_de_Cannes",
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_du_Suquet",
+        "https://fr.wikipedia.org/wiki/Chapelle_Sainte-Anne_de_Cannes",
+        "https://fr.wikipedia.org/wiki/Tour_du_Suquet"
+      ]
+    },
+    {
+      "reference": "PA00104012",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Sainte-Eulalie-et-Sainte-Julie_d%27Elne",
+        "https://fr.wikipedia.org/wiki/Clo%C3%AEtre_d%27Elne"
+      ]
+    },
+    {
+      "reference": "PA00116526",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Maison_Moschard",
+        "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+      ]
+    },
+    {
+      "reference": "PA00081941",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Chapelle_Saint-Martial_(Avignon)",
+        "https://fr.wikipedia.org/wiki/Palais_des_papes_d%27Avignon"
+      ]
+    },
+    {
+      "reference": "PA00086476",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Place_des_Vosges",
+        "https://fr.wikipedia.org/wiki/Square_Louis-XIII"
+      ]
+    },
+    {
+      "reference": "PA00135425",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Abbaye_du_Saint-Mont",
+        "https://fr.wikipedia.org/wiki/Site_arch%C3%A9ologique_du_Saint-Mont"
+      ]
+    },
+    {
+      "reference": "PA00116497",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Maison_Vallet",
+        "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+      ]
+    },
+    {
+      "reference": "PA00091806",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Porte_Saint-Vincent_(Vannes)",
+        "https://fr.wikipedia.org/wiki/Remparts_de_Vannes",
+        "https://fr.wikipedia.org/wiki/Tour_du_Conn%C3%A9table_(Vannes)"
+      ]
+    },
+    {
+      "reference": "PA00097821",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Loches",
+        "https://fr.wikipedia.org/wiki/Cit%C3%A9_royale_de_Loches"
+      ]
+    },
+    {
+      "reference": "PA00116523",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Maison_Nicolas",
+        "https://fr.wikipedia.org/wiki/Remparts_de_P%C3%A9rouges"
+      ]
+    },
+    {
+      "reference": "PA00106809",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89cole_d%27application_de_l%27artillerie_et_du_g%C3%A9nie",
+        "https://fr.wikipedia.org/wiki/Abbaye_de_Saint-Arnould"
+      ]
+    },
+    {
+      "reference": "PA00086087",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Sentier_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00116318",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Nicolas-de-Tolentin_de_Brou",
+        "https://fr.wikipedia.org/wiki/Monast%C3%A8re_royal_de_Brou"
+      ]
+    },
+    {
+      "reference": "PA00103994",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Fortifications_romaines_des_Cluses",
+        "https://fr.wikipedia.org/wiki/Les_Cluses"
+      ]
+    },
+    {
+      "reference": "PA00087524",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Marly",
+        "https://fr.wikipedia.org/wiki/Domaine_national_de_Marly-le-Roi"
+      ]
+    },
+    {
+      "reference": "PA00088714",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Saint-Louis-des-Invalides",
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_des_Invalides"
+      ]
+    },
+    {
+      "reference": "PA00114885",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_royal_de_Senlis_et_prieur%C3%A9_Saint-Maurice",
+        "https://fr.wikipedia.org/wiki/Remparts_de_Senlis"
+      ]
+    },
+    {
+      "reference": "PA00091075",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Alignement_de_Kerlescan",
+        "https://fr.wikipedia.org/wiki/Dolmen_de_Kerlescan"
+      ]
+    },
+    {
+      "reference": "PA00116079",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Gare_d%27Amiens",
+        "https://fr.wikipedia.org/wiki/Tour_Perret_(Amiens)"
+      ]
+    },
+    {
+      "reference": "PA00085989",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Palais-Royal_-_Mus%C3%A9e_du_Louvre_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00100813",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Cande-le-Jeune_de_Rouen",
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_Asselin"
+      ]
+    },
+    {
+      "reference": "PA00109801",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_du_Mans",
+        "https://fr.wikipedia.org/wiki/Palais_des_comtes_du_Maine"
+      ]
+    },
+    {
+      "reference": "PA76000060",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Sainte-Jeanne-d%27Arc_de_Rouen",
+        "https://fr.wikipedia.org/wiki/Jeanne_au_b%C3%BBcher_(statue)"
+      ]
+    },
+    {
+      "reference": "PA00097834",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_Haincque",
+        "https://fr.wikipedia.org/wiki/Maison_de_la_Chancellerie_(Loches)"
+      ]
+    },
+    {
+      "reference": "PA00091674",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Gildas_de_Saint-Gildas-de-Rhuys",
+        "https://fr.wikipedia.org/wiki/Abbaye_Saint-Gildas_de_Rhuys"
+      ]
+    },
+    {
+      "reference": "PA00100800",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Notre-Dame_de_Rouen",
+        "https://fr.wikipedia.org/wiki/Cit%C3%A9_canoniale_de_Rouen"
+      ]
+    },
+    {
+      "reference": "PA00085986",
+      "previous": "https://fr.wikipedia.org/wiki/%C3%89dicule_Guimard",
+      "selected": "https://fr.wikipedia.org/wiki/Ch%C3%A2telet_(m%C3%A9tro_de_Paris)",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00085816",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_Charlemagne",
+        "https://fr.wikipedia.org/wiki/Place_des_Victoires"
+      ]
+    },
+    {
+      "reference": "PA00094710",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_ville_d%27Auch",
+        "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_municipal_d%27Auch"
+      ]
+    },
+    {
+      "reference": "PA00091248",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Calvaire_de_Locmeltro",
+        "https://fr.wikipedia.org/wiki/Colonnes_de_Locmeltro"
+      ]
+    },
+    {
+      "reference": "PA00086746",
+      "previous": "https://fr.wikipedia.org/wiki/Maison_de_Tristan_Tzara_(Paris)",
+      "selected": "https://fr.wikipedia.org/wiki/Maison_de_Tristan_Tzara",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00088485",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Chapelle_de_la_Sorbonne",
+        "https://fr.wikipedia.org/wiki/Sorbonne"
+      ]
+    },
+    {
+      "reference": "PA70000070",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Cimeti%C3%A8re_de_Pennesi%C3%A8res",
+        "https://fr.wikipedia.org/wiki/Fontaine-lavoir_de_Pennesi%C3%A8res"
+      ]
+    },
+    {
+      "reference": "PA00080762",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Basilique_Saint-Michel-Archange_de_Menton",
+        "https://fr.wikipedia.org/wiki/Chapelle_de_l%27Immacul%C3%A9e-Conception_de_Menton"
+      ]
+    },
+    {
+      "reference": "PA00097828",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_ville_de_Loches",
+        "https://fr.wikipedia.org/wiki/Porte_Picois"
+      ]
+    },
+    {
+      "reference": "PA00083152",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_des_Rudel",
+        "https://fr.wikipedia.org/wiki/Citadelle_de_Blaye",
+        "https://fr.wikipedia.org/wiki/Couvent_des_Minimes_de_Blaye"
+      ]
+    },
+    {
+      "reference": "PA00080653",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Notre-Dame-de-l%27Immacul%C3%A9e-Conception_d%27Antibes",
+        "https://fr.wikipedia.org/wiki/Chapelle_Saint-Esprit_d%27Antibes",
+        "https://fr.wikipedia.org/wiki/Tour_Grimaldi"
+      ]
+    },
+    {
+      "reference": "PA00088668",
+      "previous": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_Delacroix",
+      "selected": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_national_Eug%C3%A8ne-Delacroix",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00117783",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Basilique_Notre-Dame_de_Fourvi%C3%A8re",
+        "https://fr.wikipedia.org/wiki/Chapelle_Saint-Thomas_de_Lyon"
+      ]
+    },
+    {
+      "reference": "PA56000127",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Alignement_de_Men_Letionnec",
+        "https://fr.wikipedia.org/wiki/Alignements_de_Kerpenhir",
+        "https://fr.wikipedia.org/wiki/Menhir_de_Go%C3%A9morent"
+      ]
+    },
+    {
+      "reference": "PA00088476",
+      "previous": "https://fr.wikipedia.org/wiki/Institut_national_de_jeunes_sourds_de_Paris",
+      "selected": "https://fr.wikipedia.org/wiki/Institut_national_des_jeunes_sourds_de_Paris",
+      "method": "wikidata:P380-exact"
+    },
+    {
+      "reference": "PA00118246",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Pont_Royal_(Savoie)",
+        "https://fr.wikipedia.org/wiki/Tunnel_hydraulique_du_Gelon"
+      ]
+    },
+    {
+      "reference": "PA00086494",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/H%C3%B4pital_Saint-Louis",
+        "https://fr.wikipedia.org/wiki/R%C3%A9servoir_de_l%27h%C3%B4pital_Saint-Louis"
+      ]
+    },
+    {
+      "reference": "PA00093212",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Chapelle_de_la_Visitation_de_Moulins",
+        "https://fr.wikipedia.org/wiki/Lyc%C3%A9e_Th%C3%A9odore-de-Banville"
+      ]
+    },
+    {
+      "reference": "PA59000219",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Cambrai_East_Military_Cemetery",
+        "https://fr.wikipedia.org/wiki/Cimeti%C3%A8re_militaire_allemand_de_Cambrai"
+      ]
+    },
+    {
+      "reference": "PA00085449",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Maison_du_rabbin_(Guebwiller)",
+        "https://fr.wikipedia.org/wiki/Synagogue_de_Guebwiller"
+      ]
+    },
+    {
+      "reference": "PA00095198",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Basilique_Saint-Sauveur_de_Rocamadour",
+        "https://fr.wikipedia.org/wiki/Crypte_Saint-Amadour"
+      ]
+    },
+    {
+      "reference": "PA00088425",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Centre_Panth%C3%A9on",
+        "https://fr.wikipedia.org/wiki/Facult%C3%A9_de_droit_de_Paris"
+      ]
+    },
+    {
+      "reference": "PA00102568",
+      "candidates": [
+        "https://fr.wikipedia.org/wiki/Grotte_de_Las_Fons",
+        "https://fr.wikipedia.org/wiki/Grotte_du_Moulin_(Bize)"
+      ]
+    }
+  ],
+  "failures": [],
+  "index_sha256": "857f21683efbf7b57b8901c97f1e1433bd7210a51c883581161f368dfa45603b",
+  "license": "Wikipedia text: CC BY-SA 4.0; Wikidata structured data: CC0"
+}

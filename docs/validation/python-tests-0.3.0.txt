@@ -1,0 +1,11 @@
+test_exact_identifiers_reject_ambiguity_and_non_french_articles (test_enrichment.EnrichmentTests.test_exact_identifiers_reject_ambiguity_and_non_french_articles) ... ok
+test_pop_then_wikipedia_then_history_then_factual_summary (test_enrichment.EnrichmentTests.test_pop_then_wikipedia_then_history_then_factual_summary) ... ok
+test_coordinates (test_pipeline.PipelineTests.test_coordinates) ... ok
+test_distance_and_search (test_pipeline.PipelineTests.test_distance_and_search) ... ok
+test_full_import_dedup_search_box_and_atomic_failure (test_pipeline.PipelineTests.test_full_import_dedup_search_box_and_atomic_failure) ... ok
+test_scoring_preserves_rules (test_pipeline.PipelineTests.test_scoring_preserves_rules) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.205s
+
+OK

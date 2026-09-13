@@ -1,0 +1,308 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "d64e8f569da2020d107bf5a99db4de6e",
+    "entities": [
+      {
+        "tableName": "monuments",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `latitude` REAL, `longitude` REAL, `reference` TEXT NOT NULL, `name` TEXT NOT NULL, `alternativeName` TEXT NOT NULL, `address` TEXT NOT NULL, `commune` TEXT NOT NULL, `insee` TEXT NOT NULL, `department` TEXT NOT NULL, `departmentName` TEXT NOT NULL, `region` TEXT NOT NULL, `protection` TEXT NOT NULL, `protectionDates` TEXT NOT NULL, `protectionDetails` TEXT NOT NULL, `category` TEXT NOT NULL, `description` TEXT NOT NULL, `history` TEXT NOT NULL, `period` TEXT NOT NULL, `copyright` TEXT NOT NULL, `shortDescription` TEXT NOT NULL, `descriptionSource` TEXT NOT NULL, `historySource` TEXT NOT NULL, `popUrl` TEXT NOT NULL, `wikipediaUrl` TEXT NOT NULL, `imageUrl` TEXT NOT NULL, `imagePageUrl` TEXT NOT NULL, `imageAuthor` TEXT NOT NULL, `imageLicense` TEXT NOT NULL, `imageLicenseUrl` TEXT NOT NULL, `scoreSource` TEXT NOT NULL, `scoreEvidence` TEXT NOT NULL, `coordinateStatus` TEXT NOT NULL, `searchName` TEXT NOT NULL, `searchText` TEXT NOT NULL, `importance` INTEGER NOT NULL, `notoriety` INTEGER NOT NULL, `globalScore` INTEGER NOT NULL, `visualLevel` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "latitude",
+            "columnName": "latitude",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "longitude",
+            "columnName": "longitude",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "reference",
+            "columnName": "reference",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "alternativeName",
+            "columnName": "alternativeName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "address",
+            "columnName": "address",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "commune",
+            "columnName": "commune",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "insee",
+            "columnName": "insee",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "department",
+            "columnName": "department",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "departmentName",
+            "columnName": "departmentName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "region",
+            "columnName": "region",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "protection",
+            "columnName": "protection",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "protectionDates",
+            "columnName": "protectionDates",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "protectionDetails",
+            "columnName": "protectionDetails",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "category",
+            "columnName": "category",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "history",
+            "columnName": "history",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "period",
+            "columnName": "period",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "copyright",
+            "columnName": "copyright",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "shortDescription",
+            "columnName": "shortDescription",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "descriptionSource",
+            "columnName": "descriptionSource",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "historySource",
+            "columnName": "historySource",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "popUrl",
+            "columnName": "popUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wikipediaUrl",
+            "columnName": "wikipediaUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imageUrl",
+            "columnName": "imageUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imagePageUrl",
+            "columnName": "imagePageUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imageAuthor",
+            "columnName": "imageAuthor",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imageLicense",
+            "columnName": "imageLicense",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imageLicenseUrl",
+            "columnName": "imageLicenseUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "scoreSource",
+            "columnName": "scoreSource",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "scoreEvidence",
+            "columnName": "scoreEvidence",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "coordinateStatus",
+            "columnName": "coordinateStatus",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "searchName",
+            "columnName": "searchName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "searchText",
+            "columnName": "searchText",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "importance",
+            "columnName": "importance",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "notoriety",
+            "columnName": "notoriety",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "globalScore",
+            "columnName": "globalScore",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "visualLevel",
+            "columnName": "visualLevel",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_monuments_reference",
+            "unique": true,
+            "columnNames": [
+              "reference"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_monuments_reference` ON `${TABLE_NAME}` (`reference`)"
+          },
+          {
+            "name": "index_monuments_name",
+            "unique": false,
+            "columnNames": [
+              "searchName"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_monuments_name` ON `${TABLE_NAME}` (`searchName`)"
+          },
+          {
+            "name": "index_monuments_commune",
+            "unique": false,
+            "columnNames": [
+              "commune"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_monuments_commune` ON `${TABLE_NAME}` (`commune`)"
+          },
+          {
+            "name": "index_monuments_department",
+            "unique": false,
+            "columnNames": [
+              "department"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_monuments_department` ON `${TABLE_NAME}` (`department`)"
+          },
+          {
+            "name": "index_monuments_coordinates",
+            "unique": false,
+            "columnNames": [
+              "latitude",
+              "longitude",
+              "id",
+              "globalScore",
+              "visualLevel"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_monuments_coordinates` ON `${TABLE_NAME}` (`latitude`, `longitude`, `id`, `globalScore`, `visualLevel`)"
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd64e8f569da2020d107bf5a99db4de6e')"
+    ]
+  }
+}

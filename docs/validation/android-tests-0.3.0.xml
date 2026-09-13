@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="fr.pierresdefrance.AddressSearchTest" tests="9" failures="0" errors="0" skipped="0" time="44.692" timestamp="2026-09-12T13:42:20" hostname="localhost">
+  <properties>
+    <property name="device" value="Pixel_10(AVD) - 17" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="parsesIgnCoordinatesAndRejectsMalformedCandidates" classname="fr.pierresdefrance.AddressSearchTest" time="3.468" />
+  <testcase name="cityStreetAndFailedSearchKeepTheChosenOrigin" classname="fr.pierresdefrance.AddressSearchTest" time="8.681" />
+  <testcase name="fullDatasetAndQueries" classname="fr.pierresdefrance.CatalogueTest" time="0.284" />
+  <testcase name="wikipediaParserAcceptsArticleButRejectsMissingAndDisambiguation" classname="fr.pierresdefrance.DescriptionsTest" time="0.004" />
+  <testcase name="allNoticesHaveSourcedText" classname="fr.pierresdefrance.DescriptionsTest" time="2.099" />
+  <testcase name="offlineSearchAndNoticeWithoutCoordinates" classname="fr.pierresdefrance.DiscoveryUiTest" time="4.967" />
+  <testcase name="nationalSearchAndDetailWithoutLocation" classname="fr.pierresdefrance.DiscoveryUiTest" time="6.122" />
+  <testcase name="locationRecentersAndShowsNearby" classname="fr.pierresdefrance.LocationUiTest" time="5.162" />
+  <testcase name="fullCatalogueRendersAtNationalAndCityScales" classname="fr.pierresdefrance.MapRenderTest" time="11.976" />
+</testsuite>

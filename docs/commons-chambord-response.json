@@ -1,0 +1,405 @@
+{
+  "batchcomplete": "",
+  "continue": {
+    "gsroffset": 3,
+    "continue": "gsroffset||"
+  },
+  "query": {
+    "pages": {
+      "50669727": {
+        "pageid": 50669727,
+        "ns": 6,
+        "title": "File:Chambord Eté2016 exposition de Calèches au château (4).jpg",
+        "index": 1,
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Chambord_Et%C3%A92016_exposition_de_Cal%C3%A8ches_au_ch%C3%A2teau_%284%29.jpg/960px-Chambord_Et%C3%A92016_exposition_de_Cal%C3%A8ches_au_ch%C3%A2teau_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 900,
+            "thumbheight": 723,
+            "responsiveUrls": {
+              "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Chambord_Et%C3%A92016_exposition_de_Cal%C3%A8ches_au_ch%C3%A2teau_%284%29.jpg/1920px-Chambord_Et%C3%A92016_exposition_de_Cal%C3%A8ches_au_ch%C3%A2teau_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+            },
+            "thumbattribs": {
+              "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Chambord_Et%C3%A92016_exposition_de_Cal%C3%A8ches_au_ch%C3%A2teau_%284%29.jpg/960px-Chambord_Et%C3%A92016_exposition_de_Cal%C3%A8ches_au_ch%C3%A2teau_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 900,
+              "height": 723,
+              "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Chambord_Et%C3%A92016_exposition_de_Cal%C3%A8ches_au_ch%C3%A2teau_%284%29.jpg/1920px-Chambord_Et%C3%A92016_exposition_de_Cal%C3%A8ches_au_ch%C3%A2teau_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Chambord_Et%C3%A92016_exposition_de_Cal%C3%A8ches_au_ch%C3%A2teau_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Chambord_Et%C3%A92016_exposition_de_Cal%C3%A8ches_au_ch%C3%A2teau_(4).jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=50669727",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2018-07-30 10:39:56",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Chambord Eté2016 exposition de Calèches au château (4)",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Base Mérimée|Monuments historiques classés|Carriage lamps|Self-published work|Horse-drawn carriages in France|Images from Été des Régions 2016|Mérimée with PA parameter|Cultural heritage monuments in France with known IDs|Black carriages|Barouches in France|Files by User:Pierre André Leclercq|Uploaded via Campaign:Été des régions 2016|Dpt du Loir-et-Cher by PIERRE ANDRE LECLERCQ|Centre-Val de Loire photographs taken on 2019-09-08|Horse-drawn carriages in Château de Chambord|QI et VI mages by Pierre André Leclercq|Show aux écuries du Maréchal de Saxe|Horse-drawn carriage brakes|Milord carriages in France",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "quality|valued",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "GPSLatitude": {
+                "value": "47.616342",
+                "source": "commons-desc-page"
+              },
+              "GPSLongitude": {
+                "value": "1.516962",
+                "source": "commons-desc-page"
+              },
+              "GPSMapDatum": {
+                "value": "WGS-84",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "<a href=\"https://en.wikipedia.org/wiki/Landau_(carriage)\" class=\"extiw\" title=\"w:Landau (carriage)\">Landau (carriage)</a> in the stables of the Saxony prince at the <a href=\"https://en.wikipedia.org/wiki/Ch%C3%A2teau_de_Chambord\" class=\"extiw\" title=\"w:Château de Chambord\">Château de Chambord</a>, Loir-et-Cher",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2015-09-08 10:25:44",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<bdi><a href=\"https://www.wikidata.org/wiki/Q97949455\" class=\"extiw\" title=\"d:Q97949455\"><span title=\"French photographer and Wikimedian\">Pierre André Leclercq</span></a></bdi>",
+                "source": "commons-desc-page"
+              },
+              "Permission": {
+                "value": "<table style=\"margin: 1.5em auto; width:90%;background-color:#B2FFFF; border:2px solid #cccccc; padding:1px;\" cellspacing=\"10\" dir=\"ltr\" class=\"layouttemplate\">\n\n<tbody><tr>\n<td align=\"center\"><span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Pierre_Andr%C3%A9_Leclercq_(photo_profil_).jpg\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Pierre_Andr%C3%A9_Leclercq_%28photo_profil_%29.jpg/120px-Pierre_Andr%C3%A9_Leclercq_%28photo_profil_%29.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"100\" height=\"100\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Pierre_Andr%C3%A9_Leclercq_%28photo_profil_%29.jpg/250px-Pierre_Andr%C3%A9_Leclercq_%28photo_profil_%29.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"1107\" data-file-height=\"1107\"></a></span>\n</td>\n<td><b>This illustration</b> <i>was made by</i> <b><a href=\"//commons.wikimedia.org/wiki/User:Pierre_Andr%C3%A9_Leclercq\" title=\"User:Pierre André Leclercq\">Pierre André Leclercq</a></b>, under the <a rel=\"nofollow\" class=\"external text\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.fr\">License CC-BY-SA</a> which allows you to:\n<ul><li>Freely use and distribute it for non-commercial or for commercial purposes</li>\n<li>Create derivative works of it.</li></ul>\n<p><b>Under this condition</b> Credit me as the original author and use the same license. I encourage distribution and modification of this image as long as you attribute its author and license. If you are using one of my images or wish to contact me, please inform me by writing a short message on my discussion page. \n</p><p>An email  <span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Nuvola_apps_kmail.png\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Nuvola_apps_kmail.png/20px-Nuvola_apps_kmail.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"16\" height=\"16\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Nuvola_apps_kmail.png/40px-Nuvola_apps_kmail.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"128\" data-file-height=\"128\"></a></span> <a href=\"//commons.wikimedia.org/wiki/Special:EmailUser/Pierre_Andr%C3%A9_Leclercq\" title=\"Special:EmailUser/Pierre André Leclercq\"> <b>would be appreciated.</b></a>\n</p>\n</td></tr></tbody></table>\n<table style=\"margin: 1.5em auto; width:90%;background-color:#B2FFFF; border:2px solid #cccccc; padding:1px;\" cellspacing=\"10\" dir=\"ltr\" class=\"layouttemplate\">\n\n<tbody><tr>\n<td align=\"center\"><span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Fairytale_upload_2.png\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Fairytale_upload_2.png/60px-Fairytale_upload_2.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"50\" height=\"50\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/2/20/Fairytale_upload_2.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail_unscaled 2x\" data-file-width=\"64\" data-file-height=\"64\"></a></span>\n</td>\n<td><span><b>Please do not overwrite the author's version with a modified image without discussing with the author.</b> The author would like to make corrections only from the uncompressed <a href=\"https://en.wikipedia.org/wiki/en:raw_image_format\" class=\"extiw\" title=\"w:en:raw image format\">RAW file</a>. This ensures that changes are preserved and are based on the best possible source to achieve a high quality. If you think that changes are required, please, get in touch with the author.<br>Otherwise, you can upload a new image with a different name without overwriting this one. Use <a href=\"//commons.wikimedia.org/wiki/Template:Derived_from\" title=\"Template:Derived from\"><span style=\"font-family:monospace,monospace;\">{{Derived from}}</span></a> or <a href=\"//commons.wikimedia.org/wiki/Template:Extracted_from\" title=\"Template:Extracted from\"><span style=\"font-family:monospace,monospace;\">{{Extracted from}}</span></a> for this purpose.</span>\n</td></tr></tbody></table>",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ],
+        "revisions": [
+          {
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "=={{int:filedesc}}==\n{{Information\n|description={{fr|1=[[:fr:Landau (hippomobile)|Landau]] dans les écuries du Mal de Saxe au [[:fr:Château_de_Chambord|Château de Chambord]], Loir-et-Cher}}{{en|{{w|Landau (carriage)}} in the stables of the Saxony prince at the {{w|Château de Chambord}}, Loir-et-Cher}}{{Mérimée|type=classé|PA00098405}}\n|date=2015-09-08 10:25:44\n|source={{own}}\n|Author={{creator|wikidata=Q97949455}} \n|Permission={{User:Pierre André Leclercq/Credit}}\n|other versions=\n}}\n\n{{Object location dec|47.616342|1.516962|region:FR_type:landmark_scale:1500}}<!-- Location from http://fr.wikipedia.org/w/index.php?title=Liste_des_monuments_historiques_de_Loir-et-Cher&redirect=no&useskin=monobook&oldid=83583801 -->\n\n=={{int:license-header}}==\n{{self|cc-by-sa-4.0}}\n\n{{L'été des régions}}\n\n[[Category:Dpt du Loir-et-Cher by PIERRE ANDRE LECLERCQ]]\n[[Category:Horse-drawn carriages in Château de Chambord]]\n[[Category:Files by User:Pierre André Leclercq]]\n[[Category:Horse-drawn carriages in France]]\n[[Category:Uploaded via Campaign:Été des régions 2016]]\n[[Category:Show aux écuries du Maréchal de Saxe]]\n[[Category:Barouches in France| ]]\n[[Category:Quality images of France by PIERRE ANDRE LECLERCQ]]\n[[Category:Quality images by PIERRE ANDRE LECLERCQ]]\n{{QualityImage}}\n[[Category:Centre-Val de Loire photographs taken on 2019-09-08]]\n[[Category:Quality images of Château de Chambord]]\n[[Category:Quality images of carriages]]\n[[Category:Valued images by PIERRE ANDRE LECLERCQ]]\n[[Category:QI et VI mages by Pierre André Leclercq]]\n[[Category:Valued images of Loir-et-Cher]]\n[[Category:Carriage lamps]]\n[[Category:Horse-drawn carriage brakes]]\n[[Category:Black carriages]]\n[[Category:Milord carriages in France]]\n{{VI|{{C|Horse-drawn carriages in Château de Chambord|Landau carriage in stables of Marshal de Saxe (Château de Chambord)}}, front and right side|00:20, 14 December 2025 (UTC)|\nsubpage=Chambord Eté2016 exposition de Calèches au château (4).jpg}}"
+              }
+            }
+          }
+        ]
+      },
+      "70937687": {
+        "pageid": 70937687,
+        "ns": 6,
+        "title": "File:French garden of the Chambord Castle 03.jpg",
+        "index": 3,
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/French_garden_of_the_Chambord_Castle_03.jpg/960px-French_garden_of_the_Chambord_Castle_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 900,
+            "thumbheight": 600,
+            "responsiveUrls": {
+              "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/French_garden_of_the_Chambord_Castle_03.jpg/1920px-French_garden_of_the_Chambord_Castle_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+            },
+            "thumbattribs": {
+              "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/French_garden_of_the_Chambord_Castle_03.jpg/960px-French_garden_of_the_Chambord_Castle_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 900,
+              "height": 600,
+              "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/French_garden_of_the_Chambord_Castle_03.jpg/1920px-French_garden_of_the_Chambord_Castle_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/French_garden_of_the_Chambord_Castle_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:French_garden_of_the_Chambord_Castle_03.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=70937687",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2018-07-17 18:45:38",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "French garden of the Chambord Castle 03",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Base Mérimée|Taken with Nikon D3300|Monuments historiques classés|Self-published work|2018 in Loir-et-Cher|Tournasol7's quality images|Mérimée with PA parameter|Cultural heritage monuments in France with known IDs|Files with coordinates missing SDC location of creation|Cultural heritage monuments in France missing SDC location of creation|Cultural heritage monuments in France missing SDC depicts|Centre-Val de Loire photographs taken on 2018-07-02|French gardens at Château de Chambord|Tournasol7/Castles of the Loire",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "quality",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "GPSLatitude": {
+                "value": "47.616421",
+                "source": "commons-desc-page"
+              },
+              "GPSLongitude": {
+                "value": "1.516767",
+                "source": "commons-desc-page"
+              },
+              "GPSMapDatum": {
+                "value": "WGS-84",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "French garden of the Chambord Castle, Loir-et-Cher, France\n<div style=\"margin:.5em 0;overflow:hidden\">\n<table cellspacing=\"8\" cellpadding=\"0\" lang=\"en\" class=\"layouttemplate\" style=\"margin:0;width:100%;border:2px solid #999933;background:var(--background-color-success-subtle,#F9FFF0);direction:ltr;color:inherit;text-align:center\">\n<tbody><tr>\n<td style=\"width:60px\"><span typeof=\"mw:File\"><span><img alt=\"\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Logo_monument_historique_-_rouge.svg/60px-Logo_monument_historique_-_rouge.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" width=\"60\" height=\"60\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Logo_monument_historique_-_rouge.svg/120px-Logo_monument_historique_-_rouge.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"800\" data-file-height=\"800\"></span></span>\n</td>\n<td><span class=\"layouttemplateargs\" style=\"display:none;speak:none;\" title=\"template=M%C3%A9rim%C3%A9e 1%3DPA00098405 2%3DIA00012822 3%3D 3%3D 3%3D type%3Dclass%C3%A9\"> </span>\n<p>This building is <i>classé au titre des <a href=\"https://en.wikipedia.org/wiki/Monument_historique\" class=\"extiw\" title=\"en:Monument historique\">monuments historiques de la France</a></i>. It is indexed in the <a href=\"https://en.wikipedia.org/wiki/Base_M%C3%A9rim%C3%A9e\" class=\"extiw\" title=\"en:Base Mérimée\">base Mérimée</a>, a database of architectural heritage maintained by the <a href=\"https://en.wikipedia.org/wiki/Minister_of_Culture_(France)\" class=\"extiw\" title=\"en:Minister of Culture (France)\">French Ministry of Culture</a>, under the references <a rel=\"nofollow\" class=\"external text\" href=\"https://www.pop.culture.gouv.fr/notice/merimee/PA00098405\">PA00098405</a> <span typeof=\"mw:File\"><a href=\"https://www.wikidata.org/wiki/special:search?search=haswbstatement%3AP380%3DPA00098405\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/20px-Wikidata-logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" width=\"20\" height=\"11\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/40px-Wikidata-logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"1050\" data-file-height=\"590\"></a></span>  and <a rel=\"nofollow\" class=\"external text\" href=\"https://www.pop.culture.gouv.fr/notice/merimee/IA00012822\">IA00012822</a> <span typeof=\"mw:File\"><a href=\"https://www.wikidata.org/wiki/special:search?search=haswbstatement%3AP380%3DIA00012822\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/20px-Wikidata-logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" width=\"20\" height=\"11\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/40px-Wikidata-logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"1050\" data-file-height=\"590\"></a></span>.\n</p>\n<hr>\n<p><span style=\"font-size:small;line-height:1.4\" class=\"plainlinks noprint\"><a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/br\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/br\"><bdi class=\"language lang-br\" lang=\"br\">brezhoneg</bdi></a> <b>∙</b> <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/ca\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/ca\"><bdi class=\"language lang-ca\" lang=\"ca\">català</bdi></a> <b>∙</b> <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/de\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/de\"><bdi class=\"language lang-de\" lang=\"de\">Deutsch</bdi></a> <b>∙</b> <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/en\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/en\"><bdi class=\"language lang-en\" lang=\"en\">English</bdi></a> <b>∙</b> <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/es\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/es\"><bdi class=\"language lang-es\" lang=\"es\">español</bdi></a> <b>∙</b> <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/eo\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/eo\"><bdi class=\"language lang-eo\" lang=\"eo\">Esperanto</bdi></a> <b>∙</b> <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/eu\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/eu\"><bdi class=\"language lang-eu\" lang=\"eu\">euskara</bdi></a> <b>∙</b> <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/fr\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/fr\"><bdi class=\"language lang-fr\" lang=\"fr\">français</bdi></a> <b>∙</b> <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/it\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/it\"><bdi class=\"language lang-it\" lang=\"it\">italiano</bdi></a> <b>∙</b> <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/hu\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/hu\"><bdi class=\"language lang-hu\" lang=\"hu\">magyar</bdi></a> <b>∙</b> <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/nl\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/nl\"><bdi class=\"language lang-nl\" lang=\"nl\">Nederlands</bdi></a> <b>∙</b> <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/pt-br\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/pt-br\"><bdi class=\"language lang-pt-br\" lang=\"pt-br\">português do Brasil</bdi></a> <b>∙</b> <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/pt\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/pt\"><bdi class=\"language lang-pt\" lang=\"pt\">português</bdi></a> <b>∙</b> <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/ro\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/ro\"><bdi class=\"language lang-ro\" lang=\"ro\">română</bdi></a> <b>∙</b> <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/scn\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/scn\"><bdi class=\"language lang-scn\" lang=\"scn\">sicilianu</bdi></a> <b>∙</b> <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/sl\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/sl\"><bdi class=\"language lang-sl\" lang=\"sl\">slovenščina</bdi></a> <b>∙</b> <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/fi\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/fi\"><bdi class=\"language lang-fi\" lang=\"fi\">suomi</bdi></a> <b>∙</b> <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/sv\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/sv\"><bdi class=\"language lang-sv\" lang=\"sv\">svenska</bdi></a> <b>∙</b> <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/el\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/el\"><bdi class=\"language lang-el\" lang=\"el\">Ελληνικά</bdi></a> <b>∙</b> <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/be-tarask\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/be-tarask\"><bdi class=\"language lang-be-tarask\" lang=\"be-tarask\">беларуская (тарашкевіца)</bdi></a> <b>∙</b> <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/mk\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/mk\"><bdi class=\"language lang-mk\" lang=\"mk\">македонски</bdi></a> <b>∙</b> <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/ru\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/ru\"><bdi class=\"language lang-ru\" lang=\"ru\">русский</bdi></a> <b>∙</b> <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/uk\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/uk\"><bdi class=\"language lang-uk\" lang=\"uk\">українська</bdi></a> <b>∙</b> <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/bn\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/bn\"><bdi class=\"language lang-bn\" lang=\"bn\">বাংলা</bdi></a> <b>∙</b> <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/zh\" href=\"https://commons.wikimedia.org/wiki/Template:M%C3%A9rim%C3%A9e/zh\"><bdi class=\"language lang-zh\" lang=\"zh\">中文</bdi></a> <b>∙</b> <small class=\"plainlinks\"><a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/w/index.php?title=Template:M%C3%A9rim%C3%A9e/lang&amp;action=edit\" href=\"https://commons.wikimedia.org/w/index.php?title=Template:M%C3%A9rim%C3%A9e/lang&amp;action=edit\">+/−</a></small></span>\n</p>\n</td></tr></tbody></table>\n</div>",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2018-07-02 15:23:35",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:Tournasol7\" title=\"User:Tournasol7\">Krzysztof Golik</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ],
+        "revisions": [
+          {
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=French garden of the Chambord Castle, Loir-et-Cher, France\n{{Mérimée|PA00098405|IA00012822|type=classé}}}}\n|date=2018-07-02 15:23:35\n|source={{own}}\n|author=[[User:Tournasol7|Krzysztof Golik]]\n|permission=\n|other versions=\n}}\n{{Location|47.616421|1.516767|heading:324}}\n\n=={{int:license-header}}==\n{{self|cc-by-sa-4.0}}\n{{QualityImage}}\n\n[[Category:French gardens at Château de Chambord]]\n[[Category:2018 in Loir-et-Cher]]\n[[Category:Centre-Val de Loire photographs taken on 2018-07-02]]\n[[Category:Taken with Nikon D3300]]\n[[Category:Tournasol7's quality images]]\n[[Category:Quality images of Château de Chambord]]\n[[Category:Tournasol7/Castles of the Loire]]\n[[Category:Quality images of France by Tournasol7]]"
+              }
+            }
+          }
+        ]
+      },
+      "153514120": {
+        "pageid": 153514120,
+        "ns": 6,
+        "title": "File:Two-wheeled open carts in Château de Chambord.jpg",
+        "index": 2,
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Two-wheeled_open_carts_in_Ch%C3%A2teau_de_Chambord.jpg/960px-Two-wheeled_open_carts_in_Ch%C3%A2teau_de_Chambord.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 900,
+            "thumbheight": 589,
+            "responsiveUrls": {
+              "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Two-wheeled_open_carts_in_Ch%C3%A2teau_de_Chambord.jpg/1920px-Two-wheeled_open_carts_in_Ch%C3%A2teau_de_Chambord.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+            },
+            "thumbattribs": {
+              "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Two-wheeled_open_carts_in_Ch%C3%A2teau_de_Chambord.jpg/960px-Two-wheeled_open_carts_in_Ch%C3%A2teau_de_Chambord.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 900,
+              "height": 589,
+              "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Two-wheeled_open_carts_in_Ch%C3%A2teau_de_Chambord.jpg/1920px-Two-wheeled_open_carts_in_Ch%C3%A2teau_de_Chambord.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Two-wheeled_open_carts_in_Ch%C3%A2teau_de_Chambord.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Two-wheeled_open_carts_in_Ch%C3%A2teau_de_Chambord.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=153514120",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-10-03 22:03:30",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Two-wheeled open carts in Château de Chambord",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Base Mérimée|Monuments historiques classés|Self-published work|Extracted images|Mérimée with PA parameter|Cultural heritage monuments in France with known IDs|Files by User:Pierre André Leclercq|Files with coordinates missing SDC location of creation|Dpt du Loir-et-Cher by PIERRE ANDRE LECLERCQ|Cultural heritage monuments in France missing SDC location of creation|Centre-Val de Loire photographs taken on 2019-09-08|Show aux écuries du Maréchal de Saxe|Black and red carriages|Horse-drawn carts in Château de Chambord",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "valued",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "GPSLatitude": {
+                "value": "47.615211",
+                "source": "commons-desc-page"
+              },
+              "GPSLongitude": {
+                "value": "1.520350",
+                "source": "commons-desc-page"
+              },
+              "GPSMapDatum": {
+                "value": "WGS-84",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Two-wheeled open carts in <a href=\"https://en.wikipedia.org/wiki/Ch%C3%A2teau_de_Chambord\" class=\"extiw\" title=\"en:Château de Chambord\">Château de Chambord</a>",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2015-09-08 11:38:27",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<bdi><a href=\"https://www.wikidata.org/wiki/Q97949455\" class=\"extiw\" title=\"d:Q97949455\"><span title=\"French photographer and Wikimedian\">Pierre André Leclercq</span></a></bdi>",
+                "source": "commons-desc-page"
+              },
+              "Permission": {
+                "value": "<table style=\"margin: 1.5em auto; width:90%;background-color:#B2FFFF; border:2px solid #cccccc; padding:1px;\" cellspacing=\"10\" dir=\"ltr\" class=\"layouttemplate\">\n\n<tbody><tr>\n<td align=\"center\"><span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Pierre_Andr%C3%A9_Leclercq_(photo_profil_).jpg\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Pierre_Andr%C3%A9_Leclercq_%28photo_profil_%29.jpg/120px-Pierre_Andr%C3%A9_Leclercq_%28photo_profil_%29.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"100\" height=\"100\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Pierre_Andr%C3%A9_Leclercq_%28photo_profil_%29.jpg/250px-Pierre_Andr%C3%A9_Leclercq_%28photo_profil_%29.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"1107\" data-file-height=\"1107\"></a></span>\n</td>\n<td><b>This illustration</b> <i>was made by</i> <b><a href=\"//commons.wikimedia.org/wiki/User:Pierre_Andr%C3%A9_Leclercq\" title=\"User:Pierre André Leclercq\">Pierre André Leclercq</a></b>, under the <a rel=\"nofollow\" class=\"external text\" href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.fr\">License CC-BY-SA</a> which allows you to:\n<ul><li>Freely use and distribute it for non-commercial or for commercial purposes</li>\n<li>Create derivative works of it.</li></ul>\n<p><b>Under this condition</b> Credit me as the original author and use the same license. I encourage distribution and modification of this image as long as you attribute its author and license. If you are using one of my images or wish to contact me, please inform me by writing a short message on my discussion page. \n</p><p>An email  <span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Nuvola_apps_kmail.png\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Nuvola_apps_kmail.png/20px-Nuvola_apps_kmail.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"16\" height=\"16\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Nuvola_apps_kmail.png/40px-Nuvola_apps_kmail.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"128\" data-file-height=\"128\"></a></span> <a href=\"//commons.wikimedia.org/wiki/Special:EmailUser/Pierre_Andr%C3%A9_Leclercq\" title=\"Special:EmailUser/Pierre André Leclercq\"> <b>would be appreciated.</b></a>\n</p>\n</td></tr></tbody></table>\n<table style=\"margin: 1.5em auto; width:90%;background-color:#B2FFFF; border:2px solid #cccccc; padding:1px;\" cellspacing=\"10\" dir=\"ltr\" class=\"layouttemplate\">\n\n<tbody><tr>\n<td align=\"center\"><span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Fairytale_upload_2.png\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Fairytale_upload_2.png/60px-Fairytale_upload_2.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"50\" height=\"50\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/2/20/Fairytale_upload_2.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail_unscaled 2x\" data-file-width=\"64\" data-file-height=\"64\"></a></span>\n</td>\n<td><span><b>Please do not overwrite the author's version with a modified image without discussing with the author.</b> The author would like to make corrections only from the uncompressed <a href=\"https://en.wikipedia.org/wiki/en:raw_image_format\" class=\"extiw\" title=\"w:en:raw image format\">RAW file</a>. This ensures that changes are preserved and are based on the best possible source to achieve a high quality. If you think that changes are required, please, get in touch with the author.<br>Otherwise, you can upload a new image with a different name without overwriting this one. Use <a href=\"//commons.wikimedia.org/wiki/Template:Derived_from\" title=\"Template:Derived from\"><span style=\"font-family:monospace,monospace;\">{{Derived from}}</span></a> or <a href=\"//commons.wikimedia.org/wiki/Template:Extracted_from\" title=\"Template:Extracted from\"><span style=\"font-family:monospace,monospace;\">{{Extracted from}}</span></a> for this purpose.</span>\n</td></tr></tbody></table>",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ],
+        "revisions": [
+          {
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n<tr><td colspan=\"2\" style=\"vertical-align:top;background:#E3E3E3;text-align:left\">\n<table cellpadding=\"4\" class=\"toccolours vevent\" style=\"width:100%;direction:{{#dir:{{int:lang}}}}\">\n<tr><td colspan=\"2\" style=\"vertical-align:top;background:#E3E3E3;text-align:center;font-size:1.6em;font-weight:bold\">\n{{c|Two-wheeled open carts in Château de Chambord}}\n</td></tr>\n<tr><td colspan=\"2\" style=\"vertical-align:top;background:#E3E3E3;text-align:left\">\n{{Information\n|description={{fr|1=[[:fr:Château_de_Chambord|Château de Chambord]], Loir-et-Cher. Charrette à deux roues dans les écuries du Maréchal de Saxe.}}{{en|Two-wheeled open carts in [[:en:Château_de_Chambord|Château de Chambord]]}}{{Mérimée|type=classé|PA00098405}}\n|date=2015-09-08 11:38:27\n|source={{own}}\n|author={{creator|wikidata=Q97949455}}\n|permission={{User:Pierre André Leclercq/Credit}}\n|other versions={{Extracted from|1=\nFile:Chambord Eté2016 exposition de Calèches-bis au château (2).jpg}}\n\n}}\n{{Location|47.615211|1.52035}}\n\n=={{int:license-header}}==\n{{self|cc-by-sa-4.0}}\n\n[[Category:Dpt du Loir-et-Cher by PIERRE ANDRE LECLERCQ]]\n[[Category:Show aux écuries du Maréchal de Saxe]]\n[[Category:Centre-Val de Loire photographs taken on 2019-09-08]]\n[[Category:Horse-drawn carts in Château de Chambord]]\n[[Category:Valued images by PIERRE ANDRE LECLERCQ]]\n[[Category:Valued images of Loir-et-Cher]]\n[[Category:Black and red carriages]]\n{{VI|{{C|Two-wheeled open carts in Château de Chambord}}, right view|00:19, 10 October 2024 (UTC)|\nsubpage=Two-wheeled open carts in Château de Chambord.jpg}}"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="fr.pierresdefrance.CatalogueTest" tests="5" failures="0" errors="0" skipped="0" time="47.96" timestamp="2026-09-12T08:17:43" hostname="localhost">
+  <properties>
+    <property name="device" value="Pixel_10(AVD) - 17" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="fullDatasetAndQueries" classname="fr.pierresdefrance.CatalogueTest" time="6.243" />
+  <testcase name="offlineSearchAndNoticeWithoutCoordinates" classname="fr.pierresdefrance.DiscoveryUiTest" time="11.459" />
+  <testcase name="nationalSearchAndDetailWithoutLocation" classname="fr.pierresdefrance.DiscoveryUiTest" time="8.555" />
+  <testcase name="locationRecentersAndShowsNearby" classname="fr.pierresdefrance.LocationUiTest" time="4.477" />
+  <testcase name="fullCatalogueRendersAtNationalAndCityScales" classname="fr.pierresdefrance.MapRenderTest" time="14.996" />
+</testsuite>
