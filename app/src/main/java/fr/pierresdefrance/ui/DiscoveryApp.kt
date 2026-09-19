@@ -43,6 +43,7 @@ import coil3.network.NetworkHeaders
 import coil3.network.httpHeaders
 import fr.pierresdefrance.R
 import fr.pierresdefrance.data.*
+import org.json.JSONObject
 import fr.pierresdefrance.domain.Position
 import java.util.Locale
 
@@ -196,12 +197,13 @@ private fun MonumentSheet(m: MonumentDetail,image: HeritageImage?,onMap: ()->Uni
             Text("★".repeat(m.visualLevel)+"☆".repeat(3-m.visualLevel),color=MaterialTheme.colorScheme.secondary)
         }
         Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(8.dp)) {
-            Score("Patrimoine",m.importance,Modifier.weight(1f))
-            Score("Notoriété",m.notoriety,Modifier.weight(1f))
-            Score("Ensemble",m.globalScore,Modifier.weight(1f))
+            Score("Protection",m.importance,Modifier.weight(1f))
+            Score("Rayonnement",m.notoriety,Modifier.weight(1f))
+            Score("Indice",m.globalScore,Modifier.weight(1f))
         }
-        if(m.scoreSource.contains("non mesurée") || m.scoreEvidence.contains("aucun indicateur"))
-            Text("Notoriété non mesurée : valeur plancher du modèle.",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
+        if(m.notoriety < 0)
+            Text("Note provisoire : rayonnement non mesuré. Une étoile ne signifie pas un faible intérêt.",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
+        Text("Protection patrimoniale et rayonnement encyclopédique. Deux étoiles à partir de 55, trois à partir de 75. Ce repère ne mesure ni la qualité de visite ni l’accessibilité.",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
         Button(onClick={
             val uri="geo:0,0?q=${m.latitude},${m.longitude}(${Uri.encode(m.name)})"
             open(context,uri,true)
@@ -224,6 +226,11 @@ private fun MonumentSheet(m: MonumentDetail,image: HeritageImage?,onMap: ()->Uni
         if(m.protectionDetails.isNotBlank()) Text(m.protectionDetails,style=MaterialTheme.typography.bodyMedium)
         TextButton(onClick={open(context,m.popUrl)}) { Text("Voir la fiche officielle POP ↗") }
         if(m.wikipediaUrl.isNotBlank()) TextButton(onClick={open(context,m.wikipediaUrl)}) { Text("Lire sur Wikipédia ↗") }
+        val ratingSource=remember(m.scoreEvidence) {
+            runCatching { JSONObject(m.scoreEvidence).optString("wikidata") }.getOrDefault("")
+                .takeIf { it.startsWith("https://www.wikidata.org/wiki/Q") }
+        }
+        if(ratingSource!=null) TextButton(onClick={open(context,ratingSource)}) { Text("Source du rayonnement ↗") }
         if(m.descriptionSource.startsWith("Wikipédia")) {
             TextButton(onClick={open(context,m.wikipediaUrl.substringBefore('#').substringBefore('?')+"?action=history")}) { Text("Contributeurs et historique du texte ↗") }
             TextButton(onClick={open(context,"https://creativecommons.org/licenses/by-sa/4.0/deed.fr")}) { Text("Licence du texte Wikipédia ↗") }
@@ -246,7 +253,7 @@ private fun communeLabel(value: String): String {
 @Composable private fun Score(label: String,value: Int,modifier: Modifier) {
     Surface(modifier,shape=RoundedCornerShape(12.dp),color=MaterialTheme.colorScheme.surfaceContainer) {
         Column(Modifier.padding(10.dp),horizontalAlignment=Alignment.CenterHorizontally) {
-            Text("$value",style=MaterialTheme.typography.titleLarge,fontWeight=FontWeight.Medium)
+            Text(if(value < 0) "—" else "$value",style=MaterialTheme.typography.titleLarge,fontWeight=FontWeight.Medium)
             Text(label,style=MaterialTheme.typography.labelSmall)
         }
     }

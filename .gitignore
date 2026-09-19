@@ -6,3 +6,4 @@ local.properties
 **/__pycache__/
 *.tmp
 data/*.csv
+data/scoring_api_cache.sqlite

@@ -11,7 +11,7 @@ fiche avec textes sourcés, scores, photographie à la demande et itinéraire ex
 ## Démarrer
 
 Pour installer directement la V1 sur un téléphone ARM 64 bits :
-[télécharger l’APK de test](dist/Les-Pierres-de-France-0.3.0-arm64.apk), puis l’ouvrir
+[télécharger l’APK de test](dist/Les-Pierres-de-France-0.3.1-arm64.apk), puis l’ouvrir
 sur Android. Autoriser l’installation depuis l’application qui ouvre le fichier si
 Android le demande. La première préparation du catalogue prend quelques secondes.
 
@@ -72,9 +72,14 @@ python tools/build_monuments_db.py --input "C:\chemin\nouveau-merimee.csv"
 
 Le snapshot `data/legacy_enrichment.json` permet de reconstruire sans avoir le projet
 parisien sur l’autre ordinateur. Les enrichissements et liens sont associés par référence,
-les cas ambigus écartés. Les règles et poids du Flâneur sont conservés : protection et
-ancienneté sont recalculées avec Mérimée, notoriété et composantes complémentaires
-auditées sont reprises. Les correspondances Wikipédia sont complétées par le script
+les cas ambigus écartés. Les anciens scores du Flâneur ne sont plus repris : le
+[barème national v2](docs/NOTATIONS.md) combine une contribution limitée de la
+protection avec le rayonnement encyclopédique, collecté par référence Mérimée exacte.
+Les seuils sont fixes (55 et 75) ; aucun bonus ne dépend du type de monument, de la
+date de protection ou de la longueur de sa notice. Les données absentes sont
+signalées, et les notes correspondantes sont provisoires. Le snapshot
+`data/scoring_enrichment.json` assure une reconstruction hors ligne ;
+`python tools/enrich_scoring.py` permet de l'actualiser. Les correspondances Wikipédia sont complétées par le script
 national décrit ci-dessous, à partir d’identifiants Mérimée exacts. Les descriptions
 POP sont conservées ; les textes manquants sont complétés par Wikipédia ou une synthèse
 factuelle des champs POP. Les synthèses sont explicitement identifiées.
@@ -130,7 +135,9 @@ après vérification du rapport. La table `source_rows` aide à examiner les ano
 | Élément | Rôle |
 |---|---|
 | `tools/build_monuments_db.py` | Import, normalisation, index, pyramide spatiale, rapport |
-| `tools/heritage_scoring.py` | Fonctions du Flâneur conservées sans modification |
+| `tools/national_scoring.py` | Barème national v2, seuils fixes et preuves par notice |
+| `tools/enrich_scoring.py` | Collecte nationale du rayonnement par référence Mérimée exacte |
+| `tools/audit_scoring.py` | Recalcul intégral, comparaison des notes et cohérence carte/liste |
 | `data/MonumentDatabase.kt` | Room, fiche détaillée chargée par identifiant |
 | `data/MonumentRepository.kt` | Projections carte/liste, FTS, bounding boxes, proximité |
 | `domain/Geo.kt` | Distance, découpage spatial, recherche normalisée |
@@ -240,6 +247,7 @@ Pour l’émulateur Windows, utiliser le GPU matériel (`-gpu host`) et au moins
 de RAM sur l’image Pixel 10 / Android 17 employée ici. Son rendu logiciel SwiftShader
 masque les symboles MapLibre dans les essais réalisés ; le test visuel le détecte.
 
-Consulter [la validation 0.3.0](docs/VERIFICATION-0.3.0.md),
+Consulter [la validation des notes 0.3.1](docs/VERIFICATION-0.3.1.md),
+[le barème national](docs/NOTATIONS.md), [la validation 0.3.0](docs/VERIFICATION-0.3.0.md),
 [l’analyse détaillée](docs/ANALYSE.md), [les mesures de la V1](docs/VERIFICATION.md)
 et [le benchmark SQL complet](docs/benchmark-desktop.json).

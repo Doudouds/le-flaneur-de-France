@@ -18,6 +18,15 @@ class CatalogueTest {
     @Test fun fullDatasetAndQueries()=runBlocking {
         val repo=MonumentRepository(db)
         Assert.assertEquals(46760,repo.total()) // pins the supplied snapshot intentionally
+        val eiffelRow=repo.search("PA00088801").single()
+        val eiffel=repo.detail(eiffelRow.id)!!
+        Assert.assertEquals(3,eiffel.visualLevel)
+        Assert.assertEquals(3,eiffelRow.level)
+        Assert.assertTrue(eiffel.globalScore>=80)
+        Assert.assertTrue(eiffel.notoriety>0)
+        Assert.assertTrue(eiffel.scoreEvidence.contains("national-v2"))
+        val eiffelBounds=Bounds(eiffel.latitude!!-.003,eiffel.longitude!!-.003,eiffel.latitude+.003,eiffel.longitude+.003)
+        Assert.assertEquals(3,repo.map(eiffelBounds,16.0).items.single { it.id==eiffel.id }.visualLevel)
         for(ref in listOf("PA00113040","PA00087398")) {
             val row=repo.search(ref).single()
             val detail=repo.detail(row.id)!!

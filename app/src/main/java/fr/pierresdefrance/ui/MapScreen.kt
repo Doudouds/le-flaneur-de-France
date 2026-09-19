@@ -116,7 +116,7 @@ fun MapScreen(state: DiscoveryState,vm: DiscoveryViewModel,active: Boolean) {
                 }
                 when {
                     result.aggregated -> cells.add(feature)
-                    item.importance>=65 -> majors.add(feature)
+                    item.visualLevel==3 -> majors.add(feature)
                     else -> points.add(feature)
                 }
             }

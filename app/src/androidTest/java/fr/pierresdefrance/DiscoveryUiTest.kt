@@ -23,13 +23,26 @@ class DiscoveryUiTest {
         ui.onNodeWithText("Domaine de Chambord").performClick()
         ui.waitUntil(15000) { ui.onAllNodesWithText("Itinéraire").fetchSemanticsNodes().isNotEmpty() }
         ui.onNodeWithText("Itinéraire").assertIsEnabled()
-        ui.onNodeWithText("Patrimoine").assertExists()
+        ui.onNodeWithText("Protection").assertExists()
         ui.onNodeWithText("Voir sur la carte").performScrollTo().performClick()
         ui.waitUntil(10000) { ui.onAllNodesWithText("Adresse ou ville").fetchSemanticsNodes().isNotEmpty() }
         ui.onNodeWithText("Liste").performClick()
         ui.onNodeWithContentDescription("Effacer la recherche").performClick()
         ui.onNodeWithText("Rechercher un monument").performTextInput("PA2A000001")
         ui.waitUntil(10000) { ui.onAllNodesWithText("Recherche dans toute la France").fetchSemanticsNodes().isNotEmpty() }
+    }
+
+    @Test fun eiffelHasThreeStarsInListAndDetail() {
+        ui.waitUntil(30000) { ui.onAllNodesWithText("Adresse ou ville").fetchSemanticsNodes().isNotEmpty() }
+        ui.onNodeWithText("Liste").performClick()
+        ui.onNodeWithText("Rechercher un monument").performTextInput("PA00088801")
+        ui.waitUntil(15000) { ui.onAllNodesWithText("Tour Eiffel").fetchSemanticsNodes().isNotEmpty() }
+        ui.onNodeWithText("★★★").assertExists()
+        ui.onNodeWithText("Tour Eiffel").performClick()
+        ui.waitUntil(15000) { ui.onAllNodesWithText("Rayonnement").fetchSemanticsNodes().isNotEmpty() }
+        ui.onNodeWithText("90").assertExists()
+        ui.onNodeWithText("Rayonnement").assertExists()
+        ui.onNodeWithText("Source du rayonnement ↗").performScrollTo().assertIsDisplayed()
     }
 
     @Test fun offlineSearchAndNoticeWithoutCoordinates() {

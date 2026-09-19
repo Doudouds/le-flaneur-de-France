@@ -13,8 +13,8 @@ android {
         applicationId = "fr.pierresdefrance"
         minSdk = 26
         targetSdk = 36
-        versionCode = 3
-        versionName = "0.3.0"
+        versionCode = 4
+        versionName = "0.3.1"
         val catalogue = file("src/main/assets/monuments.db")
         val digest = MessageDigest.getInstance("SHA-256")
         if (catalogue.exists()) catalogue.inputStream().use { stream ->

@@ -167,9 +167,21 @@
   "delimiter": "|",
   "unique_monuments": 46760,
   "visual_thresholds": [
-    37,
-    49
+    55,
+    75
   ],
+  "scoring_version": "national-v2",
+  "scoring_snapshot_sha256": "4e38bae38eab3736818c5f253d32755c0d2f8c44a50f95b6e0d7de52883476e5",
+  "scoring_retrieved": "2026-09-19T07:26:56Z",
+  "rating_distribution": {
+    "1": 44943,
+    "2": 1589,
+    "3": 228
+  },
+  "measured_visibility": 39054,
+  "provisional_ratings": 7706,
+  "unresolved_scoring_matches": 280,
+  "reviewed_scoring_scopes": 54,
   "with_coordinates": 44482,
   "with_description": 46760,
   "description_sources": {
@@ -182,7 +194,7 @@
   "with_wikipedia": 29533,
   "with_image": 0,
   "with_importance": 46760,
-  "reused_enrichments": 42715,
+  "reused_enrichments": 42786,
   "by_department": {
     "01": 390,
     "01;71": 1,
@@ -315,6 +327,6 @@
   "multiple_protections": 2562,
   "colocated_groups": 128,
   "without_coordinates": 2278,
-  "elapsed_seconds": 34.758,
-  "database_bytes": 241233920
+  "elapsed_seconds": 18.944,
+  "database_bytes": 235515904
 }

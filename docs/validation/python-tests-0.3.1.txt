@@ -1,0 +1,19 @@
+test_exact_identifiers_reject_ambiguity_and_non_french_articles (test_enrichment.EnrichmentTests.test_exact_identifiers_reject_ambiguity_and_non_french_articles) ... ok
+test_pop_then_wikipedia_then_history_then_factual_summary (test_enrichment.EnrichmentTests.test_pop_then_wikipedia_then_history_then_factual_summary) ... ok
+test_coordinates (test_pipeline.PipelineTests.test_coordinates) ... ok
+test_distance_and_search (test_pipeline.PipelineTests.test_distance_and_search) ... ok
+test_full_import_dedup_search_box_and_atomic_failure (test_pipeline.PipelineTests.test_full_import_dedup_search_box_and_atomic_failure) ... ok
+test_ambiguous_evidence_cannot_be_used_as_an_exact_signal (test_scoring.ScoringTests.test_ambiguous_evidence_cannot_be_used_as_an_exact_signal) ... ok
+test_exact_join_excludes_ambiguity_even_if_one_item_is_more_popular (test_scoring.ScoringTests.test_exact_join_excludes_ambiguity_even_if_one_item_is_more_popular) ... ok
+test_landmark_can_be_three_stars_even_when_only_inscribed (test_scoring.ScoringTests.test_landmark_can_be_three_stars_even_when_only_inscribed) ... ok
+test_missing_is_distinct_from_measured_zero (test_scoring.ScoringTests.test_missing_is_distinct_from_measured_zero) ... ok
+test_monotonic_bounded_and_fixed_thresholds (test_scoring.ScoringTests.test_monotonic_bounded_and_fixed_thresholds) ... ok
+test_no_category_date_or_documentation_bonus (test_scoring.ScoringTests.test_no_category_date_or_documentation_bonus) ... ok
+test_raw_cache_counts_only_wikipedia_and_checks_uncached_candidates (test_scoring.ScoringTests.test_raw_cache_counts_only_wikipedia_and_checks_uncached_candidates) ... ok
+test_scope_review_selects_the_object_not_the_most_popular_neighbour (test_scoring.ScoringTests.test_scope_review_selects_the_object_not_the_most_popular_neighbour) ... ok
+test_major_landmarks_and_scope_boundaries (test_scoring_catalogue.CatalogueRatingTests.test_major_landmarks_and_scope_boundaries) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.169s
+
+OK

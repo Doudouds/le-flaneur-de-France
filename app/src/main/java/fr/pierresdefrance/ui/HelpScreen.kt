@@ -81,12 +81,13 @@ fun HelpScreen() {
 
         Text("Notation en étoiles", style = MaterialTheme.typography.titleLarge)
         Text(
-            "Les étoiles donnent une indication relative de l’intérêt du monument pour la promenade. Elles combinent plusieurs indices patrimoniaux et documentaires ; elles ne constituent pas un classement absolu.",
+            "Les étoiles sont un repère de découverte fondé sur la protection patrimoniale et le rayonnement encyclopédique, mesuré par le nombre de langues de Wikipédia consacrées au monument. Le même barème s’applique à tous les lieux : aucun bonus lié au type d’édifice, à l’ancienneté du classement ou à la longueur de la notice. Il ne mesure ni la qualité de visite ni l’accessibilité.",
             style = MaterialTheme.typography.bodyLarge,
         )
-        RatingLegend(1, "Monument à découvrir", "Un lieu parfois discret, moins documenté ou d’intérêt plus local.", Color(0xFFF7B955))
-        RatingLegend(2, "Intérêt notable", "Un monument qui mérite particulièrement le détour.", Color(0xFF64B5F6))
-        RatingLegend(3, "Monument remarquable", "Un lieu particulièrement important, connu ou riche d’histoire.", Color(0xFF8E3A8A))
+        RatingLegend(1, "Monument à découvrir", "Indice inférieur à 55 ; note provisoire si le rayonnement n’est pas mesuré.", Color(0xFFF7B955))
+        RatingLegend(2, "Intérêt notable", "Indice de 55 à 74 : patrimoine à rayonnement établi.", Color(0xFF64B5F6))
+        RatingLegend(3, "Monument remarquable", "Indice à partir de 75 : patrimoine à fort rayonnement.", Color(0xFF8E3A8A))
+        Text("La protection contribue jusqu’à 35 points (classé MH : 35 ; inscrit MH : 25 ; statut à préciser : 15). Le rayonnement ajoute jusqu’à 65 points, sur une échelle logarithmique plafonnée à 100 langues. Les seuils restent fixes quand le catalogue évolue. Une donnée absente est affichée par un tiret. Wikipédia étant inégalement documenté, ces étoiles restent une indication, pas un jugement exhaustif de valeur patrimoniale.", style = MaterialTheme.typography.bodyMedium)
 
         Text("Données et connexion", style = MaterialTheme.typography.titleLarge)
         HelpIconDetail(

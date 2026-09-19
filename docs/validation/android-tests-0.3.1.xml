@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="fr.pierresdefrance.CatalogueTest" tests="7" failures="0" errors="0" skipped="0" time="31.165" timestamp="2026-09-19T07:29:25" hostname="localhost">
+  <properties>
+    <property name="device" value="Pixel_10(AVD) - 17" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="fullDatasetAndQueries" classname="fr.pierresdefrance.CatalogueTest" time="2.444" />
+  <testcase name="eiffelHasThreeStarsInListAndDetail" classname="fr.pierresdefrance.DiscoveryUiTest" time="7.214" />
+  <testcase name="offlineSearchAndNoticeWithoutCoordinates" classname="fr.pierresdefrance.DiscoveryUiTest" time="4.218" />
+  <testcase name="nationalSearchAndDetailWithoutLocation" classname="fr.pierresdefrance.DiscoveryUiTest" time="4.953" />
+  <testcase name="wikipediaParserAcceptsArticleButRejectsMissingAndDisambiguation" classname="fr.pierresdefrance.DescriptionsTest" time="0.003" />
+  <testcase name="allNoticesHaveSourcedText" classname="fr.pierresdefrance.DescriptionsTest" time="0.333" />
+  <testcase name="fullCatalogueRendersAtNationalAndCityScales" classname="fr.pierresdefrance.MapRenderTest" time="10.956" />
+</testsuite>

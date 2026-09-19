@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="fr.pierresdefrance.DiscoveryUiTest" tests="1" failures="0" errors="0" skipped="0" time="12.782" timestamp="2026-09-18T20:19:40" hostname="localhost">
+  <properties>
+    <property name="device" value="Pixel_10(AVD) - 17" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="eiffelHasThreeStarsInListAndDetail" classname="fr.pierresdefrance.DiscoveryUiTest" time="11.095" />
+</testsuite>

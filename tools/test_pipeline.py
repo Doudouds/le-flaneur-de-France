@@ -22,20 +22,6 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(fts_query('"* OR ;'),'or*')
         self.assertEqual(tile(0,0,3),(4,4))
 
-    def test_scoring_preserves_rules(self):
-        m=score({'Typologie_de_la_protection':'classé MH','Date_et_typologie_de_la_protection':'1840'})
-        self.assertEqual(m['importance'],65); self.assertEqual(m['notoriety'],2); self.assertEqual(m['globalScore'],40)
-        self.assertEqual(score({'Typologie_de_la_protection':'inscrit MH'})['importance'],32)
-        self.assertEqual(score({'Typologie_de_la_protection':'classé MH','Precision_de_la_protection':'façade'})['importance'],42)
-        old=dict(importance=3,notoriety=2,globalScore=3,components={'score_protection':0,'score_anciennete':3})
-        corrected=score({'Typologie_de_la_protection':'classé MH','Date_et_typologie_de_la_protection':'1840'},old)
-        self.assertEqual(corrected['importance'],65)
-        self.assertEqual(corrected['globalScore'],40)
-        old.update(notoriety=90,components={'score_unesco':15,'score_interet_documente':8})
-        enriched=score({'Typologie_de_la_protection':'classé MH','Date_et_typologie_de_la_protection':'1840'},old)
-        self.assertEqual(enriched['importance'],88)
-        self.assertEqual(enriched['globalScore'],89)
-
     def test_full_import_dedup_search_box_and_atomic_failure(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp); source=root/'source.csv'; out=root/'monuments.db'
@@ -56,6 +42,9 @@ class PipelineTests(unittest.TestCase):
             self.assertEqual(c.execute('SELECT count(*) FROM monuments WHERE latitude BETWEEN 47 AND 48 AND longitude BETWEEN 1 AND 2').fetchone()[0],1)
             self.assertEqual(c.execute("SELECT coordinateStatus FROM monuments WHERE reference='PA00000003'").fetchone()[0],'conflicting_duplicate')
             self.assertEqual(c.execute('SELECT sum(count) FROM map_cells WHERE level=6').fetchone()[0],1)
+            self.assertEqual(c.execute('SELECT count(*) FROM monuments m JOIN monument_list l USING(id) WHERE m.visualLevel!=l.visualLevel OR m.globalScore!=l.globalScore').fetchone()[0],0)
+            self.assertEqual(c.execute('SELECT count(*) FROM map_cells c JOIN monuments m ON m.id=c.majorId WHERE m.globalScore!=c.importance').fetchone()[0],0)
+            self.assertEqual(c.execute('SELECT max(visualLevel) FROM monuments').fetchone()[0],1)
             self.assertEqual(c.execute("SELECT history FROM monuments WHERE reference='PA00000001'").fetchone()[0],base['Historique'])
             self.assertEqual(c.execute("SELECT count(*) FROM monuments WHERE trim(description)='' OR trim(descriptionSource)=''").fetchone()[0],0)
             c.close(); before=out.read_bytes(); source.write_text('bad|headers\nx|y',encoding='utf-8')

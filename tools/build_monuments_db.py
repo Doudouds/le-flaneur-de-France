@@ -3,7 +3,7 @@
 from __future__ import annotations
 import argparse, collections, csv, hashlib, json, math, os, re, sqlite3, time, unicodedata
 from pathlib import Path
-from heritage_scoring import protection_components, round_half_up
+from national_scoring import score, VERSION, THRESHOLDS
 from monument_descriptions import pop_summary, enrich_description
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -60,35 +60,6 @@ def coordinates(value, department=''):
         return None, None, 'suspect_territory'
     return lat, lon, 'valid'
 
-class Resolver:
-    """Adapter only; the original protection_components function remains unchanged."""
-    mapping = {
-        'heritage': ['Typologie_de_la_protection'],
-        'protection_title': ['Typologie_de_la_protection'],
-        'criteria': ['Precision_de_la_protection'],
-        'protection_dates': ['Date_et_typologie_de_la_protection'],
-        'architecture': ['Auteur_de_l_edifice'],
-    }
-    def values(self, row, key): return [row[k] for k in self.mapping.get(key,[]) if row.get(k)]
-    def joined(self,row,key): return ' '.join(self.values(row,key))
-
-def score(row, old=None):
-    parts=protection_components(Resolver(),row,pop_description=row.get('Historique',''))
-    # Authoritative protection and dates come from Mérimée. Keep complementary
-    # audited enrichment components without adding the same criterion twice.
-    if old:
-        for key in ('score_exceptionnel','score_unesco','score_autres_protections','score_interet_documente'):
-            parts[key]=max(int(parts[key]),int(old.get('components',{}).get(key,0)))
-    importance=min(100,sum(int(parts[k]) for k in ('score_protection','score_anciennete','score_exceptionnel',
-                                                  'score_unesco','score_autres_protections','score_interet_documente')))
-    notoriety=int(old['notoriety']) if old else 2
-    source='Le Flâneur — critères conservés ; protection et dates Mérimée ; enrichissements par référence exacte' if old else 'Règles du Flâneur — données Mérimée'
-    if not old or 'aucun indicateur' in old.get('basis',''):
-        source+=' ; notoriété non mesurée (plancher 2)'
-    return {'importance':importance,'notoriety':notoriety,'globalScore':round_half_up(.6*importance+.4*notoriety),
-            'scoreSource':source,
-            'scoreEvidence':json.dumps({'components':parts,'legacy':old},ensure_ascii=False)}
-
 def schema(db):
     columns=['id INTEGER NOT NULL PRIMARY KEY','latitude REAL','longitude REAL']
     columns += [f'{k} TEXT NOT NULL' for k in list(FIELDS)+TEXT_EXTRA]
@@ -110,11 +81,16 @@ def tile(lat,lon,z):
     n=2**z; r=math.radians(max(-85.05112878,min(85.05112878,lat)))
     return min(n-1,int((lon+180)/360*n)), min(n-1,int((1-math.asinh(math.tan(r))/math.pi)/2*n))
 
-def _build(source, output, enrichment, db, wikipedia=None):
+def _build(source, output, enrichment, db, wikipedia=None, scoring=None):
     start=time.perf_counter(); output.parent.mkdir(parents=True,exist_ok=True)
     temp=output.with_suffix('.tmp'); schema(db)
     old=json.loads(enrichment.read_text(encoding='utf-8')) if enrichment and enrichment.exists() else {}
     wiki_enrichment=json.loads(wikipedia.read_text(encoding='utf-8')) if wikipedia and wikipedia.exists() else {}
+    snapshot=json.loads(scoring.read_text(encoding='utf-8')) if scoring else {}
+    if snapshot and snapshot.get('version') != 1: raise ValueError('Unsupported scoring snapshot')
+    signals=snapshot.get('records',{})
+    def rate(row, ref):
+        return score(row,signals.get(ref),retrieved=snapshot.get('retrieved',''),ambiguous=ref in snapshot.get('ambiguous',{}))
     summaries={}
     with source.open('rb') as source_handle: source_hash=hashlib.file_digest(source_handle,'sha256').hexdigest()
     report={'source':str(source.resolve()),'source_sha256':source_hash,
@@ -157,8 +133,7 @@ def _build(source, output, enrichment, db, wikipedia=None):
                 m['history']=legacy['popHistoricalDescription']; m['historySource']='POP / Mérimée — Flâneur'
             if not (m['imageLicense'] and m['imagePageUrl']): m['imageUrl']=''
             m['shortDescription']=(m['description'] or m['history'])[:240]
-            m.update(score(row,legacy.get('scores')))
-            m['visualLevel']=1
+            m.update(rate(row,ref))
             m['searchName']=normalize(m['name'])
             m['searchText']=normalize(' '.join(m[k] for k in ('name','alternativeName','commune','department','departmentName','region','reference')))
             prev=db.execute('SELECT * FROM monuments WHERE reference=?',(ref,)).fetchone()
@@ -184,7 +159,7 @@ def _build(source, output, enrichment, db, wikipedia=None):
                 m=previous
                 merged_row=dict(row)
                 for key,column in FIELDS.items(): merged_row[column]=m[key]
-                m.update(score(merged_row,legacy.get('scores')))
+                m.update(rate(merged_row,ref))
                 m['searchName']=normalize(m['name'])
                 m['searchText']=normalize(' '.join(m[k] for k in ('name','alternativeName','commune','department','departmentName','region','reference')))
             summaries[ref]=pop_summary(m,row)
@@ -198,11 +173,10 @@ def _build(source, output, enrichment, db, wikipedia=None):
         enrich_description(m,wiki_enrichment.get(m['reference'],{}),summaries[m['reference']])
         db.execute('UPDATE monuments SET description=?,descriptionSource=?,shortDescription=?,wikipediaUrl=? WHERE id=?',
                    (m['description'],m['descriptionSource'],m['shortDescription'],m['wikipediaUrl'],m['id']))
-    # National quantiles replace Paris-only percentiles, with ties kept together.
+    # Absolute, versioned thresholds: adding monuments cannot change existing stars.
     scores=[r[0] for r in db.execute('SELECT globalScore FROM monuments ORDER BY globalScore')]
     if not scores: raise ValueError('No valid monuments imported')
-    thresholds=[scores[int((len(scores)-1)*q)] for q in (.75,.95)]
-    db.execute('UPDATE monuments SET visualLevel=CASE WHEN globalScore>=? THEN 3 WHEN globalScore>=? THEN 2 ELSE 1 END',(thresholds[1],thresholds[0]))
+    thresholds=list(THRESHOLDS)
     db.execute('INSERT INTO monument_list SELECT id,name,commune,department,visualLevel,globalScore,searchName FROM monuments')
     db.execute('INSERT INTO monument_fts(docid,searchName,searchText) SELECT id,searchName,searchText FROM monuments')
     db.execute("INSERT INTO monument_fts(monument_fts) VALUES('optimize')")
@@ -217,13 +191,21 @@ def _build(source, output, enrichment, db, wikipedia=None):
         db.executemany('INSERT INTO map_cells VALUES (?,?,?,?,?,?,?,?)',
                        ((level,x,y,v[0]/v[2],v[1]/v[2],v[2],v[3],v[4]) for (x,y),v in cells.items()))
     report.update(unique_monuments=len(scores),visual_thresholds=thresholds,
+        scoring_version=VERSION,
+        scoring_snapshot_sha256=hashlib.sha256(scoring.read_bytes()).hexdigest() if scoring else None,
+        scoring_retrieved=snapshot.get('retrieved'),
+        rating_distribution=dict(db.execute('SELECT visualLevel,count(*) FROM monuments GROUP BY visualLevel')),
+        measured_visibility=db.execute('SELECT count(*) FROM monuments WHERE notoriety>=0').fetchone()[0],
+        provisional_ratings=db.execute('SELECT count(*) FROM monuments WHERE notoriety<0').fetchone()[0],
+        unresolved_scoring_matches=db.execute('SELECT count(*) FROM monuments WHERE scoreEvidence LIKE ?',('%"matching": "ambiguous"%',)).fetchone()[0],
+        reviewed_scoring_scopes=db.execute('SELECT count(*) FROM monuments WHERE scoreEvidence LIKE ?',('%"matching": "reviewed-monument-scope"%',)).fetchone()[0],
         with_coordinates=db.execute('SELECT count(*) FROM monuments WHERE latitude IS NOT NULL').fetchone()[0],
         with_description=db.execute("SELECT count(*) FROM monuments WHERE description<>'' OR history<>''").fetchone()[0],
         description_sources=dict(db.execute("SELECT CASE WHEN descriptionSource LIKE 'Wikipédia%' THEN 'Wikipédia' ELSE descriptionSource END AS source,count(*) FROM monuments GROUP BY source")),
         with_wikipedia=db.execute("SELECT count(*) FROM monuments WHERE wikipediaUrl<>''").fetchone()[0],
         with_image=db.execute("SELECT count(*) FROM monuments WHERE imageUrl<>''").fetchone()[0],
         with_importance=db.execute('SELECT count(*) FROM monuments WHERE importance IS NOT NULL').fetchone()[0],
-        reused_enrichments=db.execute("SELECT count(*) FROM monuments WHERE scoreSource LIKE 'Le Flâneur%'").fetchone()[0],
+        reused_enrichments=len(set(old)&{r[0] for r in db.execute('SELECT reference FROM monuments')}),
         by_department=dict(db.execute('SELECT department,count(*) FROM monuments GROUP BY department')),
         by_region=dict(db.execute('SELECT region,count(*) FROM monuments GROUP BY region')),
         multiple_protections=db.execute("SELECT count(*) FROM monuments WHERE protection LIKE '%classé%' AND protection LIKE '%inscrit%'").fetchone()[0],
@@ -239,11 +221,11 @@ def _build(source, output, enrichment, db, wikipedia=None):
     print(json.dumps({k:v for k,v in report.items() if k not in ('columns','missing_fields','by_region','by_department','conflicts')},ensure_ascii=False,indent=2))
     return report
 
-def build(source,output,enrichment=None,wikipedia=None):
+def build(source,output,enrichment=None,wikipedia=None,scoring=None):
     output.parent.mkdir(parents=True,exist_ok=True)
     temp=output.with_suffix('.tmp'); temp.unlink(missing_ok=True)
     db=sqlite3.connect(temp)
-    try: return _build(source,output,enrichment,db,wikipedia)
+    try: return _build(source,output,enrichment,db,wikipedia,scoring)
     finally:
         db.close()
         temp.unlink(missing_ok=True)
@@ -254,5 +236,6 @@ if __name__=='__main__':
     p.add_argument('--output',type=Path,default=ROOT/'app/src/main/assets/monuments.db')
     p.add_argument('--enrichment',type=Path,default=ROOT/'data/legacy_enrichment.json')
     p.add_argument('--wikipedia',type=Path,default=ROOT/'data/wikipedia_enrichment.json')
-    args=p.parse_args(); build(args.input,args.output,args.enrichment,args.wikipedia)
+    p.add_argument('--scoring',type=Path,default=ROOT/'data/scoring_enrichment.json')
+    args=p.parse_args(); build(args.input,args.output,args.enrichment,args.wikipedia,args.scoring)
 
