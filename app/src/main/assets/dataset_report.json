@@ -5,8 +5,9 @@
   "duplicates_merged": 0,
   "malformed_rows": 0,
   "coordinate_status": {
-    "valid": 44482,
+    "valid": 44266,
     "missing": 2276,
+    "suspect_precision": 216,
     "suspect_territory": 2
   },
   "missing_fields": {
@@ -182,7 +183,7 @@
   "provisional_ratings": 7706,
   "unresolved_scoring_matches": 280,
   "reviewed_scoring_scopes": 54,
-  "with_coordinates": 44482,
+  "with_coordinates": 44266,
   "with_description": 46760,
   "description_sources": {
     "OpenStreetMap": 18,
@@ -325,8 +326,8 @@
     "Île-de-France": 3988
   },
   "multiple_protections": 2562,
-  "colocated_groups": 128,
-  "without_coordinates": 2278,
-  "elapsed_seconds": 18.944,
-  "database_bytes": 235515904
+  "colocated_groups": 111,
+  "without_coordinates": 2494,
+  "elapsed_seconds": 21.508,
+  "database_bytes": 236662784
 }

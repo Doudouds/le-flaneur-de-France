@@ -3,17 +3,20 @@ package fr.pierresdefrance.data
 import android.content.Context
 import android.net.Uri
 import android.text.Html
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
+import okhttp3.*
 import org.json.JSONObject
-import java.net.HttpURLConnection
-import java.net.URL
+import java.io.IOException
+import java.util.concurrent.TimeUnit
+import kotlin.coroutines.resume
+import kotlin.coroutines.resumeWithException
 
 data class HeritageImage(val url: String,val page: String,val author: String,val license: String,val licenseUrl: String)
 const val HERITAGE_USER_AGENT="LesPierresDeFrance/0.3 (Android; heritage reference lookup)"
 
 /** Adaptation of the Flâneur's Commons resolver: exact reference, explicit rights, no name fallback. */
-class ImageResolver(context: Context) {
+class ImageResolver(context: Context,private val calls: Call.Factory=OkHttpClient.Builder()
+    .connectTimeout(8,TimeUnit.SECONDS).readTimeout(8,TimeUnit.SECONDS).callTimeout(12,TimeUnit.SECONDS).build()) {
     private val cache=context.getSharedPreferences("commons-metadata-v1",Context.MODE_PRIVATE)
     suspend fun resolve(m: MonumentDetail): HeritageImage? = withContext(Dispatchers.IO) {
         if(m.imageUrl.isNotBlank() && m.imageLicense.isNotBlank()) return@withContext HeritageImage(m.imageUrl,m.imagePageUrl,m.imageAuthor,m.imageLicense,m.imageLicenseUrl)
@@ -25,13 +28,26 @@ class ImageResolver(context: Context) {
             "rvprop" to "content","rvslots" to "main")
         val address="https://commons.wikimedia.org/w/api.php?"+params.entries.joinToString("&") { "${it.key}=${Uri.encode(it.value)}" }
         var failed=false
-        val result=runCatching {
-            val connection=URL(address).openConnection() as HttpURLConnection
-            connection.connectTimeout=8000; connection.readTimeout=8000
-            connection.setRequestProperty("User-Agent",HERITAGE_USER_AGENT)
-            try {
-                check(connection.responseCode in 200..299)
-                val root=connection.inputStream.bufferedReader().use { JSONObject(it.readText()) }
+        val result=try {
+                val call=calls.newCall(Request.Builder().url(address).header("User-Agent",HERITAGE_USER_AGENT).build())
+                val body=suspendCancellableCoroutine<String> { continuation ->
+                    continuation.invokeOnCancellation { call.cancel() }
+                    call.enqueue(object: Callback {
+                        override fun onFailure(call: Call,e: IOException) {
+                            if(continuation.isActive) continuation.resumeWithException(e)
+                        }
+                        override fun onResponse(call: Call,response: Response) {
+                            response.use {
+                                try {
+                                    if(!it.isSuccessful) throw IOException("Commons HTTP ${it.code}")
+                                    val text=it.body?.string() ?: throw IOException("Empty Commons response")
+                                    if(continuation.isActive) continuation.resume(text)
+                                } catch(e: Exception) { if(continuation.isActive) continuation.resumeWithException(e) }
+                            }
+                        }
+                    })
+                }
+                val root=JSONObject(body)
                 check(!root.has("error"))
                 val pages=root.optJSONObject("query")?.optJSONObject("pages")
                 pages?.keys()?.asSequence()?.mapNotNull { key ->
@@ -50,8 +66,9 @@ class ImageResolver(context: Context) {
                     if(!url.startsWith("https://")) return@mapNotNull null
                     HeritageImage(url,info.optString("descriptionurl"),value("Artist").ifBlank { value("Credit") },license,value("LicenseUrl"))
                 }?.firstOrNull()
-            } finally { connection.disconnect() }
-        }.onFailure { failed=true }.getOrNull()
+        } catch(e: CancellationException) { throw e }
+        catch(_: Exception) { failed=true; null }
+        ensureActive()
         val saved=JSONObject().put("expires",System.currentTimeMillis()+if(failed) 3_600_000L else 604_800_000L)
         result?.let { saved.put("url",it.url).put("page",it.page).put("author",it.author).put("license",it.license).put("licenseUrl",it.licenseUrl) }
         cache.edit().putString(m.reference,saved.toString()).apply()

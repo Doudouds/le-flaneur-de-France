@@ -20,6 +20,7 @@ data class DiscoveryState(
     val detail: MonumentDetail?=null,val selectedId: Long?=null,val detailLoading: Boolean=false,
     val image: HeritageImage?=null,val locating: Boolean=false,val message: String?=null,
     val fatal: Boolean=false,
+    val mapChoices: List<MapChoice> = emptyList(),
 )
 class DiscoveryViewModel @JvmOverloads constructor(application: Application,private val addresses: AddressSearch=IgnAddressSearch()): AndroidViewModel(application) {
     private val db=MonumentDatabase.open(application)
@@ -31,6 +32,7 @@ class DiscoveryViewModel @JvmOverloads constructor(application: Application,priv
     val state=mutable.asStateFlow()
     private var mapJob: Job?=null; private var searchJob: Job?=null; private var detailJob: Job?=null
     private var locationJob: Job?=null
+    private var mapSelectionJob: Job?=null
     private var addressJob: Job?=null; private var nearbyJob: Job?=null
     private var offset=0
     init { viewModelScope.launch {
@@ -75,8 +77,21 @@ class DiscoveryViewModel @JvmOverloads constructor(application: Application,priv
             catch(e: Exception) { mutable.update { it.copy(searching=false,message="Chargement interrompu. Réessayez.") } }
         }
     }
+    fun selectOnMap(id: Long) {
+        dismiss()
+        mapSelectionJob=viewModelScope.launch {
+            try {
+                val choices=repository.mapChoices(id); ensureActive()
+                mapSelectionJob=null
+                if(choices.size==1) select(choices.single().id)
+                else mutable.update { it.copy(mapChoices=choices) }
+            } catch(e: CancellationException) { throw e }
+            catch(e: Exception) { message("Les monuments à cet endroit n’ont pas pu être chargés.") }
+        }
+    }
     fun select(id: Long) {
-        detailJob?.cancel(); mutable.update { it.copy(selectedId=id,detail=null,image=null,detailLoading=true) }
+        mapSelectionJob?.cancel()
+        detailJob?.cancel(); mutable.update { it.copy(mapChoices=emptyList(),selectedId=id,detail=null,image=null,detailLoading=true) }
         detailJob=viewModelScope.launch {
             try {
                 val detail=repository.detail(id); ensureActive()
@@ -99,7 +114,7 @@ class DiscoveryViewModel @JvmOverloads constructor(application: Application,priv
             catch(e: Exception) { mutable.update { it.copy(detailLoading=false,message="Cette fiche est indisponible.") } }
         }
     }
-    fun dismiss() { detailJob?.cancel(); mutable.update { it.copy(detail=null,selectedId=null,image=null,detailLoading=false) } }
+    fun dismiss() { mapSelectionJob?.cancel(); detailJob?.cancel(); mutable.update { it.copy(mapChoices=emptyList(),detail=null,selectedId=null,image=null,detailLoading=false) } }
     fun focus(position: Position,zoom: Double=15.5) { mutable.update { it.copy(focus=position,focusZoom=zoom,focusSerial=it.focusSerial+1) } }
     fun editAddress(query: String) {
         addressJob?.cancel()

@@ -13,9 +13,13 @@ android {
         applicationId = "fr.pierresdefrance"
         minSdk = 26
         targetSdk = 36
-        versionCode = 4
-        versionName = "0.3.1"
+        versionCode = 5
+        versionName = "0.3.2"
         val catalogue = file("src/main/assets/monuments.db")
+        check(catalogue.isFile && catalogue.inputStream().use { stream ->
+            val header=ByteArray(16)
+            stream.read(header)==16 && header.toString(Charsets.US_ASCII)=="SQLite format 3\u0000"
+        }) { "Catalogue SQLite absent ou non extrait de Git LFS. Exécuter git lfs pull avant de compiler." }
         val digest = MessageDigest.getInstance("SHA-256")
         if (catalogue.exists()) catalogue.inputStream().use { stream ->
             val buffer = ByteArray(65536)

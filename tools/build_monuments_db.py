@@ -58,6 +58,10 @@ def coordinates(value, department=''):
         box = (41,51.6,-5.5,10)
     if box and not (box[0]<=lat<=box[1] and box[2]<=lon<=box[3]):
         return None, None, 'suspect_territory'
+    # Some source rows truncate both axes to whole degrees (including floating
+    # point artefacts such as 3.0000000000000004). They cannot locate a building.
+    if all(abs(v-round(v))<1e-9 for v in (lat,lon)):
+        return None, None, 'suspect_precision'
     return lat, lon, 'valid'
 
 def schema(db):
@@ -147,7 +151,10 @@ def _build(source, output, enrichment, db, wikipedia=None, scoring=None):
                         report['conflicts'].append({'reference':ref,'field':key,'line':line})
                     if key in ('protection','protectionDates','protectionDetails'):
                         previous[key]=' ; '.join(dict.fromkeys(filter(None,[previous[key],m[key]])))
-                    elif not previous[key]: previous[key]=m[key]
+                    elif not previous[key]:
+                        previous[key]=m[key]
+                        if key in ('description','history'):
+                            previous[key+'Source']=m[key+'Source']
                 if previous['latitude'] is None and lat is not None:
                     previous.update(latitude=lat,longitude=lon,coordinateStatus=status)
                 elif lat is not None and previous['latitude'] is not None and distance(lat,lon,previous['latitude'],previous['longitude'])>.15:

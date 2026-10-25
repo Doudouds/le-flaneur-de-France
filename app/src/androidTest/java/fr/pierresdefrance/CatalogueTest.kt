@@ -15,6 +15,20 @@ class CatalogueTest {
     private lateinit var db: MonumentDatabase
     @Before fun setup() { db=MonumentDatabase.open(ApplicationProvider.getApplicationContext()) }
     @After fun close() { db.close() }
+    @Test fun truncatedCoordinatesStaySearchableButCannotProduceADistance()=runBlocking {
+        val repo=MonumentRepository(db)
+        val row=repo.search("PA33000253").single()
+        val stadium=repo.detail(row.id)!!
+        Assert.assertEquals("suspect_precision",stadium.coordinateStatus)
+        Assert.assertNull(stadium.latitude); Assert.assertNull(stadium.longitude)
+        Assert.assertTrue(repo.mapChoices(stadium.id).isEmpty())
+        Assert.assertFalse(repo.map(Bounds(43.99,-.01,44.01,.01),17.0).items.any { it.id==stadium.id })
+        Assert.assertFalse(repo.nearby(Position(44.0,0.0),true).rows.any { it.id==stadium.id })
+        db.query("SELECT count(*) FROM monuments WHERE coordinateStatus='suspect_precision'",emptyArray()).use {
+            Assert.assertTrue(it.moveToFirst()); Assert.assertEquals(216,it.getInt(0))
+        }
+        Unit
+    }
     @Test fun fullDatasetAndQueries()=runBlocking {
         val repo=MonumentRepository(db)
         Assert.assertEquals(46760,repo.total()) // pins the supplied snapshot intentionally

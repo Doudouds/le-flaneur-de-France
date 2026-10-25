@@ -11,11 +11,19 @@ data class MonumentMapItem(val id: Long,val latitude: Double,val longitude: Doub
 data class MonumentRow(val id: Long,val name: String,val commune: String,val department: String,val level: Int,val distance: Double?=null)
 data class Nearby(val origin: Position,val radius: Double,val count: Int,val rows: List<MonumentRow>,val computedAt: Long=SystemClock.elapsedRealtime())
 data class MapResult(val bounds: Bounds,val level: Int,val aggregated: Boolean,val items: List<MonumentMapItem>)
+data class MapChoice(val id: Long,val name: String,val commune: String,val address: String,val reference: String)
 
 class MonumentRepository(val database: MonumentDatabase) {
     private var mapCache: MapResult?=null
     private var nearbyCache: Nearby?=null
     suspend fun detail(id: Long)=database.monuments().detail(id)
+    suspend fun mapChoices(id: Long): List<MapChoice> = withContext(Dispatchers.IO) {
+        // Use the stored coordinates: the renderer can round GeoJSON doubles.
+        database.query("SELECT m.id,m.name,m.commune,m.address,m.reference FROM monuments anchor JOIN monuments m ON m.latitude=anchor.latitude AND m.longitude=anchor.longitude WHERE anchor.id=? ORDER BY m.searchName,m.id",
+            arrayOf(id)).use { c -> buildList {
+                while(c.moveToNext()) add(MapChoice(c.getLong(0),c.getString(1),c.getString(2),c.getString(3),c.getString(4)))
+            } }
+    }
     suspend fun total(): Int=withContext(Dispatchers.IO) {
         database.query("SELECT count(*) FROM monuments",emptyArray()).use { it.moveToFirst(); it.getInt(0) }
     }

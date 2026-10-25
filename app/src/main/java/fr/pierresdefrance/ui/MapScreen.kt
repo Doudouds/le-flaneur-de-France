@@ -95,7 +95,7 @@ fun MapScreen(state: DiscoveryState,vm: DiscoveryViewModel,active: Boolean) {
                                 if(p!=null) instance.animateCamera(CameraUpdateFactory.newLatLngZoom(LatLng(p.latitude(),p.longitude()),instance.cameraPosition.zoom+2))
                             }
                             feature.hasProperty("id") -> {
-                                vm.select(feature.getStringProperty("id").toLong())
+                                vm.selectOnMap(feature.getStringProperty("id").toLong())
                             }
                         }
                     }

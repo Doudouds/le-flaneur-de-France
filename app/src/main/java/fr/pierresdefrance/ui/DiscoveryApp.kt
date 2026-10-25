@@ -74,7 +74,9 @@ fun DiscoveryApp(vm: DiscoveryViewModel) {
     }
     val snackbar=remember { SnackbarHostState() }
     LaunchedEffect(state.message) { state.message?.let { snackbar.showSnackbar(it); vm.message(null) } }
-    BackHandler(enabled=tab!=0 || state.selectedId!=null) { if(state.selectedId!=null) vm.dismiss() else tab=0 }
+    BackHandler(enabled=tab!=0 || state.selectedId!=null || state.mapChoices.isNotEmpty()) {
+        if(state.selectedId!=null || state.mapChoices.isNotEmpty()) vm.dismiss() else tab=0
+    }
     Scaffold(snackbarHost={ SnackbarHost(snackbar) },bottomBar={
         NavigationBar(containerColor=MaterialTheme.colorScheme.surface) {
             NavigationBarItem(selected=tab==0,onClick={tab=0},icon={Icon(HeritageIcons.Map,null)},label={Text("Carte")})
@@ -109,6 +111,21 @@ fun DiscoveryApp(vm: DiscoveryViewModel) {
                         }
                     }
                 } else if(tab==1) MonumentList(state,vm) else HelpScreen()
+            }
+        }
+    }
+    if(state.mapChoices.isNotEmpty()) {
+        ModalBottomSheet(onDismissRequest=vm::dismiss,sheetState=rememberModalBottomSheetState(skipPartiallyExpanded=true)) {
+            Text("${state.mapChoices.size} monuments à cet endroit",Modifier.padding(24.dp),style=MaterialTheme.typography.titleLarge)
+            LazyColumn(Modifier.fillMaxWidth().heightIn(max=420.dp),contentPadding=PaddingValues(bottom=24.dp)) {
+                items(state.mapChoices,key={it.id}) { choice ->
+                    Column(Modifier.fillMaxWidth().clickable { vm.select(choice.id) }.padding(horizontal=24.dp,vertical=16.dp)) {
+                        Text(choice.name,style=MaterialTheme.typography.titleMedium)
+                        Text(listOf(choice.address,choice.commune).filter { it.isNotBlank() }.joinToString(" · "),style=MaterialTheme.typography.bodyMedium)
+                        Text(choice.reference,style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
+                    }
+                    HorizontalDivider()
+                }
             }
         }
     }

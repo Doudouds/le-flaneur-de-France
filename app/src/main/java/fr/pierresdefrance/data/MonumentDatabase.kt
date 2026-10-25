@@ -2,6 +2,8 @@ package fr.pierresdefrance.data
 
 import androidx.room.*
 import android.content.Context
+import android.util.Log
+import androidx.sqlite.db.SupportSQLiteDatabase
 import fr.pierresdefrance.BuildConfig
 
 @Entity(tableName = "monuments", indices = [
@@ -63,8 +65,22 @@ interface MonumentDao {
 abstract class MonumentDatabase : RoomDatabase() {
     abstract fun monuments(): MonumentDao
     companion object {
-        fun open(context: Context): MonumentDatabase = Room.databaseBuilder(context.applicationContext,
-            MonumentDatabase::class.java, "monuments-${BuildConfig.DATASET_REVISION}.db")
-            .createFromAsset("monuments.db").build()
+        fun open(context: Context): MonumentDatabase {
+            val app=context.applicationContext
+            val name="monuments-${BuildConfig.DATASET_REVISION}.db"
+            return Room.databaseBuilder(app,MonumentDatabase::class.java,name)
+                .createFromAsset("monuments.db")
+                .addCallback(object: Callback() {
+                    override fun onOpen(db: SupportSQLiteDatabase) {
+                        // Room has copied and validated the replacement. Only catalogue
+                        // files belong here; future personal databases must survive.
+                        for(old in app.databaseList().filter { it!=name &&
+                            (it=="monuments.db" || Regex("monuments-[0-9a-f]{16}\\.db").matches(it)) }) {
+                            runCatching { app.deleteDatabase(old) }
+                                .onFailure { Log.w("MonumentDatabase","Could not remove obsolete catalogue",it) }
+                        }
+                    }
+                }).build()
+        }
     }
 }

@@ -8,10 +8,16 @@ Deux onglets : **Carte** et **Liste**. Carte nationale avec regroupements, reche
 locale dans tout le pays, position ponctuelle facultative, liste par distance et
 fiche avec textes sourcés, scores, photographie à la demande et itinéraire externe.
 
+La version 0.3.2 écarte des calculs géographiques les 216 positions tronquées au
+degré, tout en conservant leurs notices consultables. Toucher un point partagé
+par plusieurs monuments ouvre un choix avec leurs adresses et références.
+La fermeture d’une fiche annule également sa recherche d’image en cours ;
+les imports conservent la source de chaque texte lors de la fusion de doublons.
+
 ## Démarrer
 
 Pour installer directement la V1 sur un téléphone ARM 64 bits :
-[télécharger l’APK de test](dist/Les-Pierres-de-France-0.3.1-arm64.apk), puis l’ouvrir
+[télécharger l’APK de test](dist/Les-Pierres-de-France-0.3.2-arm64.apk), puis l’ouvrir
 sur Android. Autoriser l’installation depuis l’application qui ouvre le fichier si
 Android le demande. La première préparation du catalogue prend quelques secondes.
 
@@ -19,6 +25,8 @@ Ouvrir ce dossier dans Android Studio, laisser Gradle synchroniser, puis lancer 
 Le SDK 36 et un JDK 17 ou 21 sont requis. Le wrapper Gradle est fourni.
 La base est déjà générée dans `app/src/main/assets/monuments.db` : aucune préparation
 de données n’est nécessaire pour compiler.
+Après un clonage, exécuter `git lfs pull` pour récupérer la base complète. La
+compilation refuse un pointeur Git LFS à la place du fichier SQLite.
 
 ```powershell
 .\gradlew.bat :app:assembleDebug
@@ -32,6 +40,8 @@ Identifiant Android : `fr.pierresdefrance`, distinct de `fr.parisfogofwar`.
 Au premier démarrage, la base embarquée est copiée une seule fois en arrière-plan.
 Une empreinte du fichier embarqué identifie chaque version du catalogue ; une mise
 à jour APK contenant un nouveau catalogue ouvre automatiquement la nouvelle base.
+Après validation de cette nouvelle base, les anciens catalogues sont supprimés.
+Les autres bases de l’application sont conservées.
 
 ## Dataset et reconstruction
 
@@ -247,7 +257,8 @@ Pour l’émulateur Windows, utiliser le GPU matériel (`-gpu host`) et au moins
 de RAM sur l’image Pixel 10 / Android 17 employée ici. Son rendu logiciel SwiftShader
 masque les symboles MapLibre dans les essais réalisés ; le test visuel le détecte.
 
-Consulter [la validation des notes 0.3.1](docs/VERIFICATION-0.3.1.md),
+Consulter [les corrections et tests sur téléphone 0.3.2](docs/VERIFICATION-0.3.2.md),
+[la validation des notes 0.3.1](docs/VERIFICATION-0.3.1.md),
 [le barème national](docs/NOTATIONS.md), [la validation 0.3.0](docs/VERIFICATION-0.3.0.md),
 [l’analyse détaillée](docs/ANALYSE.md), [les mesures de la V1](docs/VERIFICATION.md)
 et [le benchmark SQL complet](docs/benchmark-desktop.json).
