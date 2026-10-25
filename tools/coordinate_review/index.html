@@ -16,7 +16,7 @@
 <main>
   <aside>
     <label>Rechercher <input id="search" type="search" placeholder="Nom, commune, référence, département"></label>
-    <label>Afficher <select id="filter"><option value="all">Tous</option><option value="a_verifier">À vérifier</option><option value="bon">Bons emplacements</option><option value="mauvais">Mauvais emplacements</option></select></label>
+    <label>Afficher <select id="filter"><option value="all">Tous</option><option value="a_verifier">À vérifier</option><option value="bon">Bons emplacements</option><option value="mauvais">Mauvais emplacements</option><option value="corrige">Positions corrigées</option></select></label>
     <div id="list" aria-label="Lieux suspects"></div>
   </aside>
   <div id="map" aria-label="Carte des lieux suspects"></div>
@@ -25,13 +25,19 @@
     <div id="selected" hidden>
       <h1 id="name"></h1><p id="reference"></p><p id="place"></p>
       <p id="position"></p><p id="reason"></p><p id="distances"></p>
+      <p id="corrected-position" hidden></p>
       <p id="reference-place"></p><p id="caution"></p><p id="changed" hidden>La position a changé depuis la décision précédente. À revérifier.</p>
-      <div class="actions"><button id="zoom">Voir le point</button><button id="expected">Voir la commune du code INSEE</button></div>
+      <div class="actions"><button id="zoom">Voir le point actuel</button><button id="origin" hidden>Voir la position d’origine</button><button id="expected">Voir la commune du code INSEE</button></div>
+      <div class="actions"><button id="relocate" disabled aria-pressed="false">Corriger la position par un clic</button><button id="cancel-relocate" hidden>Annuler le mode correction</button><button id="restore-position" hidden>Rétablir la position d’origine</button></div>
+      <p id="correction-help" role="status" hidden>Mode correction actif : déplace ou zoome la carte, puis clique sur le nouvel emplacement. Le changement sera enregistré immédiatement.</p>
       <p><a id="pop" target="_blank" rel="noopener noreferrer">Fiche officielle POP ↗</a> · <a id="osm" target="_blank" rel="noopener noreferrer">Ouvrir dans OSM ↗</a></p>
-      <label>Commentaire (enregistré avec le choix) <textarea id="note" rows="3" maxlength="5000" placeholder="Facultatif : ce qui permet de confirmer ou d’infirmer la position"></textarea></label>
+      <label>Commentaire <textarea id="note" rows="3" maxlength="5000" placeholder="Facultatif : ce qui permet de confirmer ou d’infirmer la position"></textarea></label>
+      <button id="save-note">Enregistrer le commentaire</button>
+      <small>Les choix Bon/Mauvais ci-dessous concernent la position d’origine. Une correction conserve ce jugement.</small>
       <div class="actions"><button id="good">Bon emplacement</button><button id="bad">Mauvais emplacement</button><button id="pending">À vérifier</button></div>
       <p id="save-status" role="status" aria-live="polite"></p>
       <button id="next">Lieu suivant à vérifier →</button>
+      <details id="history"><summary id="history-title">Historique</summary><ol id="history-list"></ol></details>
       <small>Les décisions sont enregistrées sur ce PC. Les fonds de carte nécessitent Internet. Le contour bleu correspond au code INSEE de la notice, qui peut lui-même être erroné.</small>
     </div>
   </section>

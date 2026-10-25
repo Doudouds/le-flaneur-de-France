@@ -3,10 +3,12 @@ import csv
 import http.client
 import io
 import json
+import math
 from pathlib import Path
 import tempfile
 import threading
 import unittest
+from unittest.mock import patch
 from review_coordinates import ReviewServer, ReviewStore
 
 
@@ -87,6 +89,92 @@ class CoordinateReviewTests(unittest.TestCase):
         self.reviews.write_text(json.dumps(data),encoding='utf-8')
         rows=list(csv.DictReader(io.StringIO(self.store.export_csv().decode('utf-8-sig')),delimiter=';'))
         self.assertEqual(rows[0]['position_modifiee_depuis_decision'],'True')
+
+    def test_existing_reviews_are_unchanged_until_edit_and_backed_up_exactly(self):
+        legacy={'version':1,'extra_metadata':'preserve', 'reviews':{
+            'PA00000001':{'decision':'bon','note':'Existing personal note','latitude':48.5,'longitude':2.5,'updated_at':'2026-10-25T10:00:00Z','future_field':42},
+            'PA00000002':{'decision':'a_verifier','note':'Second note','latitude':48.5,'longitude':2.5,'updated_at':'2026-10-25T11:00:00Z'}}}
+        self.reviews.write_text(json.dumps(legacy),encoding='utf-8');before=self.reviews.read_bytes()
+        restored=ReviewStore(self.audit,self.reviews)
+        self.assertEqual(self.reviews.read_bytes(),before)
+        result=restored.save('PA00000001',correction={'latitude':48.6,'longitude':2.6})
+        self.assertEqual(result['decision'],'bon');self.assertEqual(result['note'],'Existing personal note')
+        self.assertEqual(result['future_field'],42)
+        self.assertEqual(result['latitude'],48.5)
+        data=restored.read()
+        self.assertEqual(data['extra_metadata'],'preserve')
+        self.assertEqual(data['reviews']['PA00000002'],legacy['reviews']['PA00000002'])
+        backups=list((self.root/'coordinate_review_backups').glob('*.json'))
+        self.assertEqual(len(backups),1);self.assertEqual(backups[0].read_bytes(),before)
+        self.assertEqual(len(result['history']),2)
+        self.assertEqual(result['history'][0]['note'],'Existing personal note')
+        self.assertEqual(result['history'][0]['action'],'etat_initial_conserve')
+
+    def test_corrections_survive_old_client_saves_restart_and_reset(self):
+        self.store.save('PA00000001','mauvais','Original note')
+        payload={'correction':{'latitude':49.343,'longitude':2.282}}
+        status,body=self.request('PUT','/api/corrections/PA00000001',payload,self.local_headers())
+        self.assertEqual(status,200)
+        self.assertEqual(json.loads(body)['decision'],'mauvais')
+        self.assertEqual(json.loads(body)['note'],'Original note')
+        self.store.save('PA00000001','bon','Edited note from an older browser tab')
+        restored=ReviewStore(self.audit,self.reviews)
+        self.assertEqual(restored.read()['reviews']['PA00000001']['correction']['latitude'],49.343)
+        restored.save('PA00000001',correction={'latitude':49.344,'longitude':2.283})
+        reset=restored.save('PA00000001',correction=None)
+        self.assertIsNone(reset['correction']);self.assertEqual(reset['decision'],'bon')
+        previous_points=[h['correction']['latitude'] for h in reset['history'] if h.get('correction')]
+        self.assertIn(49.343,previous_points);self.assertIn(49.344,previous_points)
+        self.assertEqual(reset['history'][-1]['action'],'position_retablie')
+
+    def test_export_contains_original_corrected_coordinates_and_full_history(self):
+        self.store.save('PA00000001','mauvais','Keep this judgment')
+        self.store.save('PA00000001',correction={'latitude':49.34,'longitude':2.28})
+        status,body=self.request('GET','/api/export.csv')
+        self.assertEqual(status,200)
+        row=next(csv.DictReader(io.StringIO(body.decode('utf-8-sig')),delimiter=';'))
+        self.assertEqual(row['latitude'],'48.5');self.assertEqual(row['latitude_corrigee'],'49.34')
+        self.assertEqual(row['decision'],'mauvais');self.assertEqual(row['position_modifiee_depuis_decision'],'False')
+        status,body=self.request('GET','/api/export.json')
+        self.assertEqual(len(json.loads(body)['reviews']['PA00000001']['history']),2)
+
+    def test_invalid_corrections_are_rejected_without_touching_existing_work(self):
+        self.store.save('PA00000001','bon','Do not lose this')
+        before=self.reviews.read_bytes()
+        for value in ({'latitude':91,'longitude':2},{'latitude':49,'longitude':181},
+                      {'latitude':math.nan,'longitude':2},{'latitude':math.inf,'longitude':2},
+                      {'latitude':True,'longitude':2},{'latitude':'49','longitude':2},{'latitude':49}):
+            status,_=self.request('PUT','/api/corrections/PA00000001',{'correction':value},self.local_headers())
+            self.assertEqual(status,400)
+            self.assertEqual(self.reviews.read_bytes(),before)
+
+    def test_noop_saves_do_not_fill_history_with_duplicate_entries(self):
+        result=self.store.save('PA00000001','bon','Same note')
+        result=self.store.save('PA00000001',correction={'latitude':49,'longitude':2})
+        before=self.reviews.read_bytes()
+        self.store.save('PA00000001','bon','Same note')
+        self.store.save('PA00000001',correction={'latitude':49,'longitude':2})
+        self.assertEqual(self.reviews.read_bytes(),before)
+        self.assertEqual(len(result['history']),2)
+
+    def test_failed_atomic_replacement_preserves_work_and_recovery_copy(self):
+        self.store.save('PA00000001','bon','Existing note')
+        before=self.reviews.read_bytes()
+        with patch.object(Path,'replace',side_effect=OSError('disk unavailable')):
+            status,_=self.request('PUT','/api/corrections/PA00000001',{'correction':{'latitude':49,'longitude':2}},self.local_headers())
+        self.assertEqual(status,500);self.assertEqual(self.reviews.read_bytes(),before)
+        self.assertTrue(any(p.read_bytes()==before for p in (self.root/'coordinate_review_backups').glob('*.json')))
+        self.assertFalse(list(self.root.glob('*.tmp')))
+
+    def test_parallel_correction_and_comment_preserve_both_updates(self):
+        self.store.save('PA00000001','bon','old')
+        with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
+            tasks=[pool.submit(self.store.save,'PA00000001','bon','new note'),
+                   pool.submit(self.store.save,'PA00000001',correction={'latitude':49,'longitude':2})]
+            for task in tasks:task.result()
+        result=self.store.read()['reviews']['PA00000001']
+        self.assertEqual(result['note'],'new note');self.assertEqual(result['correction']['latitude'],49)
+        self.assertEqual(len(result['history']),3)
 
 
 if __name__=='__main__':unittest.main()

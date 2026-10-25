@@ -18,8 +18,32 @@ rouvre l’outil déjà démarré. « Arrêter l’outil » arrête son serveur 
 - Les décisions sont conservées dans `data/coordinate_reviews.json`, ignoré par
   Git. Recharger ou fermer le navigateur ne les efface pas. Le fichier est écrit
   atomiquement ; un fichier endommagé n’est pas remplacé silencieusement.
+- Les anciennes décisions et notes sont relues telles quelles, sans réinitialiser
+  le fichier. Les coordonnées corrigées sont ajoutées à la même sauvegarde.
+- Pour déplacer un lieu : le sélectionner, cliquer sur « Corriger la position
+  par un clic », puis cliquer sur le nouvel emplacement. On peut d’abord déplacer
+  ou zoomer la carte, ou afficher la commune et les photos IGN. Le point corrigé
+  devient bleu et son enregistrement est confirmé dans la fiche. « Annuler le mode
+  correction » quitte ce mode sans déplacer le point.
+- La position d’origine reste conservée et apparaît en gris lorsque le lieu est
+  sélectionné. Les boutons permettent de revoir l’origine ou le point corrigé.
+  « Rétablir la position d’origine » annule la correction courante en la conservant
+  dans l’historique. Le filtre « Positions corrigées » retrouve les ajustements.
+- Le jugement Bon/Mauvais concerne la position d’origine ; déplacer le point ne
+  change pas ce jugement et ne supprime pas son commentaire. Le bouton
+  « Enregistrer le commentaire » peut être utilisé séparément.
+- Chaque changement enregistré est conservé dans l’historique du lieu : date,
+  jugement, commentaire et coordonnées. Au premier changement d’une ancienne
+  décision, son état précédent est conservé. Les enregistrements sans changement
+  ne créent pas de doublon.
+- Avant chaque écriture, une copie datée complète est créée dans
+  `data/coordinate_review_backups/`, également ignoré par Git. Aucune ancienne
+  sauvegarde n’est supprimée automatiquement. Pour récupérer une copie, arrêter
+  l’outil et recopier la sauvegarde choisie vers `data/coordinate_reviews.json`.
 - Les exports CSV et JSON permettent de récupérer les décisions. Un export CSV
-  contient aussi les lieux restant à vérifier. Le JSON conserve les notes exactes.
+  contient aussi les lieux restant à vérifier, les coordonnées originales et
+  corrigées, la date de correction et le nombre d’entrées d’historique. Le JSON
+  conserve les notes exactes et l’historique complet de tous les ajustements.
 - Le filtre permet de ne voir que les lieux à vérifier, bons ou mauvais. La
   recherche accepte nom, référence, commune ou département. Le bouton « Lieu
   suivant » passe au prochain lieu à vérifier dans le filtre courant.
@@ -35,11 +59,15 @@ rouvre l’outil déjà démarré. « Arrêter l’outil » arrête son serveur 
 Cette interface ne modifie ni la base SQLite des monuments, ni l’application
 Android. Les décisions personnelles restent sur le PC et ne sont pas poussées.
 
-Vérification : 30 tests Python réussis, dont sauvegarde après redémarrage,
-écritures concurrentes, exports et conservation d’un fichier endommagé.
+Vérification : 37 tests Python réussis, dont conservation des anciennes décisions,
+sauvegardes exactes avant modification, historique de corrections successives,
+compatibilité avec un ancien onglet, écritures concurrentes, exports, rejet de
+coordonnées invalides et récupération après une erreur d’écriture.
 Le clic sur carte, le choix entre points superposés, les filtres, les photos IGN
 et la persistance après rechargement ont également été vérifiés dans le navigateur
-avec un fichier de décisions isolé.
+avec un fichier de décisions isolé. Le clic de correction, le rechargement et le
+rétablissement de l’origine ont aussi été vérifiés sans toucher aux décisions
+personnelles.
 
 Autre port ou fichier de décisions, pour un test isolé :
 

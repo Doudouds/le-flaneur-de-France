@@ -7,6 +7,7 @@ import gzip
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import io
 import json
+import math
 import os
 from pathlib import Path
 import secrets
@@ -19,6 +20,16 @@ from urllib.request import urlopen
 ROOT = Path(__file__).resolve().parents[1]
 STATIC = Path(__file__).with_name('coordinate_review')
 DECISIONS = {'a_verifier', 'bon', 'mauvais'}
+UNCHANGED = object()
+
+
+def valid_position(value):
+    return isinstance(value, dict) and all(type(value.get(k)) in (int, float) and math.isfinite(value[k])
+        and -limit <= value[k] <= limit for k, limit in (('latitude', 90), ('longitude', 180)))
+
+
+def snapshot(review, action):
+    return {k: v for k, v in review.items() if k != 'history'} | {'action': action}
 
 
 class ReviewStore:
@@ -46,18 +57,52 @@ class ReviewStore:
         if any(not isinstance(r, dict) or r.get('decision') not in DECISIONS or not isinstance(r.get('note'), str)
                for r in data['reviews'].values()):
             raise ValueError('Invalid saved review')
+        if any((r.get('correction') is not None and not valid_position(r['correction']))
+               or not isinstance(r.get('history', []), list) for r in data['reviews'].values()):
+            raise ValueError('Invalid saved correction or history')
         return data
 
-    def save(self, ref, decision, note):
-        if ref not in self.by_ref or decision not in DECISIONS or not isinstance(note, str) or len(note) > 5000:
+    def save(self, ref, decision=UNCHANGED, note=UNCHANGED, correction=UNCHANGED):
+        if (ref not in self.by_ref or (decision is not UNCHANGED and decision not in DECISIONS)
+                or (note is not UNCHANGED and (not isinstance(note, str) or len(note) > 5000))
+                or (correction is not UNCHANGED and correction is not None and not valid_position(correction))):
             raise ValueError('Décision, référence ou commentaire invalide.')
         with self.lock:
             data = self.read()
             row = self.by_ref[ref]
-            data['reviews'][ref] = dict(decision=decision, note=note,
-                latitude=row['latitude'], longitude=row['longitude'],
-                updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat())
+            previous = data['reviews'].get(ref, {})
+            now = datetime.datetime.now(datetime.timezone.utc).isoformat()
+            updated = dict(previous, decision=previous.get('decision', 'a_verifier') if decision is UNCHANGED else decision,
+                note=previous.get('note', '') if note is UNCHANGED else note,
+                latitude=row['latitude'], longitude=row['longitude'])
+            action = 'decision_ou_commentaire'
+            if correction is not UNCHANGED:
+                action = 'position_corrigee' if correction is not None else 'position_retablie'
+                old = previous.get('correction')
+                if correction is None:
+                    updated['correction'] = None
+                elif old is None or any(old[k] != correction[k] for k in ('latitude', 'longitude')):
+                    updated['correction'] = {k: correction[k] for k in ('latitude', 'longitude')} | {'updated_at': now}
+            if updated == previous:
+                return previous  # Selecting the next place must not duplicate the history.
+            history = list(previous.get('history', []))
+            if previous and not history:
+                history.append(snapshot(previous, 'etat_initial_conserve'))
+            updated['updated_at'] = now
+            history.append(snapshot(updated, action))
+            updated['history'] = history
+            data['reviews'][ref] = updated
             self.path.parent.mkdir(parents=True, exist_ok=True)
+            if self.path.exists():
+                # Exact pre-write copy, including old notes and unknown future fields.
+                folder = self.path.parent/'coordinate_review_backups'
+                folder.mkdir(exist_ok=True)
+                stamp = datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
+                backup = folder/(self.path.stem+'-'+stamp+'-'+secrets.token_hex(3)+'.json')
+                with backup.open('xb') as handle:
+                    handle.write(self.path.read_bytes())
+                    handle.flush()
+                    os.fsync(handle.fileno())
             temporary = None
             try:
                 with tempfile.NamedTemporaryFile('w', encoding='utf-8', dir=self.path.parent,
@@ -87,14 +132,18 @@ class ReviewStore:
     def export_csv(self):
         reviews = self.read()['reviews']
         out = io.StringIO(newline='')
-        fields = list(self.rows[0]) + ['decision', 'commentaire', 'date_decision', 'position_modifiee_depuis_decision']
+        fields = list(self.rows[0]) + ['decision', 'commentaire', 'date_decision', 'position_modifiee_depuis_decision',
+            'latitude_corrigee', 'longitude_corrigee', 'date_correction', 'nombre_entrees_historique']
         writer = csv.DictWriter(out, fieldnames=fields, delimiter=';')
         writer.writeheader()
         for row in self.rows:
             review = reviews.get(row['reference'], {})
             changed = bool(review) and (review.get('latitude'), review.get('longitude')) != (row['latitude'], row['longitude'])
+            correction = review.get('correction') or {}
             item = dict(row, decision=review.get('decision', 'a_verifier'), commentaire=review.get('note', ''),
-                        date_decision=review.get('updated_at', ''), position_modifiee_depuis_decision=changed)
+                        date_decision=review.get('updated_at', ''), position_modifiee_depuis_decision=changed,
+                        latitude_corrigee=correction.get('latitude', ''), longitude_corrigee=correction.get('longitude', ''),
+                        date_correction=correction.get('updated_at', ''), nombre_entrees_historique=len(review.get('history', [])))
             # Do not turn a personal note or source label into an Excel formula.
             for key, value in item.items():
                 if isinstance(value, str) and value.startswith(('=', '+', '-', '@')):
@@ -151,7 +200,7 @@ class Handler(BaseHTTPRequestHandler):
                 self.send(200, {'app': 'flaneur-coordinate-review'})
             elif route == '/api/data':
                 self.send(200, {'monuments': self.server.store.rows, 'reviews': self.server.store.read()['reviews'],
-                                'token': self.server.token})
+                                'token': self.server.token, 'capabilities': {'corrections': True, 'history': True}})
             elif route.startswith('/api/contours/'):
                 row = self.server.store.by_ref.get(route.rsplit('/', 1)[1])
                 if row is None:
@@ -180,7 +229,7 @@ class Handler(BaseHTTPRequestHandler):
         if not self.local_request(mutation=True):
             return
         route = urlsplit(self.path).path
-        if not route.startswith('/api/reviews/'):
+        if not route.startswith(('/api/reviews/', '/api/corrections/')):
             self.send(404, {'error': 'Route inconnue.'})
             return
         try:
@@ -190,7 +239,13 @@ class Handler(BaseHTTPRequestHandler):
             payload = json.loads(self.rfile.read(length))
             if not isinstance(payload, dict):
                 raise ValueError('Requête invalide.')
-            review = self.server.store.save(route.rsplit('/', 1)[1], payload.get('decision'), payload.get('note', ''))
+            if route.startswith('/api/corrections/'):
+                if 'correction' not in payload:
+                    raise ValueError('Position manquante.')
+                review = self.server.store.save(route.rsplit('/', 1)[1],
+                    note=payload.get('note', UNCHANGED), correction=payload['correction'])
+            else:
+                review = self.server.store.save(route.rsplit('/', 1)[1], payload.get('decision'), payload.get('note', ''))
             self.send(200, review)
         except (ValueError, TypeError):
             self.send(400, {'error': 'Décision ou commentaire invalide.'})
