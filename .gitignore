@@ -7,3 +7,4 @@ local.properties
 *.tmp
 data/*.csv
 data/scoring_api_cache.sqlite
+data/geo_audit_cache/
