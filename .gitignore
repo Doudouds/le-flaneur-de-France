@@ -8,3 +8,5 @@ local.properties
 data/*.csv
 data/scoring_api_cache.sqlite
 data/geo_audit_cache/
+data/coordinate_reviews.json
+data/coordinate_review_*.log
