@@ -166,6 +166,800 @@
     "Producteur"
   ],
   "delimiter": "|",
+  "coordinate_review": {
+    "snapshot_sha256": "6b7b05e2974f23fd37534be1fde89a7296f3590e0219d2942512dec82831cccc",
+    "review_sha256": "3ea18323625485ecab412685d76220cda9f41c20142248205f9bf37281b3821f",
+    "finalized_at": "2026-10-26T21:30:33.655916+00:00",
+    "reviewed_monuments": 198,
+    "reviewed_positions": 87,
+    "changed_positions": 81,
+    "restored_positions": 6,
+    "records": {
+      "PA00078052": {
+        "latitude": 48.440516583071,
+        "longitude": 4.4506585085277,
+        "original_latitude": 48.4317029255296,
+        "original_longitude": 4.47472723591713,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00078052/betignicourt-troncons-de-voies-romaines-de-langres-a-reims-et-de-troyes-a-naix",
+        "reviewed_at": "2026-10-26T20:15:14.157413+00:00"
+      },
+      "PA00078193": {
+        "latitude": 48.434778,
+        "longitude": 4.455333,
+        "original_latitude": 48.30143587039065,
+        "original_longitude": 4.586638931553191,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00078193/precy-saint-martin-troncons-de-voies-romaines-de-langres-a-remps-et-de-troyes-a-naix",
+        "reviewed_at": "2026-10-26T20:15:13.675783+00:00"
+      },
+      "PA00078209": {
+        "latitude": 48.34109271,
+        "longitude": 4.56220504,
+        "original_latitude": 48.30143587039065,
+        "original_longitude": 4.586638931553191,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00078209/la-rothiere-troncons-de-voies-romaines-de-langres-a-remps-et-de-troyes-a-naix",
+        "reviewed_at": "2026-10-26T20:15:14.062826+00:00"
+      },
+      "PA00078217": {
+        "latitude": 48.428979911917,
+        "longitude": 4.4737712405146,
+        "original_latitude": 48.30143587039065,
+        "original_longitude": 4.586638931553191,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00078217/saint-christophe-dodinicourt-troncons-de-voies-romaines-de-langres-a-remps-et-de-troyes-a-naix",
+        "reviewed_at": "2026-10-26T20:15:13.641453+00:00"
+      },
+      "PA00078284": {
+        "latitude": 48.33118015,
+        "longitude": 4.57215282,
+        "original_latitude": 48.30143587039065,
+        "original_longitude": 4.586638931553191,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00078284/unienville-troncons-de-voies-romaines-de-langres-a-remps-et-de-troyes-a-naix",
+        "reviewed_at": "2026-10-26T20:15:14.178183+00:00"
+      },
+      "PA00078287": {
+        "latitude": 48.34100446,
+        "longitude": 3.60674661,
+        "original_latitude": 48.34100151547635,
+        "original_longitude": 3.6067370233899467,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00078287/bourdenay-dolmen",
+        "reviewed_at": "2026-10-26T20:57:30.777643+00:00"
+      },
+      "PA00079249": {
+        "latitude": 47.87664351,
+        "longitude": 5.65148973,
+        "original_latitude": 47.8766540294447,
+        "original_longitude": 5.6514529666585,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00079249/varennes-sur-amance-croix-du-17e-siecle-sur-la-route-de-coiffy",
+        "reviewed_at": "2026-10-26T20:57:30.803001+00:00"
+      },
+      "PA00081624": {
+        "latitude": 43.4719558114,
+        "longitude": 6.76361597424,
+        "original_latitude": 43.45503476750958,
+        "original_longitude": -1.172354736308809,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00081624/frejus-thermes-antiques-restes",
+        "reviewed_at": "2026-10-26T20:15:13.100504+00:00"
+      },
+      "PA00082407": {
+        "latitude": 45.361333,
+        "longitude": 0.663028,
+        "original_latitude": 45.345042583631006,
+        "original_longitude": 0.3043652767579169,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00082407/brantome-en-perigord-dolmen-dit-de-la-pierre-levee",
+        "reviewed_at": "2026-10-26T20:15:13.614252+00:00"
+      },
+      "PA00082809": {
+        "latitude": 44.7744668,
+        "longitude": 0.81630349,
+        "original_latitude": 44.757842247702236,
+        "original_longitude": 0.7241900876491515,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00082809/saint-avit-senieur-ancienne-abbaye",
+        "reviewed_at": "2026-10-26T20:15:13.938566+00:00"
+      },
+      "PA00083106": {
+        "latitude": 45.017926,
+        "longitude": -0.124339,
+        "original_latitude": 44.58843,
+        "original_longitude": 0.0,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00083106/abzac-ancienne-manufacture-ou-minoterie",
+        "reviewed_at": "2026-10-26T20:15:13.228660+00:00"
+      },
+      "PA00083193": {
+        "latitude": 44.8409563,
+        "longitude": -0.5698138,
+        "original_latitude": 44.840631,
+        "original_longitude": 0.0,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00083193/bordeaux-hotel-des-douanes",
+        "reviewed_at": "2026-10-26T20:15:13.384781+00:00"
+      },
+      "PA00083227": {
+        "latitude": 44.842013074196,
+        "longitude": -0.57066904212955,
+        "original_latitude": 44.841031,
+        "original_longitude": 0.0,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00083227/bordeaux-immeuble",
+        "reviewed_at": "2026-10-26T20:33:20.818988+00:00"
+      },
+      "PA00083228": {
+        "latitude": 44.840955,
+        "longitude": -0.570361,
+        "original_latitude": 44.841031,
+        "original_longitude": 0.0,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00083228/bordeaux-immeuble",
+        "reviewed_at": "2026-10-26T20:33:20.863173+00:00"
+      },
+      "PA00083229": {
+        "latitude": 44.840999,
+        "longitude": -0.570401,
+        "original_latitude": 44.841031,
+        "original_longitude": 0.0,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00083229/bordeaux-immeuble",
+        "reviewed_at": "2026-10-26T20:33:20.908706+00:00"
+      },
+      "PA00083230": {
+        "latitude": 44.841035,
+        "longitude": -0.570412,
+        "original_latitude": 44.841031,
+        "original_longitude": 0.0,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00083230/bordeaux-immeuble",
+        "reviewed_at": "2026-10-26T20:15:13.248273+00:00"
+      },
+      "PA00083231": {
+        "latitude": 44.841058,
+        "longitude": -0.570425,
+        "original_latitude": 44.841031,
+        "original_longitude": 0.0,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00083231/bordeaux-immeuble",
+        "reviewed_at": "2026-10-26T20:15:13.290917+00:00"
+      },
+      "PA00083232": {
+        "latitude": 44.841077,
+        "longitude": -0.570433,
+        "original_latitude": 44.841031,
+        "original_longitude": 0.0,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00083232/bordeaux-immeuble",
+        "reviewed_at": "2026-10-26T20:15:13.337649+00:00"
+      },
+      "PA00087132": {
+        "latitude": 48.30001641,
+        "longitude": 2.99803652,
+        "original_latitude": 48.3000332993418,
+        "original_longitude": 2.9980532271611,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00087132/montmachoux-croix",
+        "reviewed_at": "2026-10-26T20:57:30.690416+00:00"
+      },
+      "PA00087186": {
+        "latitude": 48.6603,
+        "longitude": 2.7735,
+        "original_latitude": 48.6602941352004,
+        "original_longitude": 2.77347896890308,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00087186/courquetaine-eglise-dozouer",
+        "reviewed_at": "2026-10-26T20:57:30.840885+00:00"
+      },
+      "PA00089260": {
+        "latitude": 48.698814375812,
+        "longitude": -3.5311590997885,
+        "original_latitude": 48.698804845246,
+        "original_longitude": -3.53119586900078,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00089260/lannion-borne-de-corvee",
+        "reviewed_at": "2026-10-26T20:57:30.577348+00:00"
+      },
+      "PA00090767": {
+        "latitude": 48.6391490230508,
+        "longitude": -2.15957001235283,
+        "original_latitude": 48.6391490230508,
+        "original_longitude": -2.15957001235283,
+        "selection": "original_restored",
+        "source_url": "https://monumentum.fr/monument-historique/pa00090767/saint-briac-sur-mer-ile-agot-renfermant-des-sites-protohistoriques",
+        "reviewed_at": "2026-10-26T21:23:03.946640+00:00"
+      },
+      "PA00091660": {
+        "latitude": 47.679583,
+        "longitude": -2.96325,
+        "original_latitude": 47.6795858611059,
+        "original_longitude": -2.96324997628174,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00091660/sainte-anne-dauray-croix-percee",
+        "reviewed_at": "2026-10-26T20:57:30.735434+00:00"
+      },
+      "PA00094275": {
+        "latitude": 42.81575464,
+        "longitude": 0.5364039,
+        "original_latitude": 42.8127492177858,
+        "original_longitude": 0.543480955909164,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00094275/bagneres-de-luchon-alignements",
+        "reviewed_at": "2026-10-26T20:15:14.014437+00:00"
+      },
+      "PA00094278": {
+        "latitude": 42.81277181,
+        "longitude": 0.54348493,
+        "original_latitude": 42.8162047147181,
+        "original_longitude": 0.536730206785925,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00094278/bagneres-de-luchon-cromlech",
+        "reviewed_at": "2026-10-26T20:15:13.962085+00:00"
+      },
+      "PA00097185": {
+        "latitude": 48.48740293,
+        "longitude": 1.13327355,
+        "original_latitude": 48.5713034100903,
+        "original_longitude": 1.56117107310357,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00097185/pontgouin-ancien-aqueduc-de-pontgouin-a-versailles-egalement-sur-communes-de-maintenon-et-bercheres-saint-germain",
+        "reviewed_at": "2026-10-26T20:15:13.571804+00:00"
+      },
+      "PA00097732": {
+        "latitude": 47.1241,
+        "longitude": 0.4598,
+        "original_latitude": 47.121942120355925,
+        "original_longitude": 0.32827649950619114,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00097732/crouzilles-eglise-notre-dame",
+        "reviewed_at": "2026-10-26T20:33:21.195154+00:00"
+      },
+      "PA00099550": {
+        "latitude": 49.23834991,
+        "longitude": 1.19079061,
+        "original_latitude": 49.2383979290899,
+        "original_longitude": 1.1909391529113,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00099550/saint-etienne-du-vauvray-menhir-au-bord-du-chemin-n-11",
+        "reviewed_at": "2026-10-26T20:33:21.623487+00:00"
+      },
+      "PA00099916": {
+        "latitude": 45.266224600496,
+        "longitude": 1.7675019656122,
+        "original_latitude": 45.2662200581443,
+        "original_longitude": 1.76752730187915,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00099916/vignols-croix-de-chemin",
+        "reviewed_at": "2026-10-26T20:57:30.237754+00:00"
+      },
+      "PA00100792": {
+        "latitude": 49.3895716,
+        "longitude": 1.0212564,
+        "original_latitude": 49.3889811354468,
+        "original_longitude": 1.02145033661579,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00100792/rouen-maison-de-pierre-corneille-actuellement-musee-pierre-corneille",
+        "reviewed_at": "2026-10-26T20:33:21.375422+00:00"
+      },
+      "PA00103408": {
+        "latitude": 43.646751280698,
+        "longitude": 3.9237127696282,
+        "original_latitude": 43.8206524601006,
+        "original_longitude": 4.55197955810181,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00103408/castelnau-le-lez-troncon-de-la-via-domitia-egalement-sur-communes-de-beaucaire-jonquieres-saint-vincent-et-redessan-dans-le-gard",
+        "reviewed_at": "2026-10-26T20:33:20.627381+00:00"
+      },
+      "PA00104112": {
+        "latitude": 42.61471815,
+        "longitude": 2.74742424,
+        "original_latitude": 42.6147206581025,
+        "original_longitude": 2.74742382664025,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00104112/sainte-colombe-la-commanderie-eglise-sainte-colombe",
+        "reviewed_at": "2026-10-26T20:57:30.029445+00:00"
+      },
+      "PA00105659": {
+        "latitude": 46.53618078,
+        "longitude": 0.57608286,
+        "original_latitude": 46.94115390867001,
+        "original_longitude": 0.5631192082280321,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00105659/pouille-eglise-saint-martin",
+        "reviewed_at": "2026-10-26T20:33:20.768480+00:00"
+      },
+      "PA00107256": {
+        "latitude": 48.0379623810685,
+        "longitude": 6.640744862717131,
+        "original_latitude": 48.0379623810685,
+        "original_longitude": 6.640744862717131,
+        "selection": "original_restored",
+        "source_url": "https://monumentum.fr/monument-historique/pa00107256/remiremont-deux-menhirs-dits-pierres-fittes",
+        "reviewed_at": "2026-10-26T21:21:09.019632+00:00"
+      },
+      "PA00107837": {
+        "latitude": 50.72211967,
+        "longitude": 3.15989002,
+        "original_latitude": 51.05385115239057,
+        "original_longitude": 3.165411151839652,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00107837/tourcoing-eglise-saint-christophe",
+        "reviewed_at": "2026-10-26T20:15:13.404802+00:00"
+      },
+      "PA00111450": {
+        "latitude": 49.156667,
+        "longitude": -0.698611,
+        "original_latitude": 49.1567171656049,
+        "original_longitude": -0.698666816694088,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00111450/aurseulles-eglise-de-longraye",
+        "reviewed_at": "2026-10-26T20:57:30.484495+00:00"
+      },
+      "PA00112451": {
+        "latitude": 47.244809,
+        "longitude": 4.969527,
+        "original_latitude": 47.24476406679081,
+        "original_longitude": 4.96946183912694,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00112451/faverolles-les-lucey-eglise",
+        "reviewed_at": "2026-10-26T20:57:30.209192+00:00"
+      },
+      "PA00112461": {
+        "latitude": 47.2761,
+        "longitude": 4.8923,
+        "original_latitude": 47.3204473233408,
+        "original_longitude": 5.03705260615608,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00112461/fleurey-sur-ouche-manoir-de-lezeu",
+        "reviewed_at": "2026-10-26T20:15:13.712225+00:00"
+      },
+      "PA00112591": {
+        "latitude": 47.495536,
+        "longitude": 4.760791,
+        "original_latitude": 47.0089588216265,
+        "original_longitude": 4.79470874763893,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00112591/lery-eglise-saint-barthelemy",
+        "reviewed_at": "2026-10-26T20:15:13.182618+00:00"
+      },
+      "PA00113098": {
+        "latitude": 46.94666611,
+        "longitude": 4.29652333,
+        "original_latitude": 46.4161925313242,
+        "original_longitude": 4.81436644364619,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00113098/autun-remparts-romains",
+        "reviewed_at": "2026-10-26T20:33:20.606104+00:00"
+      },
+      "PA00113150": {
+        "latitude": 46.94921718,
+        "longitude": 4.29749093,
+        "original_latitude": 46.7845873642048,
+        "original_longitude": 4.84818660576561,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00113150/autun-ancien-college-des-jesuites-aujourdhui-lycee-bonaparte",
+        "reviewed_at": "2026-10-26T20:33:20.934840+00:00"
+      },
+      "PA00113219": {
+        "latitude": 46.416133,
+        "longitude": 4.814333,
+        "original_latitude": 46.9492021442578,
+        "original_longitude": 4.29736096806691,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00113219/clesse-eglise",
+        "reviewed_at": "2026-10-26T20:33:20.443283+00:00"
+      },
+      "PA00113317": {
+        "latitude": 46.4719900721262,
+        "longitude": 4.80818494496201,
+        "original_latitude": 46.4719900721262,
+        "original_longitude": 4.80818494496201,
+        "selection": "original_restored",
+        "source_url": "https://monumentum.fr/monument-historique/pa00113317/lugny-les-charolles-croix",
+        "reviewed_at": "2026-10-26T21:09:54.841016+00:00"
+      },
+      "PA00113401": {
+        "latitude": 46.51222,
+        "longitude": 5.02,
+        "original_latitude": 46.51223542037836,
+        "original_longitude": 5.020100152914782,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00113401/monthelon-ferme-a-saint-romain",
+        "reviewed_at": "2026-10-26T20:57:30.069648+00:00"
+      },
+      "PA00113448": {
+        "latitude": 46.20329526,
+        "longitude": 4.24476077,
+        "original_latitude": 46.96006892208481,
+        "original_longitude": 4.30380376107352,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00113448/saint-martin-de-lixy-eglise",
+        "reviewed_at": "2026-10-26T20:33:20.341758+00:00"
+      },
+      "PA00113698": {
+        "latitude": 47.635755,
+        "longitude": 3.971558,
+        "original_latitude": 47.64396661337327,
+        "original_longitude": 3.981425474294301,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00113698/lisle-sur-serein-tumulus-du-tertre-a-tormancy",
+        "reviewed_at": "2026-10-26T20:15:13.893811+00:00"
+      },
+      "PA00114985": {
+        "latitude": 49.34309,
+        "longitude": 2.282292,
+        "original_latitude": 43.945208780259186,
+        "original_longitude": -2.8445536106579152,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00114985/saint-felix-ancienne-brosserie-autin",
+        "reviewed_at": "2026-10-26T20:15:13.076758+00:00"
+      },
+      "PA00115702": {
+        "latitude": 49.804203,
+        "longitude": 4.054846,
+        "original_latitude": 49.789326979224825,
+        "original_longitude": 4.207308045023554,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00115702/jeantes-eglise-saint-martin",
+        "reviewed_at": "2026-10-26T20:33:21.172204+00:00"
+      },
+      "PA00115998": {
+        "latitude": 49.828099,
+        "longitude": 4.21088,
+        "original_latitude": 49.83535632659417,
+        "original_longitude": 4.1511523796943735,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00115998/logny-les-aubenton-eglise",
+        "reviewed_at": "2026-10-26T20:33:21.423618+00:00"
+      },
+      "PA00116009": {
+        "latitude": 49.854491,
+        "longitude": 3.29302,
+        "original_latitude": 47.15551471032623,
+        "original_longitude": 3.2431965077441975,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00116009/saint-quentin-usine-sidoux",
+        "reviewed_at": "2026-10-26T20:33:20.232085+00:00"
+      },
+      "PA00116357": {
+        "latitude": 45.996410692059,
+        "longitude": 5.1696968138089,
+        "original_latitude": 46.14124328394802,
+        "original_longitude": 5.158655008774421,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00116357/chalamont-maison",
+        "reviewed_at": "2026-10-26T20:15:13.754026+00:00"
+      },
+      "PA00116358": {
+        "latitude": 45.99641536426,
+        "longitude": 5.1701427472712,
+        "original_latitude": 46.14124328394802,
+        "original_longitude": 5.158655008774421,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00116358/chalamont-maison",
+        "reviewed_at": "2026-10-26T20:15:13.780439+00:00"
+      },
+      "PA00116359": {
+        "latitude": 45.996407567778,
+        "longitude": 5.1699855247382,
+        "original_latitude": 46.14124328394802,
+        "original_longitude": 5.158655008774421,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00116359/chalamont-maison-a-pan-de-bois",
+        "reviewed_at": "2026-10-26T20:15:13.802897+00:00"
+      },
+      "PA00116421": {
+        "latitude": 45.75742,
+        "longitude": 5.6903,
+        "original_latitude": 45.7574111756522,
+        "original_longitude": 5.69030182326093,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00116421/magnieu-pierre-a-cupules",
+        "reviewed_at": "2026-10-26T20:57:30.603930+00:00"
+      },
+      "PA00116748": {
+        "latitude": 44.58781,
+        "longitude": 4.701411,
+        "original_latitude": 44.58780274608281,
+        "original_longitude": 4.70144513778,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00116748/privas-borne-milliaire-gallo-romaine",
+        "reviewed_at": "2026-10-26T20:57:30.391446+00:00"
+      },
+      "PA00116895": {
+        "latitude": 45.028164,
+        "longitude": 5.174582,
+        "original_latitude": 45.0281576207148,
+        "original_longitude": 5.17454425780911,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00116895/beauregard-baret-eglise-paroissiale-de-jaillans",
+        "reviewed_at": "2026-10-26T20:57:30.638870+00:00"
+      },
+      "PA00117156": {
+        "latitude": 45.724735466427,
+        "longitude": 5.2500596034034,
+        "original_latitude": 45.72473959883663,
+        "original_longitude": 5.250062689528717,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00117156/vernas-fontaine",
+        "reviewed_at": "2026-10-26T20:57:30.532767+00:00"
+      },
+      "PA00125222": {
+        "latitude": 48.290351596835,
+        "longitude": 7.3878909475559,
+        "original_latitude": 50.976971289298255,
+        "original_longitude": 7.680621267187196,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00125222/scherwiller-pont-numero-1",
+        "reviewed_at": "2026-10-26T20:33:20.207020+00:00"
+      },
+      "PA00125223": {
+        "latitude": 48.29223194286,
+        "longitude": 7.3797032317494,
+        "original_latitude": 50.98087524090668,
+        "original_longitude": 7.6739244048072015,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00125223/scherwiller-pont-numero-2",
+        "reviewed_at": "2026-10-26T20:33:20.176215+00:00"
+      },
+      "PA00125224": {
+        "latitude": 48.292671152816,
+        "longitude": 7.3774109946201,
+        "original_latitude": 50.98183527355055,
+        "original_longitude": 7.672605045275256,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00125224/scherwiller-pont-numero-3",
+        "reviewed_at": "2026-10-26T20:33:20.153873+00:00"
+      },
+      "PA00125225": {
+        "latitude": 48.296115537599,
+        "longitude": 7.3699076921597,
+        "original_latitude": 50.98285884914338,
+        "original_longitude": 7.669865489315357,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00125225/scherwiller-pont-numero-4",
+        "reviewed_at": "2026-10-26T20:33:20.134482+00:00"
+      },
+      "PA00125424": {
+        "latitude": 47.47965,
+        "longitude": 6.93051,
+        "original_latitude": 47.7309268671629,
+        "original_longitude": 6.81300362923717,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00125424/montbouton-habitat-fortifie",
+        "reviewed_at": "2026-10-26T20:15:13.477559+00:00"
+      },
+      "PA00125441": {
+        "latitude": 48.8810729390132,
+        "longitude": 2.36875393156495,
+        "original_latitude": 48.8810729390132,
+        "original_longitude": 2.36875393156495,
+        "selection": "original_restored",
+        "source_url": "https://monumentum.fr/monument-historique/pa00125441/paris-11e-arrondissement-canal-saint-martin",
+        "reviewed_at": "2026-10-26T21:22:57.588485+00:00"
+      },
+      "PA00125491": {
+        "latitude": 43.496108697427,
+        "longitude": 3.2453344249315,
+        "original_latitude": 43.4845632598041,
+        "original_longitude": 3.24342369314073,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00125491/gabian-aqueduc-de-beziers-egalement-sur-communes-de-fouzilhon-magalas-puissalicon-et-corneilhan",
+        "reviewed_at": "2026-10-26T20:33:21.542028+00:00"
+      },
+      "PA00125689": {
+        "latitude": 46.61664793,
+        "longitude": 0.61307073,
+        "original_latitude": 46.949313286444166,
+        "original_longitude": 0.602403234274906,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00125689/bonnes-chateau-de-loubressay",
+        "reviewed_at": "2026-10-26T20:15:13.442649+00:00"
+      },
+      "PA00132968": {
+        "latitude": 46.7846048,
+        "longitude": 4.84821349,
+        "original_latitude": 46.2033093947836,
+        "original_longitude": 4.244761382638791,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00132968/chalon-sur-saone-chapelle-de-la-colombiere",
+        "reviewed_at": "2026-10-26T20:33:20.381504+00:00"
+      },
+      "PA00135349": {
+        "latitude": 47.730769,
+        "longitude": 6.813068,
+        "original_latitude": 47.479629633546764,
+        "original_longitude": 6.930859713361201,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa00135349/auxelles-bas-fort-dorsner",
+        "reviewed_at": "2026-10-26T20:15:13.525434+00:00"
+      },
+      "PA01000039": {
+        "latitude": 46.2707,
+        "longitude": 6.0961,
+        "original_latitude": 46.08057566758216,
+        "original_longitude": 5.460656202608731,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa01000039/ornex-maison-haute-dite-egalement-tour-dornex",
+        "reviewed_at": "2026-10-26T20:33:20.675009+00:00"
+      },
+      "PA02000058": {
+        "latitude": 49.04612,
+        "longitude": 3.40245,
+        "original_latitude": 49.045857371477005,
+        "original_longitude": 3.4298619136696473,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa02000058/chateau-thierry-hotel-de-ville",
+        "reviewed_at": "2026-10-26T20:15:14.214582+00:00"
+      },
+      "PA21000001": {
+        "latitude": 47.23677748676467,
+        "longitude": 5.117078125476837,
+        "original_latitude": 47.2380940565376,
+        "original_longitude": 5.11839554779611,
+        "selection": "manual_final",
+        "source_url": "https://monumentum.fr/monument-historique/pa21000001/brochon-chateau",
+        "reviewed_at": "2026-10-26T21:15:41.982644+00:00"
+      },
+      "PA21000003": {
+        "latitude": 47.24446533,
+        "longitude": 4.96708632,
+        "original_latitude": 47.2444271493419,
+        "original_longitude": 4.967078479612,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa21000003/fixin-manoir-de-la-perriere",
+        "reviewed_at": "2026-10-26T20:57:30.160570+00:00"
+      },
+      "PA25000051": {
+        "latitude": 47.311396,
+        "longitude": 5.888089,
+        "original_latitude": 47.31067000000001,
+        "original_longitude": 5.0,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa25000051/emagny-chateau-de-moncley",
+        "reviewed_at": "2026-10-26T20:15:13.145169+00:00"
+      },
+      "PA33000212": {
+        "latitude": 45.0066,
+        "longitude": -0.2112,
+        "original_latitude": 45.00657689269603,
+        "original_longitude": -0.21119227663514156,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa33000212/sauviac-chateau-de-lagrave-parc-ferme-et-orangerie",
+        "reviewed_at": "2026-10-26T20:57:30.119191+00:00"
+      },
+      "PA44000049": {
+        "latitude": 47.177132438718004,
+        "longitude": -2.4678388237953186,
+        "original_latitude": 47.1765922727719,
+        "original_longitude": -2.46740172115292,
+        "selection": "manual_final",
+        "source_url": "https://monumentum.fr/monument-historique/pa44000049/la-baule-escoublac-phare-de-la-banche",
+        "reviewed_at": "2026-10-26T21:14:45.073527+00:00"
+      },
+      "PA44000052": {
+        "latitude": 47.250061755658,
+        "longitude": -2.2167797343714,
+        "original_latitude": 47.2500617543741,
+        "original_longitude": -2.21677973437681,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa44000052/saint-nazaire-balise-des-morees",
+        "reviewed_at": "2026-10-26T20:57:30.936860+00:00"
+      },
+      "PA47000012": {
+        "latitude": 44.416298191387,
+        "longitude": 0.39062322876998,
+        "original_latitude": 44.418569322497206,
+        "original_longitude": 0.515793561969042,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa47000012/grateloup-saint-gayrand-chateau-de-lagarde",
+        "reviewed_at": "2026-10-26T20:15:13.847324+00:00"
+      },
+      "PA50000096": {
+        "latitude": 49.6702826486,
+        "longitude": -1.66473790151,
+        "original_latitude": 49.67028264859532,
+        "original_longitude": -1.6647379015122041,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa50000096/cherbourg-en-cotentin-fort-de-chavagnac-ouvrage-constitutif-de-la-rade-de-cherbourg",
+        "reviewed_at": "2026-10-26T20:57:30.887598+00:00"
+      },
+      "PA50000103": {
+        "latitude": 49.67144254905758,
+        "longitude": -1.5987653580357142,
+        "original_latitude": 49.67144254905758,
+        "original_longitude": -1.5987653580357142,
+        "selection": "original_restored",
+        "source_url": "https://monumentum.fr/monument-historique/pa50000103/cherbourg-en-cotentin-fort-de-lest-ouvrage-constitutif-de-la-rade-de-cherbourg",
+        "reviewed_at": "2026-10-26T21:10:10.488862+00:00"
+      },
+      "PA62000009": {
+        "latitude": 50.62982741,
+        "longitude": 1.60711278,
+        "original_latitude": 47.93038430862004,
+        "original_longitude": 1.6464406113240793,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa62000009/neufchatel-hardelot-villa-sans-gene",
+        "reviewed_at": "2026-10-26T20:33:20.270225+00:00"
+      },
+      "PA62000010": {
+        "latitude": 50.629347,
+        "longitude": 1.607831,
+        "original_latitude": 47.93038430862004,
+        "original_longitude": 1.6464406113240793,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa62000010/neufchatel-hardelot-maison-de-gardien-de-la-villa-sans-gene",
+        "reviewed_at": "2026-10-26T20:33:20.317897+00:00"
+      },
+      "PA75040007": {
+        "latitude": 48.855,
+        "longitude": 2.3568,
+        "original_latitude": 48.8393042189938,
+        "original_longitude": 2.3334318465175428,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa75040007/paris-4e-arrondissement-maison",
+        "reviewed_at": "2026-10-26T20:15:14.109468+00:00"
+      },
+      "PA76000121": {
+        "latitude": 49.873645046016,
+        "longitude": 0.96216370544526,
+        "original_latitude": 49.873645046015575,
+        "original_longitude": 0.9621637054452569,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa76000121/ouville-labbaye-monument-aux-morts-de-la-guerre-1914-1918",
+        "reviewed_at": "2026-10-26T20:57:30.333766+00:00"
+      },
+      "PA77000040": {
+        "latitude": 48.927593,
+        "longitude": 2.721723,
+        "original_latitude": 48.92765215594041,
+        "original_longitude": 2.7221138466342354,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa77000040/citry-ancien-atelier-de-victor-vasarely",
+        "reviewed_at": "2026-10-26T20:33:20.956244+00:00"
+      },
+      "PA80000141": {
+        "latitude": 49.647486712257,
+        "longitude": 2.7673735896486,
+        "original_latitude": 49.64748671225749,
+        "original_longitude": 2.7673735896485914,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa80000141/fresnes-mazancourt-eglise-saint-medard-et-monument-aux-morts",
+        "reviewed_at": "2026-10-26T20:57:30.286682+00:00"
+      },
+      "PA85000043": {
+        "latitude": 46.495,
+        "longitude": -1.841944,
+        "original_latitude": 46.4945678819375,
+        "original_longitude": -1.8369941000753698,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa85000043/les-sables-dolonne-phare-des-barges",
+        "reviewed_at": "2026-10-26T20:33:21.514985+00:00"
+      },
+      "PA87000019": {
+        "latitude": 45.8313015807803,
+        "longitude": 1.26410807693861,
+        "original_latitude": 45.8313015807803,
+        "original_longitude": 1.26410807693861,
+        "selection": "original_restored",
+        "source_url": "https://monumentum.fr/monument-historique/pa87000019/champnetery-siege-du-cercle-de-lunion-et-turgot",
+        "reviewed_at": "2026-10-26T21:12:27.545018+00:00"
+      },
+      "PA97200019": {
+        "latitude": 14.60392834,
+        "longitude": -61.07854484,
+        "original_latitude": 14.603956078237498,
+        "original_longitude": -61.078521053513505,
+        "selection": "monumentum",
+        "source_url": "https://monumentum.fr/monument-historique/pa97200019/case-pilote-villa-monplaisir",
+        "reviewed_at": "2026-10-26T20:57:30.438579+00:00"
+      }
+    }
+  },
   "unique_monuments": 46760,
   "visual_thresholds": [
     55,
@@ -326,8 +1120,8 @@
     "Île-de-France": 3988
   },
   "multiple_protections": 2562,
-  "colocated_groups": 111,
+  "colocated_groups": 102,
   "without_coordinates": 2494,
-  "elapsed_seconds": 21.508,
-  "database_bytes": 236662784
+  "elapsed_seconds": 21.56,
+  "database_bytes": 236695552
 }

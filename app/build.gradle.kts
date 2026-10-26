@@ -13,8 +13,8 @@ android {
         applicationId = "fr.pierresdefrance"
         minSdk = 26
         targetSdk = 36
-        versionCode = 5
-        versionName = "0.3.2"
+        versionCode = 6
+        versionName = "0.3.3"
         val catalogue = file("src/main/assets/monuments.db")
         check(catalogue.isFile && catalogue.inputStream().use { stream ->
             val header=ByteArray(16)

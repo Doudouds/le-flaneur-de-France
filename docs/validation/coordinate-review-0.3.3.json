@@ -1,0 +1,14 @@
+{
+  "monuments": 46760,
+  "positioned": 44266,
+  "changed_positions": 81,
+  "restored_positions": 6,
+  "verified_final_positions": 87,
+  "non_position_changes": 0,
+  "spatial_levels_verified": 16,
+  "integrity": "ok",
+  "review_sha256": "3ea18323625485ecab412685d76220cda9f41c20142248205f9bf37281b3821f",
+  "snapshot_sha256": "6b7b05e2974f23fd37534be1fde89a7296f3590e0219d2942512dec82831cccc",
+  "old_database_sha256": "a59902a411479dd79e8d4d16012af4a10ed6acb87a7ef7cade32683a742cc9aa",
+  "new_database_sha256": "6f66e365e740017285f1651dbb679f703799ec9f96f94fbd8ccaa5aaad028559"
+}

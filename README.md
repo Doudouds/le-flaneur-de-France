@@ -8,6 +8,13 @@ Deux onglets : **Carte** et **Liste**. Carte nationale avec regroupements, reche
 locale dans tout le pays, position ponctuelle facultative, liste par distance et
 fiche avec textes sourcés, scores, photographie à la demande et itinéraire externe.
 
+La version 0.3.3 intègre les positions issues de la vérification finale sur PC :
+81 coordonnées mises à jour et 6 retours explicites à la position d’origine.
+Les dernières retouches manuelles ont priorité sur les points Monumentum.
+Le snapshot `data/coordinate_overrides.json` conserve les positions avant/après
+et leur provenance ; il est réappliqué lors de chaque reconstruction. Le rapport
+de validation est dans [docs/VERIFICATION-0.3.3.md](docs/VERIFICATION-0.3.3.md).
+
 La version 0.3.2 écarte des calculs géographiques les 216 positions tronquées au
 degré, tout en conservant leurs notices consultables. Toucher un point partagé
 par plusieurs monuments ouvre un choix avec leurs adresses et références.
@@ -17,7 +24,7 @@ les imports conservent la source de chaque texte lors de la fusion de doublons.
 ## Démarrer
 
 Pour installer directement la V1 sur un téléphone ARM 64 bits :
-[télécharger l’APK de test](dist/Les-Pierres-de-France-0.3.2-arm64.apk), puis l’ouvrir
+[télécharger l’APK de test](dist/Les-Pierres-de-France-0.3.3-arm64.apk), puis l’ouvrir
 sur Android. Autoriser l’installation depuis l’application qui ouvre le fichier si
 Android le demande. La première préparation du catalogue prend quelques secondes.
 
@@ -53,6 +60,14 @@ Il contient 46 760 notices, 77 colonnes UTF-8 séparées par `|`, avec une paire
 ```powershell
 python tools/build_monuments_db.py --input "C:\Users\edoua\Downloads\merimee.csv"
 ```
+
+Le pipeline applique ensuite `data/coordinate_overrides.json`, figé après les
+vérifications du 26 octobre 2026. Il vérifie chaque référence et la position
+d’origine avant application, puis reconstruit tous les regroupements de la carte.
+Une référence absente, une position invalide ou une origine différente arrête
+la reconstruction sans remplacer le catalogue précédent. Le CSV ministère reste
+intact. Les commentaires personnels et l’historique complet restent dans les
+sauvegardes locales de l’outil de vérification.
 
 Si Python n’est pas dans le PATH sur cette machine :
 

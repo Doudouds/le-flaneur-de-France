@@ -9,12 +9,34 @@ import org.junit.*
 import org.junit.runner.RunWith
 import android.util.Log
 import kotlin.system.measureTimeMillis
+import android.content.Context
+import org.json.JSONObject
 
 @RunWith(AndroidJUnit4::class)
 class CatalogueTest {
     private lateinit var db: MonumentDatabase
     @Before fun setup() { db=MonumentDatabase.open(ApplicationProvider.getApplicationContext()) }
     @After fun close() { db.close() }
+    @Test fun finalizedCoordinateReviewMatchesDetailsAndMap()=runBlocking {
+        val context=ApplicationProvider.getApplicationContext<Context>()
+        val report=context.assets.open("dataset_report.json").bufferedReader().use { JSONObject(it.readText()) }
+        val review=report.getJSONObject("coordinate_review")
+        Assert.assertEquals(81,review.getInt("changed_positions"))
+        Assert.assertEquals(6,review.getInt("restored_positions"))
+        val records=review.getJSONObject("records")
+        Assert.assertEquals(87,records.length())
+        val repo=MonumentRepository(db)
+        for(ref in records.keys()) {
+            val expected=records.getJSONObject(ref)
+            val row=repo.search(ref).single()
+            val detail=repo.detail(row.id)!!
+            val lat=expected.getDouble("latitude");val lon=expected.getDouble("longitude")
+            Assert.assertEquals(ref,lat,detail.latitude!!,1e-10)
+            Assert.assertEquals(ref,lon,detail.longitude!!,1e-10)
+            Assert.assertTrue(ref,repo.map(Bounds(lat-.0001,lon-.0001,lat+.0001,lon+.0001),18.0).items.any { it.id==row.id })
+        }
+        Unit
+    }
     @Test fun truncatedCoordinatesStaySearchableButCannotProduceADistance()=runBlocking {
         val repo=MonumentRepository(db)
         val row=repo.search("PA33000253").single()

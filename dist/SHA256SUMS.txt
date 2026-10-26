@@ -2,3 +2,5 @@
 2bf1dcd5a89f00c1bd7e87df616363446b899f330fa9e8e6b9e52ab035d4a98f  Les-Pierres-de-France-0.2.0-arm64.apk
 1b550221c0938f2a62db01893628169493084faedeebe7f08b38bb9d4e6aa725  Les-Pierres-de-France-0.3.0-arm64.apk
 d913d823db8ca2406e5c185475300c85fa65b24c89bf8d82d1d4c7a6366f9057  Les-Pierres-de-France-0.3.1-arm64.apk
+e0afcce09452b81c93f26ee1ca466b9370c28973089d4159794d9892b7081eff  Les-Pierres-de-France-0.3.2-arm64.apk
+607e56ad8c8fb2d7cd476aa4510ce01f7b3b1d3125eaa5e1868a14d85783451d  Les-Pierres-de-France-0.3.3-arm64.apk

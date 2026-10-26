@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="fr.pierresdefrance.GeoTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-26T21:34:58.477Z" hostname="EDOUARD" time="0.065">
+  <properties/>
+  <testcase name="adaptiveRadius" classname="fr.pierresdefrance.GeoTest" time="0.032"/>
+  <testcase name="bounds" classname="fr.pierresdefrance.GeoTest" time="0.004"/>
+  <testcase name="distance" classname="fr.pierresdefrance.GeoTest" time="0.001"/>
+  <testcase name="textSearch" classname="fr.pierresdefrance.GeoTest" time="0.026"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

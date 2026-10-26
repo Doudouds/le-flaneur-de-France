@@ -5,6 +5,7 @@ import argparse, collections, csv, hashlib, json, math, os, re, sqlite3, time, u
 from pathlib import Path
 from national_scoring import score, VERSION, THRESHOLDS
 from monument_descriptions import pop_summary, enrich_description
+from coordinate_overrides import apply_coordinate_overrides
 
 ROOT = Path(__file__).resolve().parents[1]
 FIELDS = {
@@ -85,7 +86,7 @@ def tile(lat,lon,z):
     n=2**z; r=math.radians(max(-85.05112878,min(85.05112878,lat)))
     return min(n-1,int((lon+180)/360*n)), min(n-1,int((1-math.asinh(math.tan(r))/math.pi)/2*n))
 
-def _build(source, output, enrichment, db, wikipedia=None, scoring=None):
+def _build(source, output, enrichment, db, wikipedia=None, scoring=None, coordinate_overrides=None):
     start=time.perf_counter(); output.parent.mkdir(parents=True,exist_ok=True)
     temp=output.with_suffix('.tmp'); schema(db)
     old=json.loads(enrichment.read_text(encoding='utf-8')) if enrichment and enrichment.exists() else {}
@@ -174,6 +175,8 @@ def _build(source, output, enrichment, db, wikipedia=None, scoring=None):
             if issue or prev:
                 db.execute('INSERT INTO source_rows VALUES (?,?,?,?)',(line,ref,json.dumps(row,ensure_ascii=False),issue or 'duplicate'))
         db.commit()
+    review = apply_coordinate_overrides(db, coordinate_overrides)
+    if review is not None: report['coordinate_review'] = review
     columns=[d[0] for d in db.execute('SELECT * FROM monuments LIMIT 0').description]
     for values in db.execute('SELECT * FROM monuments').fetchall():
         m=dict(zip(columns,values))
@@ -225,14 +228,14 @@ def _build(source, output, enrichment, db, wikipedia=None, scoring=None):
     db.close(); os.replace(temp,output)
     report['database_bytes']=output.stat().st_size
     output.with_name('dataset_report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
-    print(json.dumps({k:v for k,v in report.items() if k not in ('columns','missing_fields','by_region','by_department','conflicts')},ensure_ascii=False,indent=2))
+    print(json.dumps({k:v for k,v in report.items() if k not in ('columns','missing_fields','by_region','by_department','conflicts','coordinate_review')},ensure_ascii=False,indent=2))
     return report
 
-def build(source,output,enrichment=None,wikipedia=None,scoring=None):
+def build(source,output,enrichment=None,wikipedia=None,scoring=None,coordinate_overrides=None):
     output.parent.mkdir(parents=True,exist_ok=True)
     temp=output.with_suffix('.tmp'); temp.unlink(missing_ok=True)
     db=sqlite3.connect(temp)
-    try: return _build(source,output,enrichment,db,wikipedia,scoring)
+    try: return _build(source,output,enrichment,db,wikipedia,scoring,coordinate_overrides)
     finally:
         db.close()
         temp.unlink(missing_ok=True)
@@ -244,5 +247,6 @@ if __name__=='__main__':
     p.add_argument('--enrichment',type=Path,default=ROOT/'data/legacy_enrichment.json')
     p.add_argument('--wikipedia',type=Path,default=ROOT/'data/wikipedia_enrichment.json')
     p.add_argument('--scoring',type=Path,default=ROOT/'data/scoring_enrichment.json')
-    args=p.parse_args(); build(args.input,args.output,args.enrichment,args.wikipedia,args.scoring)
+    p.add_argument('--coordinate-overrides',type=Path,default=ROOT/'data/coordinate_overrides.json')
+    args=p.parse_args(); build(args.input,args.output,args.enrichment,args.wikipedia,args.scoring,args.coordinate_overrides)
 

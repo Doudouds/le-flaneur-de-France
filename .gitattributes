@@ -1,2 +1,4 @@
 *.db filter=lfs diff=lfs merge=lfs -text
 *.apk filter=lfs diff=lfs merge=lfs -text
+# Preserve the exact bytes used by the catalogue's snapshot SHA-256.
+data/coordinate_overrides.json -text whitespace=cr-at-eol
