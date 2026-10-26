@@ -74,3 +74,46 @@ Autre port ou fichier de décisions, pour un test isolé :
 ```powershell
 python tools/review_coordinates.py --port 8766 --reviews chemin/decisions-test.json
 ```
+
+## Comparaison avec Monumentum
+
+`tools/reconcile_monumentum_positions.py` recherche chaque référence Mérimée
+indécise et chaque correction manuelle sur Monumentum. La recherche doit donner
+une seule fiche et une seule position pour la référence exacte. Le lien POP et
+l’URL de la fiche confirment l’identité ; recherche et fiche doivent donner les
+mêmes coordonnées. Les requêtes sont séquentielles, espacées et mises en cache
+dans `data/monumentum_cache/` (ignoré par Git).
+
+```powershell
+# Comparaison et propositions, sans changer les décisions ni le catalogue :
+python -B tools/reconcile_monumentum_positions.py
+# Réutiliser le cache sans requête extérieure :
+python -B tools/reconcile_monumentum_positions.py --offline
+# Appliquer à la carte PC déjà démarrée, avec son historique et ses sauvegardes :
+python -B tools/reconcile_monumentum_positions.py --offline --apply
+```
+
+Les résultats CSV et JSON sont dans `data/monumentum_reconciliation/`, ignoré par
+Git : `positions-corrigees-monumentum.csv` liste les coordonnées différentes de
+l’origine, et `verification-monumentum.csv` couvre tout le périmètre contrôlé.
+Chaque ligne indique l’origine, la position précédente, la position retenue,
+le point Monumentum, les écarts en mètres, le motif, la source et sa date.
+Sans `--apply`, ces fichiers décrivent les propositions ; avec cette option,
+ils sont écrits après application réussie. Les notes personnelles ne sont pas
+incluses dans les rapports et restent dans le fichier de décisions.
+
+Une différence de 50 m ou moins ne déclenche pas un déplacement. Une correction
+manuelle éloignée du point d’un ouvrage étendu (aqueduc, voie romaine, canal,
+remparts) est conservée et signalée à confirmer : plusieurs points peuvent
+représenter la même protection. Les positions de Monumentum constituent une
+source de comparaison, sans garantir à elles seules l’exactitude sur le terrain.
+Une référence non retrouvée de façon univoque reste inchangée.
+
+L’application se fait par l’API locale, sans toucher aux jugements ni aux notes.
+Un fichier de décisions modifié pendant la recherche entraîne l’arrêt avant
+application. Le serveur est aussi utilisé par les tests isolés de conservation
+de l’historique et de rejet d’un comparatif obsolète :
+
+```powershell
+python -B -m unittest discover -s tools -p test_monumentum_positions.py
+```
