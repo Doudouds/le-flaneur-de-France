@@ -4,19 +4,24 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Vérification des positions — monuments suspects</title>
   <link rel="stylesheet" href="vendor/leaflet.css"><link rel="stylesheet" href="style.css">
-  <script defer src="vendor/leaflet.js"></script><script defer src="app.js"></script>
+  <script defer src="vendor/leaflet.js"></script><script defer src="position_rules.js"></script><script defer src="app.js"></script>
 </head>
 <body>
 <header>
   <strong>Vérification des positions</strong><span id="counts">Chargement…</span>
-  <button id="france">France</button><button id="all">Tous les points</button>
+  <button id="france">France</button><button id="all">Cadrer les points affichés</button>
   <a href="/api/export.csv" download>Exporter CSV</a><a href="/api/export.json" download>Sauvegarde JSON</a>
   <button id="stop">Arrêter l’outil</button>
 </header>
+<div class="filterbar">
+  <label for="filter">Filtrer la carte</label>
+  <select id="filter"><option value="a_verifier" selected>À vérifier</option><option value="corrige">Toutes les positions corrigées</option><option value="bon">Bons emplacements</option><option value="mauvais">Mauvais emplacements</option><option value="all">Tous les lieux</option></select>
+  <button id="pending-view">Masquer les bons</button><button id="corrected-view">Voir toutes les corrections</button>
+  <small>Écart origine → position corrigée inférieur à 10 m : position considérée bonne.</small>
+</div>
 <main>
   <aside>
     <label>Rechercher <input id="search" type="search" placeholder="Nom, commune, référence, département"></label>
-    <label>Afficher <select id="filter"><option value="all">Tous</option><option value="a_verifier">À vérifier</option><option value="bon">Bons emplacements</option><option value="mauvais">Mauvais emplacements</option><option value="corrige">Positions corrigées</option></select></label>
     <div id="list" aria-label="Lieux suspects"></div>
   </aside>
   <div id="map" aria-label="Carte des lieux suspects"></div>
@@ -25,7 +30,7 @@
     <div id="selected" hidden>
       <h1 id="name"></h1><p id="reference"></p><p id="place"></p>
       <p id="position"></p><p id="reason"></p><p id="distances"></p>
-      <p id="corrected-position" hidden></p>
+      <p id="corrected-position" hidden></p><p id="correction-distance" hidden></p>
       <p id="reference-place"></p><p id="caution"></p><p id="changed" hidden>La position a changé depuis la décision précédente. À revérifier.</p>
       <div class="actions"><button id="zoom">Voir le point actuel</button><button id="origin" hidden>Voir la position d’origine</button><button id="expected">Voir la commune du code INSEE</button></div>
       <div class="actions"><button id="relocate" disabled aria-pressed="false">Corriger la position par un clic</button><button id="cancel-relocate" hidden>Annuler le mode correction</button><button id="restore-position" hidden>Rétablir la position d’origine</button></div>

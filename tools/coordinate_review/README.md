@@ -47,6 +47,17 @@ rouvre l’outil déjà démarré. « Arrêter l’outil » arrête son serveur 
 - Le filtre permet de ne voir que les lieux à vérifier, bons ou mauvais. La
   recherche accepte nom, référence, commune ou département. Le bouton « Lieu
   suivant » passe au prochain lieu à vérifier dans le filtre courant.
+- Le menu « Filtrer la carte » est au-dessus de la carte. « Masquer les bons »
+  affiche les lieux restant à vérifier ; « Voir toutes les corrections » affiche
+  aussi les petits écarts. L’affichage initial masque les bons, et un filtre
+  choisi est conservé dans l’URL, y compris après rechargement. Le compteur
+  distingue les lieux affichés du total.
+- Un écart strictement inférieur à 10 m entre la position d’origine et la
+  position corrigée est considéré bon. Le calcul utilise les coordonnées sans
+  arrondi ; 10 m exactement reste à vérifier. La fiche affiche cet écart en
+  mètres. Un jugement explicite « Mauvais » et une modification de l’origine
+  par un nouvel audit restent à vérifier. Les coordonnées Monumentum et les
+  positions antérieures restent conservées même pour les petits écarts.
 - Un contour bleu montre la commune correspondant au code INSEE, grâce au cache
   de l’audit. Le code peut être erroné : la commune déclarée et la commune de
   référence sont affichées séparément. Si le cache manque, la carte et les
@@ -118,4 +129,6 @@ de l’historique et de rejet d’un comparatif obsolète :
 
 ```powershell
 python -B -m unittest discover -s tools -p test_monumentum_positions.py
+# Règle des 10 mètres et conservation des jugements explicites :
+node --test tools/test_coordinate_review_rules.cjs
 ```
