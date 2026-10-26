@@ -9,7 +9,7 @@ import tempfile
 import threading
 import unittest
 from unittest.mock import patch
-from review_coordinates import ReviewServer, ReviewStore
+from review_coordinates import ReviewServer, ReviewStore, review_decision
 
 
 class CoordinateReviewTests(unittest.TestCase):
@@ -89,6 +89,44 @@ class CoordinateReviewTests(unittest.TestCase):
         self.reviews.write_text(json.dumps(data),encoding='utf-8')
         rows=list(csv.DictReader(io.StringIO(self.store.export_csv().decode('utf-8-sig')),delimiter=';'))
         self.assertEqual(rows[0]['position_modifiee_depuis_decision'],'True')
+
+    def test_filtered_export_omits_restored_good_position_but_full_backup_keeps_it(self):
+        self.store.save('PA00000001','a_verifier','Personal note')
+        self.store.save('PA00000001',correction={'latitude':49,'longitude':3})
+        self.store.save('PA00000001','bon','Personal note',correction=None)
+        before=self.reviews.read_bytes()
+        status,body=self.request('GET','/api/export.csv')
+        self.assertEqual(status,200)
+        rows=list(csv.DictReader(io.StringIO(body.decode('utf-8-sig')),delimiter=';'))
+        self.assertEqual([r['reference'] for r in rows],['PA00000002'])
+        status,body=self.request('GET','/api/export-all.csv')
+        self.assertEqual(status,200)
+        rows=list(csv.DictReader(io.StringIO(body.decode('utf-8-sig')),delimiter=';'))
+        self.assertEqual(len(rows),2);self.assertEqual(rows[0]['decision'],'bon')
+        self.assertEqual(rows[0]['commentaire'],'Personal note')
+        status,body=self.request('GET','/api/export.json')
+        saved=json.loads(body)['reviews']['PA00000001']
+        self.assertIsNone(saved['correction']);self.assertTrue(any(h.get('correction') for h in saved['history']))
+        self.assertEqual(self.reviews.read_bytes(),before)
+
+    def test_export_ten_metre_rule_matches_map_and_preserves_explicit_bad_judgments(self):
+        row={'latitude':0,'longitude':0}
+        def at(metres,decision='a_verifier'):
+            return dict(latitude=0,longitude=0,decision=decision,correction={'latitude':metres/6371008.8*180/math.pi,'longitude':0})
+        self.assertEqual(review_decision(row,at(9.999)),'bon')
+        self.assertEqual(review_decision(row,at(10)),'a_verifier')
+        self.assertEqual(review_decision(row,at(10.001)),'a_verifier')
+        self.assertEqual(review_decision(row,at(1,'mauvais')),'mauvais')
+        self.assertEqual(review_decision(row,at(1,'bon')|{'latitude':1}),'a_verifier')
+
+    def test_all_good_export_has_header_only_and_complete_export_still_has_all_rows(self):
+        for ref in self.store.by_ref:self.store.save(ref,'bon','Checked')
+        status,body=self.request('GET','/api/export.csv')
+        self.assertEqual(status,200)
+        reader=csv.DictReader(io.StringIO(body.decode('utf-8-sig')),delimiter=';')
+        self.assertIn('reference',reader.fieldnames);self.assertEqual(list(reader),[])
+        status,body=self.request('GET','/api/export-all.csv')
+        self.assertEqual(len(list(csv.DictReader(io.StringIO(body.decode('utf-8-sig')),delimiter=';'))),2)
 
     def test_existing_reviews_are_unchanged_until_edit_and_backed_up_exactly(self):
         legacy={'version':1,'extra_metadata':'preserve', 'reviews':{

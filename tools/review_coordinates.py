@@ -32,6 +32,22 @@ def snapshot(review, action):
     return {k: v for k, v in review.items() if k != 'history'} | {'action': action}
 
 
+def review_decision(row, review):
+    """Use the same status as the map, including its strict ten metre rule."""
+    if review and (review.get('latitude'), review.get('longitude')) != (row['latitude'], row['longitude']):
+        return 'a_verifier'
+    decision = review.get('decision', 'a_verifier')
+    correction = review.get('correction')
+    if correction and decision != 'mauvais':
+        lat1, lat2 = map(math.radians, (row['latitude'], correction['latitude']))
+        delta = math.radians(correction['longitude']-row['longitude'])
+        h = math.sin((lat2-lat1)/2)**2 + math.cos(lat1)*math.cos(lat2)*math.sin(delta/2)**2
+        metres = 6371008.8*2*math.asin(math.sqrt(max(0, min(1, h))))
+        if metres < 10:
+            return 'bon'
+    return decision
+
+
 class ReviewStore:
     def __init__(self, audit, path):
         self.path = path
@@ -129,7 +145,7 @@ class ReviewStore:
                         found.setdefault(code, feature)
         return found
 
-    def export_csv(self):
+    def export_csv(self, include_good=True):
         reviews = self.read()['reviews']
         out = io.StringIO(newline='')
         fields = list(self.rows[0]) + ['decision', 'commentaire', 'date_decision', 'position_modifiee_depuis_decision',
@@ -138,9 +154,12 @@ class ReviewStore:
         writer.writeheader()
         for row in self.rows:
             review = reviews.get(row['reference'], {})
+            decision = review_decision(row, review)
+            if not include_good and decision == 'bon':
+                continue
             changed = bool(review) and (review.get('latitude'), review.get('longitude')) != (row['latitude'], row['longitude'])
             correction = review.get('correction') or {}
-            item = dict(row, decision=review.get('decision', 'a_verifier'), commentaire=review.get('note', ''),
+            item = dict(row, decision=decision, commentaire=review.get('note', ''),
                         date_decision=review.get('updated_at', ''), position_modifiee_depuis_decision=changed,
                         latitude_corrigee=correction.get('latitude', ''), longitude_corrigee=correction.get('longitude', ''),
                         date_correction=correction.get('updated_at', ''), nombre_entrees_historique=len(review.get('history', [])))
@@ -200,7 +219,7 @@ class Handler(BaseHTTPRequestHandler):
                 self.send(200, {'app': 'flaneur-coordinate-review'})
             elif route == '/api/data':
                 self.send(200, {'monuments': self.server.store.rows, 'reviews': self.server.store.read()['reviews'],
-                                'token': self.server.token, 'capabilities': {'corrections': True, 'history': True}})
+                                'token': self.server.token, 'capabilities': {'corrections': True, 'history': True, 'filtered_csv': True}})
             elif route.startswith('/api/contours/'):
                 row = self.server.store.by_ref.get(route.rsplit('/', 1)[1])
                 if row is None:
@@ -209,7 +228,9 @@ class Handler(BaseHTTPRequestHandler):
                 self.send(200, {'type': 'FeatureCollection', 'features': [self.server.boundaries[c]
                     for c in row.get('codes_controles', '').split(';') if c in self.server.boundaries]})
             elif route == '/api/export.csv':
-                self.send(200, self.server.store.export_csv(), 'text/csv; charset=utf-8', 'verification-positions.csv')
+                self.send(200, self.server.store.export_csv(include_good=False), 'text/csv; charset=utf-8', 'positions-a-corriger.csv')
+            elif route == '/api/export-all.csv':
+                self.send(200, self.server.store.export_csv(), 'text/csv; charset=utf-8', 'verification-positions-complet.csv')
             elif route == '/api/export.json':
                 self.send(200, json.dumps(self.server.store.read(), ensure_ascii=False, indent=2).encode('utf-8'),
                           filename='verification-positions.json')

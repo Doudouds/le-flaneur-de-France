@@ -40,8 +40,11 @@ rouvre l’outil déjà démarré. « Arrêter l’outil » arrête son serveur 
   `data/coordinate_review_backups/`, également ignoré par Git. Aucune ancienne
   sauvegarde n’est supprimée automatiquement. Pour récupérer une copie, arrêter
   l’outil et recopier la sauvegarde choisie vers `data/coordinate_reviews.json`.
-- Les exports CSV et JSON permettent de récupérer les décisions. Un export CSV
-  contient aussi les lieux restant à vérifier, les coordonnées originales et
+- « Exporter CSV (sans les bons) » exclut tous les lieux considérés bons,
+  y compris ceux rétablis à l’origine et les écarts inférieurs à 10 m. Cet export
+  contient les lieux à vérifier et les mauvais emplacements, indépendamment du
+  filtre d’affichage. « CSV complet » conserve tous les lieux. Les exports CSV
+  contiennent les coordonnées originales et
   corrigées, la date de correction et le nombre d’entrées d’historique. Le JSON
   conserve les notes exactes et l’historique complet de tous les ajustements.
 - Le filtre permet de ne voir que les lieux à vérifier, bons ou mauvais. La
