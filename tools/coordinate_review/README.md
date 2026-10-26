@@ -102,12 +102,14 @@ Sans `--apply`, ces fichiers décrivent les propositions ; avec cette option,
 ils sont écrits après application réussie. Les notes personnelles ne sont pas
 incluses dans les rapports et restent dans le fichier de décisions.
 
-Une différence de 50 m ou moins ne déclenche pas un déplacement. Une correction
-manuelle éloignée du point d’un ouvrage étendu (aqueduc, voie romaine, canal,
-remparts) est conservée et signalée à confirmer : plusieurs points peuvent
-représenter la même protection. Les positions de Monumentum constituent une
-source de comparaison, sans garantir à elles seules l’exactitude sur le terrain.
-Une référence non retrouvée de façon univoque reste inchangée.
+Les positions vérifiées sur Monumentum ont priorité sur les positions initiales
+et les corrections manuelles, même pour un écart inférieur à 50 m ou pour un
+ouvrage étendu comme l’aqueduc de Béziers. Le point exact de la fiche est utilisé
+sur la carte ; les positions précédentes restent dans l’historique et les
+sauvegardes. Un point déjà identique ne déclenche pas de nouvelle écriture.
+Les positions de Monumentum constituent une source de comparaison, sans garantir
+à elles seules l’exactitude sur le terrain. Une référence non retrouvée de façon
+univoque reste inchangée.
 
 L’application se fait par l’API locale, sans toucher aux jugements ni aux notes.
 Un fichier de décisions modifié pendant la recherche entraîne l’arrêt avant

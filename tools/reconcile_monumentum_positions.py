@@ -153,8 +153,8 @@ def reconcile(rows, reviews, source, output):
     return records
 
 
-def proposed_change(record, tolerance=50):
-    """Keep small manual differences and flag ambiguous multi-part monuments."""
+def proposed_change(record):
+    """Prefer the exact verified Monumentum point, as requested by the user."""
     result = dict(record)
     result['final'] = list(record['current'])
     result['needs_review'] = False
@@ -163,15 +163,13 @@ def proposed_change(record, tolerance=50):
         return result
     found = record['source']
     target = [found['latitude'], found['longitude']]
-    if record['distance_current_m'] <= tolerance:
-        result.update(action='correction_manuelle_conservee' if record['had_correction'] else 'position_initiale_conservee',
-                      reason=f'Écart inférieur ou égal à {tolerance} m : déplacement non nécessaire.')
-    elif record['had_correction'] and re.search(r'aqueduc|tronçon|troncon|voies? romaines?|canal|remparts?', record['nom'], re.I):
-        result.update(action='correction_manuelle_a_confirmer', needs_review=True,
-                      reason='Ouvrage étendu ou à plusieurs tronçons : un autre point représentatif ne prouve pas une erreur. Correction conservée.')
+    result['final'] = target
+    if list(record['current']) == target:
+        result.update(action='position_monumentum_identique',
+                      reason='La position actuelle correspond exactement au point Monumentum.')
     else:
-        result.update(final=target, action='correction_manuelle_ajustee' if record['had_correction'] else 'nouvelle_correction',
-                      reason='Alignement sur le point de la fiche Monumentum, référence et recherche concordantes.')
+        result.update(action='correction_manuelle_ajustee' if record['had_correction'] else 'nouvelle_correction',
+                      reason='Priorité au point exact de Monumentum, même pour un faible écart ou un ouvrage étendu. Ancienne position conservée dans l’historique.')
     result['movement_m'] = round(distance_m(record['current'], result['final']), 2)
     return result
 
@@ -192,7 +190,7 @@ def report_matrix(records):
 
 
 def write_reports(records, folder):
-    corrected = [item for item in records if distance_m(item['original'], item['final']) > 0.01]
+    corrected = [item for item in records if list(item['original']) != list(item['final'])]
     for name, selected in [('positions-corrigees-monumentum', corrected), ('verification-monumentum', records)]:
         with (folder/(name+'.csv')).open('w', encoding='utf-8-sig', newline='') as handle:
             writer = csv.writer(handle, delimiter=';', quoting=csv.QUOTE_ALL)
@@ -273,9 +271,9 @@ def main():
     args.output.parent.mkdir(parents=True, exist_ok=True)
     records = reconcile(rows, reviews, Source(args.cache, offline=args.offline), args.output)
     proposed = [proposed_change(record) for record in records]
-    args.output.with_name('plan.json').write_text(json.dumps({'version': 1, 'tolerance_m': 50, 'records': proposed},
+    args.output.with_name('plan.json').write_text(json.dumps({'version': 1, 'priority_source': 'monumentum', 'records': proposed},
                                                            ensure_ascii=False, indent=2), encoding='utf-8')
-    changed = [record for record in proposed if distance_m(record['original'], record['final']) > 0.01]
+    changed = [record for record in proposed if list(record['original']) != list(record['final'])]
     args.output.with_name('report-matrices.json').write_text(json.dumps({
         'positions-corrigees-monumentum': report_matrix(changed),
         'verification-monumentum': report_matrix(proposed)}, ensure_ascii=False, indent=2), encoding='utf-8')

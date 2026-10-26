@@ -95,22 +95,35 @@ class MonumentumTests(unittest.TestCase):
                     original=[43, -2], current=[49.34309, 2.282292], had_correction=True,
                     source={'latitude':49.34309, 'longitude':2.282292}, distance_current_m=1, status='matched', **kwargs)
 
-    def test_small_manual_difference_is_kept_without_rounding(self):
+    def test_small_manual_difference_uses_exact_monumentum_point(self):
         item = self.candidate()
         item['current'] = [49.3430912345678, 2.2822912345678]
         result = proposed_change(item)
-        self.assertEqual(result['final'], item['current'])
-        self.assertEqual(result['movement_m'], 0)
-        self.assertEqual(result['action'], 'correction_manuelle_conservee')
+        self.assertEqual(result['final'], [49.34309,2.282292])
+        self.assertGreater(result['movement_m'], 0)
+        self.assertEqual(result['action'], 'correction_manuelle_ajustee')
 
-    def test_large_difference_is_corrected_but_extended_monument_is_flagged(self):
+    def test_extended_monument_also_uses_monumentum_point(self):
         item = self.candidate()
         item.update(current=[49.35, 2.3], distance_current_m=1500)
         self.assertEqual(proposed_change(item)['action'], 'correction_manuelle_ajustee')
         item['nom'] = 'Aqueduc sur plusieurs communes'
         result = proposed_change(item)
-        self.assertEqual(result['final'], item['current'])
-        self.assertTrue(result['needs_review'])
+        self.assertEqual(result['final'], [49.34309,2.282292])
+        self.assertFalse(result['needs_review'])
+
+    def test_small_original_difference_also_uses_monumentum_point(self):
+        item = self.candidate()
+        item.update(had_correction=False,current=[49.3431,2.2823],distance_current_m=2)
+        result = proposed_change(item)
+        self.assertEqual(result['final'], [49.34309,2.282292])
+        self.assertEqual(result['action'],'nouvelle_correction')
+
+    def test_identical_monumentum_point_does_not_require_another_write(self):
+        result = proposed_change(self.candidate())
+        self.assertEqual(result['final'],[49.34309,2.282292])
+        self.assertEqual(result['action'],'position_monumentum_identique')
+        self.assertEqual(result['movement_m'],0)
 
     def test_unresolved_source_is_not_applied_and_export_marks_it(self):
         item = self.candidate()
@@ -130,6 +143,7 @@ class MonumentumTests(unittest.TestCase):
     def test_csv_roundtrip_keeps_precision_negative_longitude_and_literal_text(self):
         item = self.candidate()
         item.update(nom='=unsafe; "label"',current=[49.3430912345678,-2.2822912345678])
+        item['source'] = {'latitude':49.3430912345678,'longitude':-2.2822912345678}
         result = proposed_change(item)
         with tempfile.TemporaryDirectory() as folder:
             write_reports([result],Path(folder))
@@ -138,6 +152,17 @@ class MonumentumTests(unittest.TestCase):
         self.assertEqual(row['monument'],"'=unsafe; \"label\"")
         self.assertEqual(float(row['longitude_corrigee']),-2.2822912345678)
         self.assertEqual(row['a_confirmer'],'non')
+
+    def test_csv_includes_even_sub_centimetre_alignment_to_monumentum(self):
+        item = self.candidate()
+        item['original'] = [49.343090000001,2.282292]
+        result = proposed_change(item)
+        with tempfile.TemporaryDirectory() as folder:
+            write_reports([result],Path(folder))
+            with (Path(folder)/'positions-corrigees-monumentum.csv').open(encoding='utf-8-sig',newline='') as handle:
+                rows=list(csv.DictReader(handle,delimiter=';'))
+        self.assertEqual(len(rows),1)
+        self.assertEqual(float(rows[0]['latitude_corrigee']),49.34309)
 
 
 class ApplyMonumentumTests(unittest.TestCase):
