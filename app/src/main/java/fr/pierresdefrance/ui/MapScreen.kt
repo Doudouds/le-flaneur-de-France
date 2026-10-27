@@ -6,6 +6,7 @@ import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Typeface
 import android.graphics.RectF
+import android.view.Gravity
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -35,7 +36,14 @@ private val emptyFeatures=FeatureCollection.fromFeatures(emptyArray<Feature>())
 fun MapScreen(state: DiscoveryState,vm: DiscoveryViewModel,active: Boolean) {
     val context=LocalContext.current
     val lifecycle=LocalLifecycleOwner.current.lifecycle
-    val view=remember { MapLibre.getInstance(context); MapView(context,MapLibreMapOptions.createFromAttributes(context).textureMode(true)).apply { onCreate(null) } }
+    val view=remember {
+        MapLibre.getInstance(context)
+        val margin=(16*context.resources.displayMetrics.density).toInt()
+        val options=MapLibreMapOptions.createFromAttributes(context).textureMode(true)
+            .attributionGravity(Gravity.BOTTOM or Gravity.LEFT)
+            .attributionMargins(intArrayOf(margin,0,0,margin))
+        MapView(context,options).apply { onCreate(null) }
+    }
     var map by remember { mutableStateOf<MapLibreMap?>(null) }
     var style by remember { mutableStateOf<Style?>(null) }
     DisposableEffect(view) { onDispose { view.onDestroy() } }
