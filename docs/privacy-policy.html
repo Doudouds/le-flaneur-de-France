@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <title>Règles de confidentialité — Le Flâneur de France</title>
+  <style>
+    :root { color-scheme: light; --ink: #292820; --muted: #625f55; --accent: #765332; --paper: #f5f3ed; --card: #fff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { width: min(820px, calc(100% - 32px)); margin: 40px auto; padding: clamp(22px, 5vw, 52px); background: var(--card); border-radius: 18px; box-shadow: 0 8px 32px #29282012; }
+    h1, h2 { line-height: 1.25; }
+    h1 { margin: 0 0 8px; font-size: clamp(2rem, 5vw, 2.65rem); }
+    h2 { margin: 32px 0 10px; font-size: 1.35rem; }
+    p, ul { margin: 10px 0; }
+    li + li { margin-top: 7px; }
+    a { color: var(--accent); text-underline-offset: 3px; }
+    .updated { color: var(--muted); margin: 0 0 28px; }
+    .note { border-left: 4px solid var(--accent); padding: 12px 16px; background: var(--paper); }
+    footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid #ddd9ce; color: var(--muted); font-size: .94rem; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Règles de confidentialité</h1>
+  <p class="updated">Application Le Flâneur de France · Dernière mise à jour : 11 novembre 2026</p>
+
+  <p>Ces règles décrivent les données utilisées par l’application Android Le Flâneur de France, qui permet de consulter un catalogue local de monuments historiques en France, d’explorer une carte et, si vous le souhaitez, d’utiliser votre position ou de rechercher une adresse.</p>
+  <p><strong>Éditeur et contact :</strong> Le Flâneur de France — <a href="mailto:fabulainlumine@gmail.com">fabulainlumine@gmail.com</a>.</p>
+
+  <h2>Résumé</h2>
+  <ul>
+    <li>L’application ne demande pas de compte et ne contient pas de publicité, de paiement intégré ni d’outil d’analyse d’audience.</li>
+    <li>Le catalogue des monuments et les recherches par nom sont traités sur votre appareil.</li>
+    <li>La permission de localisation est facultative. La position est utilisée ponctuellement sur l’appareil pour centrer la carte, trouver les monuments proches ou déterminer la région choisie. L’application ne conserve pas un historique de position et ne transmet pas cette coordonnée à un serveur exploité par son éditeur.</li>
+    <li>Lorsque vous utilisez les fonctions en ligne, certaines informations sont envoyées directement aux fournisseurs concernés, comme décrit ci-dessous. Ces fournisseurs reçoivent aussi les informations techniques habituelles d’une requête Internet, notamment l’adresse IP et l’heure de la requête.</li>
+  </ul>
+
+  <h2>Localisation et carte</h2>
+  <p>Si vous accordez l’autorisation Android de localisation, l’application peut obtenir une position ponctuelle lorsque vous l’ouvrez au premier plan et lorsque vous demandez un recentrage ou une découverte dans votre région. Elle utilise la position pour afficher la zone et calculer des distances sur l’appareil. Elle ne suit pas votre position en arrière-plan et ne crée pas d’historique de vos déplacements. Vous pouvez refuser ou retirer l’autorisation dans les réglages Android ; l’exploration nationale et la recherche par nom restent disponibles.</p>
+  <p>L’obtention de la position utilise le service de localisation Android fourni par Google Play Services, selon les permissions et réglages de votre appareil. Consultez la <a href="https://policies.google.com/privacy?hl=fr">politique de confidentialité de Google</a>.</p>
+  <p>Le fond de carte est chargé à la demande depuis les serveurs de tuiles OpenStreetMap. Le fournisseur reçoit les coordonnées des tuiles affichées, ainsi que les informations techniques de la requête. La zone demandée peut correspondre à la zone où vous vous trouvez, notamment si vous avez centré la carte sur votre position. La coordonnée GPS exacte n’est pas incluse par l’application dans la requête de tuile. Consultez la <a href="https://osmfoundation.org/wiki/Privacy_Policy">politique de confidentialité de l’OpenStreetMap Foundation</a> et la <a href="https://operations.osmfoundation.org/policies/tiles/">politique d’utilisation des tuiles</a>.</p>
+
+  <h2>Recherche d’adresse</h2>
+  <p>Quand vous saisissez une ville, une adresse ou un code postal, le texte de recherche est transmis au service de géocodage de la Géoplateforme de l’IGN pour obtenir des suggestions. Votre position GPS et votre historique de recherche ne sont pas envoyés avec cette requête. L’application ne conserve pas cet historique. La requête Internet peut toutefois révéler votre adresse IP et des informations techniques au fournisseur. Consultez les <a href="https://cartes.gouv.fr/cgu/?lang=fr">conditions d’utilisation de cartes.gouv.fr</a>.</p>
+
+  <h2>Descriptions et photographies en ligne</h2>
+  <p>À l’ouverture d’une fiche, l’application peut demander à Wikimedia Commons des métadonnées de photographie associées à la référence Mérimée du monument, puis charger la miniature correspondante. Si un texte Wikipédia n’est pas déjà disponible dans le catalogue ou le cache local, l’application demande à l’API de Wikipédia le titre de l’article associé. Ces requêtes sont faites directement depuis votre appareil vers Wikimedia ; la référence du monument ou le titre d’article consulté, ainsi que les informations techniques de la connexion, sont donc connus du service concerné. Consultez la <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy/en">politique de confidentialité de la Wikimedia Foundation</a>.</p>
+
+  <h2>Données conservées sur votre appareil</h2>
+  <p>Le catalogue des monuments est intégré à l’application. Les descriptions Wikipédia et les métadonnées Commons récupérées peuvent être mises en cache localement pour faciliter les prochaines consultations, avec une durée de validité prévue de sept jours. La recherche d’adresse n’est pas conservée après la session. L’application n’envoie pas ces caches à l’éditeur. Vous pouvez supprimer les données locales en effaçant le stockage de l’application dans les réglages Android ou en désinstallant l’application.</p>
+
+  <h2>Partage, conservation et contrôle</h2>
+  <p>L’éditeur n’exploite pas de serveur applicatif recevant les positions, les recherches, les fiches consultées ou les identifiants des utilisateurs. Les demandes décrites plus haut vont directement aux fournisseurs tiers qui fournissent la carte, le géocodage ou le contenu encyclopédique. Le traitement et la durée de conservation de leurs journaux relèvent de leurs propres règles de confidentialité. Vous pouvez désactiver la localisation, éviter les fonctions en ligne ou ne pas saisir d’adresse. Sans connexion Internet, le catalogue local et la recherche par nom restent consultables.</p>
+
+  <h2>Vos demandes et contact</h2>
+  <p>Pour toute question concernant ces règles ou le fonctionnement de l’application, écrivez à <a href="mailto:fabulainlumine@gmail.com">fabulainlumine@gmail.com</a>. L’éditeur ne disposant pas de copie serveur des positions ni des recherches, les demandes relatives aux journaux éventuellement conservés par un fournisseur tiers doivent également être adressées à ce fournisseur, selon sa propre politique.</p>
+
+  <h2>Hébergement de cette page</h2>
+  <p>Cette page est publiée avec GitHub Pages. Lors de sa consultation, GitHub peut traiter des informations techniques de connexion conformément à sa <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">déclaration de confidentialité</a>. Cette page n’intègre pas de publicité, de cookies de suivi ni de service d’analyse d’audience ajouté par l’éditeur.</p>
+
+  <h2>Modifications</h2>
+  <p>Ces règles pourront être mises à jour si le fonctionnement de l’application ou ses fournisseurs changent. La date de mise à jour figurera en haut de cette page.</p>
+
+  <p class="note">Le Flâneur de France est une application indépendante. Les noms et services de tiers restent la responsabilité de leurs opérateurs respectifs.</p>
+  <footer>Contact : <a href="mailto:fabulainlumine@gmail.com">fabulainlumine@gmail.com</a></footer>
+</main>
+</body>
+</html>

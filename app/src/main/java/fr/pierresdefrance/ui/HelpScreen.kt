@@ -111,6 +111,9 @@ fun HelpScreen() {
         TextButton(onClick={links.openUri("https://www.data.gouv.fr/datasets/contours-administratifs/")}) {
             Text("Contours régionaux · data.gouv.fr et IGN · ODbL ↗")
         }
+        TextButton(onClick={links.openUri("https://doudouds.github.io/le-flaneur-de-France/privacy-policy.html")}) {
+            Text("Règles de confidentialité ↗")
+        }
         }
     }
 }
