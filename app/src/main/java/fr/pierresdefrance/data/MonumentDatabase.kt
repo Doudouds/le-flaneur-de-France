@@ -59,6 +59,9 @@ data class MonumentDetail(
 interface MonumentDao {
     @Query("SELECT * FROM monuments WHERE id=:id")
     suspend fun detail(id: Long): MonumentDetail?
+
+    @Query("SELECT * FROM monuments WHERE reference=:reference")
+    suspend fun detailByReference(reference: String): MonumentDetail?
 }
 
 @Database(entities=[MonumentDetail::class], version=1, exportSchema=true)

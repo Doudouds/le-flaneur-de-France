@@ -17,6 +17,7 @@ import androidx.lifecycle.ViewModelProvider
 import fr.pierresdefrance.data.AddressPlace
 import fr.pierresdefrance.domain.Position
 import fr.pierresdefrance.ui.DiscoveryViewModel
+import fr.pierresdefrance.ui.DrawScope
 import org.junit.Assert.*
 
 /** Tests the real location-to-map-to-list flow with an explicit simulated Paris fix. */
@@ -65,6 +66,16 @@ class LocationUiTest {
             assertEquals("",vm.state.value.query)
             ui.onNodeWithText("Liste").performClick()
             ui.onNodeWithText("Autour de vous",substring=true).assertIsDisplayed()
+            ui.onNodeWithText("Découvrir").performClick()
+            ui.waitUntil(15000) { vm.state.value.draw.detail != null }
+            ui.onNodeWithText("France entière").performClick()
+            ui.onNodeWithText("Ma région actuelle").performClick()
+            assertEquals(DrawScope.CurrentRegion,vm.state.value.draw.scope)
+            val first = vm.state.value.draw.detail!!.reference
+            ui.onNodeWithText("Tirer").performClick()
+            ui.waitUntil(20000) { vm.state.value.draw.let { it.error != null || it.detail?.reference != first } }
+            assertNull(vm.state.value.draw.error,vm.state.value.draw.error)
+            assertEquals("Île-de-France",vm.state.value.draw.detail?.region)
         } finally {
             Tasks.await(client.setMockMode(false),10,TimeUnit.SECONDS)
             val previous=Regex("(?:MOCK_LOCATION|mock_location): (allow|ignore|deny|default)").find(old)?.groupValues?.get(1) ?: "default"

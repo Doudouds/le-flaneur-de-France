@@ -14,10 +14,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.unit.dp
 
 @Composable
 fun HelpScreen() {
+    val links = LocalUriHandler.current
     Surface(
         modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colorScheme.background,
@@ -54,7 +56,7 @@ fun HelpScreen() {
             text = "Saisissez une ville, une adresse ou un code postal dans la barre de recherche, puis choisissez une suggestion pour explorer les monuments à proximité.",
         )
 
-        Text("Carte et liste", style = MaterialTheme.typography.titleLarge)
+        Text("Carte, liste et découverte", style = MaterialTheme.typography.titleLarge)
         HelpIconDetail(
             icon = HeritageIcons.Map,
             label = "Carte",
@@ -64,6 +66,11 @@ fun HelpScreen() {
             icon = Icons.AutoMirrored.Filled.List,
             label = "Liste",
             explanation = "Consultez les monuments autour de votre position ou du lieu choisi. Une recherche par nom lance une recherche dans tout le catalogue français.",
+        )
+        HelpIconDetail(
+            icon = HeritageIcons.Monument,
+            label = "Tirage de monuments",
+            explanation = "Tirez un monument au hasard parmi 2 000 fiches. Choisissez la France entière, votre région actuelle ou une région de la liste, puis touchez Tirer.",
         )
 
         Text("Comprendre une fiche monument", style = MaterialTheme.typography.titleLarge)
@@ -101,6 +108,9 @@ fun HelpScreen() {
             explanation = "La recherche d’adresse, les photographies et certains textes complémentaires nécessitent une connexion internet.",
         )
         Text("Les données patrimoniales proviennent notamment du Ministère de la Culture, d’OpenStreetMap et de Wikipédia. Consultez les liens affichés dans chaque fiche pour les détails et les licences.", style = MaterialTheme.typography.bodyMedium)
+        TextButton(onClick={links.openUri("https://www.data.gouv.fr/datasets/contours-administratifs/")}) {
+            Text("Contours régionaux · data.gouv.fr et IGN · ODbL ↗")
+        }
         }
     }
 }

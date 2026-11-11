@@ -1,11 +1,14 @@
 package fr.pierresdefrance.ui
 
 import android.app.Application
+import android.os.SystemClock
+import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import fr.pierresdefrance.data.*
 import fr.pierresdefrance.domain.*
 import fr.pierresdefrance.location.LocationProvider
+import fr.pierresdefrance.location.RegionLocator
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
 
@@ -21,19 +24,41 @@ data class DiscoveryState(
     val image: HeritageImage?=null,val locating: Boolean=false,val message: String?=null,
     val fatal: Boolean=false,
     val mapChoices: List<MapChoice> = emptyList(),
+    val draw: MonumentDrawState = MonumentDrawState(),
 )
+
+sealed interface DrawScope {
+    data object France : DrawScope
+    data object CurrentRegion : DrawScope
+    data class Region(val region: DiscoveryRegion) : DrawScope
+}
+
+data class MonumentDrawState(
+    val scope: DrawScope = DrawScope.France,
+    val regions: List<DiscoveryRegion> = emptyList(),
+    val detail: MonumentDetail? = null,
+    val image: HeritageImage? = null,
+    val loading: Boolean = false,
+    val error: String? = null,
+)
+
 class DiscoveryViewModel @JvmOverloads constructor(application: Application,private val addresses: AddressSearch=IgnAddressSearch()): AndroidViewModel(application) {
     private val db=MonumentDatabase.open(application)
     private val repository=MonumentRepository(db)
     private val images=ImageResolver(application)
     private val wikipedia=WikipediaDescriptions(application)
     private val location=LocationProvider(application)
+    private val discovery=DiscoveryCatalogue(application.assets, db.monuments())
+    private val regionLocator=RegionLocator(application.assets)
     private val mutable=MutableStateFlow(DiscoveryState())
     val state=mutable.asStateFlow()
     private var mapJob: Job?=null; private var searchJob: Job?=null; private var detailJob: Job?=null
     private var locationJob: Job?=null
     private var mapSelectionJob: Job?=null
     private var addressJob: Job?=null; private var nearbyJob: Job?=null
+    private var drawJob: Job? = null
+    private var discoveryOpened = false
+    private var lastPositionAt = 0L
     private var offset=0
     init { viewModelScope.launch {
         try {
@@ -97,23 +122,106 @@ class DiscoveryViewModel @JvmOverloads constructor(application: Application,priv
                 val detail=repository.detail(id); ensureActive()
                 mutable.update { it.copy(detail=detail,detailLoading=false) }
                 if(detail!=null) {
-                    coroutineScope {
-                        launch {
-                            val image=images.resolve(detail); ensureActive(); mutable.update { it.copy(image=image) }
-                        }
-                        launch {
-                            if(detail.wikipediaUrl.isNotBlank() && (detail.descriptionSource.startsWith("Synthèse") || detail.description==detail.history)) {
-                                val description=wikipedia.resolve(detail); ensureActive()
-                                if(description!=null) mutable.update { it.copy(detail=detail.copy(description=description.text,
-                                    descriptionSource=description.source,wikipediaUrl=description.url)) }
-                            }
-                        }
-                    }
+                    enrichDetail(detail, onImage = { image -> mutable.update { it.copy(image=image) } },
+                        onText = { text -> mutable.update { it.copy(detail=text) } })
                 }
             } catch(e: CancellationException) { throw e }
             catch(e: Exception) { mutable.update { it.copy(detailLoading=false,message="Cette fiche est indisponible.") } }
         }
     }
+    private suspend fun enrichDetail(
+        detail: MonumentDetail,
+        onImage: (HeritageImage?) -> Unit,
+        onText: (MonumentDetail) -> Unit,
+    ) = coroutineScope {
+        launch {
+            val image = images.resolve(detail)
+            ensureActive()
+            onImage(image)
+        }
+        launch {
+            if (detail.wikipediaUrl.isNotBlank() &&
+                (detail.descriptionSource.startsWith("Synthèse") || detail.description == detail.history)) {
+                val description = wikipedia.resolve(detail)
+                ensureActive()
+                if (description != null) onText(detail.copy(description = description.text,
+                    descriptionSource = description.source, wikipediaUrl = description.url))
+            }
+        }
+    }
+
+    fun openDiscovery() {
+        if (discoveryOpened) return
+        discoveryOpened = true
+        drawMonument()
+    }
+
+    fun changeDrawScope(scope: DrawScope) {
+        mutable.update { it.copy(draw = it.draw.copy(scope = scope, error = null)) }
+    }
+
+    fun drawPermissionDenied() {
+        drawError("Autorisez la localisation ou choisissez une région dans la liste.")
+    }
+
+    fun drawMonument() {
+        val current = mutable.value.draw
+        if (current.loading) return
+        drawJob?.cancel()
+        mutable.update { it.copy(draw = it.draw.copy(loading = true, error = null)) }
+        drawJob = viewModelScope.launch {
+            try {
+                val regions = discovery.regions()
+                mutable.update { it.copy(draw = it.draw.copy(regions = regions)) }
+                val region = when (val scope = current.scope) {
+                    DrawScope.France -> null
+                    is DrawScope.Region -> scope.region.code
+                    DrawScope.CurrentRegion -> {
+                        val recent = mutable.value.position?.takeIf {
+                            SystemClock.elapsedRealtime() - lastPositionAt < 60_000
+                        }
+                        val position = recent ?: location.current(highAccuracy = true)?.also {
+                            ensureActive()
+                            rememberPosition(it)
+                        }
+                        val code = position?.let { regionLocator.codeAt(it) }
+                        if (code == null) {
+                            drawError("Votre région n’a pas pu être détectée. Choisissez-la dans la liste.")
+                            return@launch
+                        }
+                        code
+                    }
+                }
+                val detail = discovery.draw(region, current.detail?.reference)
+                ensureActive()
+                if (detail == null) {
+                    drawError("Aucun autre monument disponible pour ce tirage.")
+                    return@launch
+                }
+                mutable.update { it.copy(draw = it.draw.copy(detail = detail, image = null, loading = false)) }
+                enrichDetail(detail, onImage = { image ->
+                    mutable.update { it.copy(draw = it.draw.copy(image = image)) }
+                }, onText = { text ->
+                    mutable.update { it.copy(draw = it.draw.copy(detail = text)) }
+                })
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                Log.w("DiscoveryViewModel", "Could not draw a monument", e)
+                if (mutable.value.draw.loading) drawError("Le tirage a échoué. Réessayez.")
+            }
+        }
+    }
+
+    private fun drawError(text: String) {
+        mutable.update { it.copy(draw = it.draw.copy(loading = false, error = text)) }
+    }
+
+    private fun rememberPosition(position: Position) {
+        lastPositionAt = SystemClock.elapsedRealtime()
+        mutable.update { it.copy(position = position) }
+    }
+
     fun dismiss() { mapSelectionJob?.cancel(); detailJob?.cancel(); mutable.update { it.copy(mapChoices=emptyList(),detail=null,selectedId=null,image=null,detailLoading=false) } }
     fun focus(position: Position,zoom: Double=15.5) { mutable.update { it.copy(focus=position,focusZoom=zoom,focusSerial=it.focusSerial+1) } }
     fun editAddress(query: String) {
@@ -178,7 +286,7 @@ class DiscoveryViewModel @JvmOverloads constructor(application: Application,priv
                 ensureActive()
                 if(position==null) message("Position indisponible. La carte et la recherche restent accessibles.")
                 else {
-                    mutable.update { it.copy(position=position) }
+                    rememberPosition(position)
                     if(center) { editAddress(""); focus(position) }
                     if(center || mutable.value.exploration==null) loadNearby(position,null,resetQuery=center)
                 }

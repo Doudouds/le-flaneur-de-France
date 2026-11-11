@@ -31,6 +31,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Lifecycle
@@ -47,11 +48,13 @@ import org.json.JSONObject
 import fr.pierresdefrance.domain.Position
 import java.util.Locale
 
+private enum class Tab { MAP, LIST, DISCOVER, HELP }
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DiscoveryApp(vm: DiscoveryViewModel) {
     val state by vm.state.collectAsStateWithLifecycle()
-    var tab by rememberSaveable { mutableIntStateOf(0) }
+    var tab by rememberSaveable { mutableStateOf(Tab.MAP) }
     val context=LocalContext.current
     val lifecycle=LocalLifecycleOwner.current.lifecycle
     fun permitted()=listOf(Manifest.permission.ACCESS_COARSE_LOCATION,Manifest.permission.ACCESS_FINE_LOCATION).any {
@@ -59,6 +62,9 @@ fun DiscoveryApp(vm: DiscoveryViewModel) {
     }
     val permission=rememberLauncherForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) {
         if(permitted()) vm.locate() else vm.message("Localisation refusée. Vous pouvez explorer toute la France et rechercher un monument.")
+    }
+    val drawPermission = rememberLauncherForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) {
+        if (permitted()) vm.drawMonument() else vm.drawPermissionDenied()
     }
     fun locate() {
         if(permitted()) vm.locate() else permission.launch(arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION,Manifest.permission.ACCESS_FINE_LOCATION))
@@ -74,14 +80,15 @@ fun DiscoveryApp(vm: DiscoveryViewModel) {
     }
     val snackbar=remember { SnackbarHostState() }
     LaunchedEffect(state.message) { state.message?.let { snackbar.showSnackbar(it); vm.message(null) } }
-    BackHandler(enabled=tab!=0 || state.selectedId!=null || state.mapChoices.isNotEmpty()) {
-        if(state.selectedId!=null || state.mapChoices.isNotEmpty()) vm.dismiss() else tab=0
+    BackHandler(enabled=tab!=Tab.MAP || state.selectedId!=null || state.mapChoices.isNotEmpty()) {
+        if(state.selectedId!=null || state.mapChoices.isNotEmpty()) vm.dismiss() else tab=Tab.MAP
     }
     Scaffold(snackbarHost={ SnackbarHost(snackbar) },bottomBar={
         NavigationBar(containerColor=MaterialTheme.colorScheme.surface) {
-            NavigationBarItem(selected=tab==0,onClick={tab=0},icon={Icon(HeritageIcons.Map,null)},label={Text("Carte")})
-            NavigationBarItem(selected=tab==1,onClick={tab=1},icon={Icon(Icons.AutoMirrored.Filled.List,null)},label={Text("Liste")})
-            NavigationBarItem(selected=tab==2,onClick={tab=2},icon={Icon(Icons.Default.Info,null)},label={Text("Aide")})
+            NavigationBarItem(selected=tab==Tab.MAP,onClick={tab=Tab.MAP},icon={Icon(HeritageIcons.Map,null)},label={Text("Carte")})
+            NavigationBarItem(selected=tab==Tab.LIST,onClick={tab=Tab.LIST},icon={Icon(Icons.AutoMirrored.Filled.List,null)},label={Text("Liste")})
+            NavigationBarItem(selected=tab==Tab.DISCOVER,onClick={tab=Tab.DISCOVER},icon={Icon(HeritageIcons.Monument,null)},label={Text("Découvrir")})
+            NavigationBarItem(selected=tab==Tab.HELP,onClick={tab=Tab.HELP},icon={Icon(Icons.Default.Info,null)},label={Text("Aide")})
         }
     }) { padding ->
         Box(Modifier.fillMaxSize().padding(padding)) {
@@ -94,8 +101,8 @@ fun DiscoveryApp(vm: DiscoveryViewModel) {
             } else if(state.fatal) {
                 Text(state.message ?: "Catalogue indisponible",Modifier.align(Alignment.Center).padding(32.dp))
             } else {
-                MapScreen(state,vm,tab==0)
-                if(tab==0) {
+                MapScreen(state,vm,tab==Tab.MAP)
+                if(tab==Tab.MAP) {
                     Surface(Modifier.align(Alignment.TopCenter).padding(12.dp).fillMaxWidth(),shape=RoundedCornerShape(18.dp),shadowElevation=3.dp) {
                         Column(Modifier.padding(horizontal=12.dp,vertical=6.dp)) {
                             AddressSearchBox(state,vm)
@@ -103,14 +110,27 @@ fun DiscoveryApp(vm: DiscoveryViewModel) {
                     }
                     Column(Modifier.align(Alignment.BottomEnd).padding(end=16.dp,bottom=44.dp),horizontalAlignment=Alignment.End,verticalArrangement=Arrangement.spacedBy(12.dp)) {
                         state.nearby?.let { n ->
-                            FilledTonalButton(onClick={vm.search("");tab=1}) { Text("${n.count} monuments à moins de ${n.radius.toInt()} km") }
+                            FilledTonalButton(onClick={vm.search("");tab=Tab.LIST}) { Text("${n.count} monuments à moins de ${n.radius.toInt()} km") }
                         }
                         FloatingActionButton(onClick={locate()},containerColor=MaterialTheme.colorScheme.surface) {
                             if(state.locating) CircularProgressIndicator(Modifier.size(24.dp),strokeWidth=2.dp)
                             else Icon(HeritageIcons.Locate,"Recentrer sur ma position")
                         }
                     }
-                } else if(tab==1) MonumentList(state,vm) else HelpScreen()
+                } else when (tab) {
+                    Tab.LIST -> MonumentList(state, vm)
+                    Tab.DISCOVER -> {
+                        LaunchedEffect(Unit) { vm.openDiscovery() }
+                        DrawScreen(state.draw, vm::changeDrawScope, onDraw = {
+                            if (state.draw.scope == DrawScope.CurrentRegion && !permitted()) {
+                                drawPermission.launch(arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION,
+                                    Manifest.permission.ACCESS_FINE_LOCATION))
+                            } else vm.drawMonument()
+                        }, onMap = { position -> vm.focus(position); tab=Tab.MAP })
+                    }
+                    Tab.HELP -> HelpScreen()
+                    Tab.MAP -> Unit
+                }
             }
         }
     }
@@ -134,9 +154,71 @@ fun DiscoveryApp(vm: DiscoveryViewModel) {
             if(state.detailLoading) Box(Modifier.fillMaxWidth().height(180.dp),contentAlignment=Alignment.Center) { CircularProgressIndicator() }
             else state.detail?.let { m ->
                 MonumentSheet(m,state.image) {
-                    if(m.latitude!=null && m.longitude!=null) { vm.focus(Position(m.latitude,m.longitude)); tab=0; vm.dismiss() }
+                    if(m.latitude!=null && m.longitude!=null) { vm.focus(Position(m.latitude,m.longitude)); tab=Tab.MAP; vm.dismiss() }
                 }
             } ?: Text("Cette notice est indisponible.",Modifier.padding(24.dp))
+        }
+    }
+}
+
+private fun DrawScope.label(): String = when (this) {
+    DrawScope.France -> "France entière"
+    DrawScope.CurrentRegion -> "Ma région actuelle"
+    is DrawScope.Region -> region.name
+}
+
+@Composable
+private fun DrawScreen(
+    state: MonumentDrawState,
+    onScope: (DrawScope) -> Unit,
+    onDraw: () -> Unit,
+    onMap: (Position) -> Unit,
+) {
+    var menuOpen by remember { mutableStateOf(false) }
+    Surface(Modifier.fillMaxSize()) {
+        Column(Modifier.fillMaxSize()) {
+            Column(Modifier.padding(horizontal=24.dp,vertical=16.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
+                Text("Découvrir un monument", style=MaterialTheme.typography.headlineMedium)
+                Text("Laissez le hasard vous faire découvrir l’un des 2 000 monuments de la sélection.",
+                    style=MaterialTheme.typography.bodyMedium)
+                Row(horizontalArrangement=Arrangement.spacedBy(8.dp),verticalAlignment=Alignment.CenterVertically) {
+                    Box(Modifier.weight(1f)) {
+                        OutlinedButton(onClick={menuOpen=true},enabled=!state.loading,modifier=Modifier.fillMaxWidth()) {
+                            Text(state.scope.label(),Modifier.weight(1f),maxLines=1,overflow=TextOverflow.Ellipsis)
+                            Icon(Icons.Default.ArrowDropDown,null)
+                        }
+                        DropdownMenu(expanded=menuOpen,onDismissRequest={menuOpen=false},
+                            modifier=Modifier.heightIn(max=360.dp)) {
+                            val scopes = listOf(DrawScope.France, DrawScope.CurrentRegion) +
+                                state.regions.map { DrawScope.Region(it) }
+                            scopes.forEach { scope ->
+                                DropdownMenuItem(text={Text(scope.label())},onClick={
+                                    menuOpen=false
+                                    onScope(scope)
+                                })
+                            }
+                        }
+                    }
+                    Button(onClick=onDraw,enabled=!state.loading) {
+                        Icon(Icons.Default.Refresh,null,Modifier.size(18.dp))
+                        Spacer(Modifier.width(6.dp))
+                        Text("Tirer")
+                    }
+                }
+                if (state.loading) LinearProgressIndicator(Modifier.fillMaxWidth())
+                state.error?.let { Text(it,style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.error) }
+            }
+            state.detail?.let { monument ->
+                Box(Modifier.weight(1f)) {
+                    key(monument.reference) {
+                        MonumentSheet(monument,state.image) {
+                            if (monument.latitude!=null && monument.longitude!=null) {
+                                onMap(Position(monument.latitude,monument.longitude))
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

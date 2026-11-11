@@ -8,6 +8,12 @@ import android.os.ParcelFileDescriptor
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
+import androidx.lifecycle.ViewModelProvider
+import fr.pierresdefrance.ui.DiscoveryViewModel
+import org.json.JSONObject
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotEquals
+import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -15,6 +21,44 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class DiscoveryUiTest {
     @get:Rule val ui=createAndroidComposeRule<MainActivity>()
+
+    @Test fun discoveryDrawPersistsAndHonorsTheSelectedRegion() {
+        lateinit var vm: DiscoveryViewModel
+        ui.runOnUiThread { vm = ViewModelProvider(ui.activity)[DiscoveryViewModel::class.java] }
+        ui.waitUntil(30000) { !vm.state.value.loading }
+        ui.onNode(hasText("Découvrir") and hasClickAction()).performClick()
+        ui.waitUntil(15000) { vm.state.value.draw.detail != null }
+        val first = vm.state.value.draw.detail!!.reference
+        val assets = InstrumentationRegistry.getInstrumentation().targetContext.assets
+        val regions = assets.open("discovery_selection.json").bufferedReader().use {
+            JSONObject(it.readText()).getJSONArray("regions")
+        }
+        val references = (0 until regions.length()).associate { i ->
+            val region = regions.getJSONObject(i)
+            val entries = region.getJSONArray("references")
+            region.getString("name") to List(entries.length()) { entries.getString(it) }
+        }
+        assertEquals(18, references.size)
+        assertEquals(2000, references.values.flatten().toSet().size)
+        assertTrue(first in references.values.flatten())
+        ui.onNodeWithText("Itinéraire").performScrollTo().assertIsEnabled()
+        ui.onNodeWithText("Aide").performClick()
+        ui.onNode(hasText("Découvrir") and hasClickAction()).performClick()
+        assertEquals(first, vm.state.value.draw.detail?.reference)
+
+        ui.onNodeWithText("France entière").performClick()
+        ui.onNodeWithText("Mayotte").performScrollTo().performClick()
+        assertEquals(first, vm.state.value.draw.detail?.reference)
+        ui.onNodeWithText("Tirer").performClick()
+        ui.waitUntil(15000) { vm.state.value.draw.detail?.reference?.let { it != first } == true }
+        val second = vm.state.value.draw.detail!!.reference
+        assertTrue(second in references.getValue("Mayotte"))
+        ui.onNodeWithText("Tirer").performClick()
+        ui.waitUntil(15000) { vm.state.value.draw.detail?.reference?.let { it != second } == true }
+        assertNotEquals(second, vm.state.value.draw.detail?.reference)
+        assertTrue(vm.state.value.draw.detail?.reference in references.getValue("Mayotte"))
+    }
+
     @Test fun nationalSearchAndDetailWithoutLocation() {
         ui.waitUntil(30000) { ui.onAllNodesWithText("Adresse ou ville").fetchSemanticsNodes().isNotEmpty() }
         ui.onNodeWithText("Liste").performClick()

@@ -109,6 +109,16 @@ national décrit ci-dessous, à partir d’identifiants Mérimée exacts. Les de
 POP sont conservées ; les textes manquants sont complétés par Wikipédia ou une synthèse
 factuelle des champs POP. Les synthèses sont explicitement identifiées.
 
+## Tirage de monuments
+
+L’onglet **Découvrir** s’appuie sur les 2 000 références Mérimée du classeur de
+sélection régionale, embarquées dans `discovery_selection.json`. La sélection
+couvre les 18 régions avec au moins cinq références chacune.
+Pour le filtre **Ma région actuelle**, les contours 2025 généralisés à 100 m
+sont embarqués dans `discovery_regions.geojson.gz`, limité aux 18 régions.
+Source des contours : [data.gouv.fr, d’après IGN Admin Express](https://www.data.gouv.fr/datasets/contours-administratifs/),
+[licence ODbL](https://opendatacommons.org/licenses/odbl/1-0/).
+
 ## Descriptions et associations Wikipédia (0.3.0)
 
 Les 46 760 notices ont un texte sourcé. La base contient 29 533 liens Wikipédia
