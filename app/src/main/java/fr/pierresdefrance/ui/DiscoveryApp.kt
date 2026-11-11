@@ -179,7 +179,7 @@ private fun DrawScreen(
         Column(Modifier.fillMaxSize()) {
             Column(Modifier.padding(horizontal=24.dp,vertical=16.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
                 Text("Découvrir un monument", style=MaterialTheme.typography.headlineMedium)
-                Text("Laissez le hasard vous faire découvrir l’un des 2 000 monuments de la sélection.",
+                Text("Laissez le hasard vous faire découvrir un monument de France",
                     style=MaterialTheme.typography.bodyMedium)
                 Row(horizontalArrangement=Arrangement.spacedBy(8.dp),verticalAlignment=Alignment.CenterVertically) {
                     Box(Modifier.weight(1f)) {
@@ -202,7 +202,7 @@ private fun DrawScreen(
                     Button(onClick=onDraw,enabled=!state.loading) {
                         Icon(Icons.Default.Refresh,null,Modifier.size(18.dp))
                         Spacer(Modifier.width(6.dp))
-                        Text("Tirer")
+                        Text("Flâner")
                     }
                 }
                 if (state.loading) LinearProgressIndicator(Modifier.fillMaxWidth())

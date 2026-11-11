@@ -72,7 +72,7 @@ class LocationUiTest {
             ui.onNodeWithText("Ma région actuelle").performClick()
             assertEquals(DrawScope.CurrentRegion,vm.state.value.draw.scope)
             val first = vm.state.value.draw.detail!!.reference
-            ui.onNodeWithText("Tirer").performClick()
+            ui.onNodeWithText("Flâner").performClick()
             ui.waitUntil(20000) { vm.state.value.draw.let { it.error != null || it.detail?.reference != first } }
             assertNull(vm.state.value.draw.error,vm.state.value.draw.error)
             assertEquals("Île-de-France",vm.state.value.draw.detail?.region)

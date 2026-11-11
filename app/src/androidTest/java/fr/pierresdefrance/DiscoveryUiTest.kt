@@ -28,6 +28,7 @@ class DiscoveryUiTest {
         ui.waitUntil(30000) { !vm.state.value.loading }
         ui.onNode(hasText("Découvrir") and hasClickAction()).performClick()
         ui.waitUntil(15000) { vm.state.value.draw.detail != null }
+        ui.onNodeWithText("Laissez le hasard vous faire découvrir un monument de France").assertIsDisplayed()
         val first = vm.state.value.draw.detail!!.reference
         val assets = InstrumentationRegistry.getInstrumentation().targetContext.assets
         val regions = assets.open("discovery_selection.json").bufferedReader().use {
@@ -49,11 +50,11 @@ class DiscoveryUiTest {
         ui.onNodeWithText("France entière").performClick()
         ui.onNodeWithText("Mayotte").performScrollTo().performClick()
         assertEquals(first, vm.state.value.draw.detail?.reference)
-        ui.onNodeWithText("Tirer").performClick()
+        ui.onNodeWithText("Flâner").performClick()
         ui.waitUntil(15000) { vm.state.value.draw.detail?.reference?.let { it != first } == true }
         val second = vm.state.value.draw.detail!!.reference
         assertTrue(second in references.getValue("Mayotte"))
-        ui.onNodeWithText("Tirer").performClick()
+        ui.onNodeWithText("Flâner").performClick()
         ui.waitUntil(15000) { vm.state.value.draw.detail?.reference?.let { it != second } == true }
         assertNotEquals(second, vm.state.value.draw.detail?.reference)
         assertTrue(vm.state.value.draw.detail?.reference in references.getValue("Mayotte"))

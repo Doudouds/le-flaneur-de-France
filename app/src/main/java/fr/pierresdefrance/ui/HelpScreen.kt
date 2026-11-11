@@ -70,7 +70,7 @@ fun HelpScreen() {
         HelpIconDetail(
             icon = HeritageIcons.Monument,
             label = "Tirage de monuments",
-            explanation = "Tirez un monument au hasard parmi 2 000 fiches. Choisissez la France entière, votre région actuelle ou une région de la liste, puis touchez Tirer.",
+            explanation = "Découvrez un monument au hasard parmi 2 000 fiches. Choisissez la France entière, votre région actuelle ou une région de la liste, puis touchez « Flâner ».",
         )
 
         Text("Comprendre une fiche monument", style = MaterialTheme.typography.titleLarge)
